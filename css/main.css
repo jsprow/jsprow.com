@@ -1,0 +1,71 @@
+h1 {
+    display: block;
+    font-size: 2em;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold;
+}
+table {
+    white-space: normal;
+    line-height: 1.2em;
+    font-weight: normal;
+    font-size: medium;
+    font-style: normal;
+    color: -internal-quirk-inherit;
+    text-align: start;
+    font-variant: normal normal;
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+th {
+    font-weight: bold;
+    text-align: -internal-center;
+    border-bottom: 1px solid black;
+}
+.tr-header {
+  border-bottom: 1px solid black;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+    padding-right: 1em;
+
+}
+i, cite, em, var, address, dfn {
+    font-style: italic;
+}
+address {
+    display: block;
+}
+hr {
+    display: block;
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+    -webkit-margin-start: auto;
+    -webkit-margin-end: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+td {
+    vertical-align: top;
+}
+a:-webkit-any-link, th {
+    color: -webkit-link;
+    text-decoration: underline;
+    cursor: auto;
+}
+
+/* FONT EFFECTS */
