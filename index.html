@@ -68,11 +68,11 @@
             </tr>
         </tbody>
         <tfoot>
-          <tr>
-              <td colspan="6">
-                  <hr>
-              </td>
-          </tr>
+            <tr>
+                <td colspan="6">
+                    <hr>
+                </td>
+            </tr>
         </tfoot>
     </table>
     <address>Apache/2.4.16 (Ubuntu) Server at 192.168.33.10 Port 80</address>
@@ -80,6 +80,11 @@
     <script>
         $(document).ready(function() {
             $("#index").mouseenter(function() {
+
+                $(this).addClass("animated grow wobble")
+            });
+            $("#index").mouseleave(function() {
+                $(this).removeClass("animated grow wobble")
                 $(this).addClass("animated wobble")
             });
             $("#index").mouseleave(function() {
@@ -101,7 +106,8 @@
                 $(this).addClass("animated swing")
             });
             $("#ta2").mouseleave(function() {
-                $(this).removeClass("animated swing")
+                $(this).removeClass("animated swing") >>>
+                    >>> > dev
             });
         });
     </script>

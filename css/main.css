@@ -41,13 +41,12 @@ th {
     text-align: -internal-center;
 }
 .tr-header {
-  border-bottom: 1px solid black;
+    border-bottom: 1px solid black;
 }
 td, th {
     display: table-cell;
     vertical-align: inherit;
     padding-right: 1em;
-
 }
 i, cite, em, var, address, dfn {
     font-style: italic;
