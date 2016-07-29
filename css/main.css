@@ -1,3 +1,6 @@
+body {
+  padding: 1em;
+}
 h1 {
     display: block;
     font-size: 2em;
@@ -9,21 +12,24 @@ h1 {
 }
 table {
     white-space: normal;
-    line-height: 1.2em;
+    line-height: 1.1em;
     font-weight: normal;
     font-size: medium;
     font-style: normal;
     color: -internal-quirk-inherit;
     text-align: start;
-    font-variant: normal normal;
+    font-variant: normal;
     display: table;
     border-collapse: separate;
-    border-spacing: 2px;
+    border-spacing: 0.1em 1em;
     border-color: grey;
 }
 tbody {
     display: table-row-group;
     vertical-align: middle;
+}
+hr {
+
 }
 tr {
     display: table-row;
@@ -33,7 +39,6 @@ tr {
 th {
     font-weight: bold;
     text-align: -internal-center;
-    border-bottom: 1px solid black;
 }
 .tr-header {
   border-bottom: 1px solid black;
@@ -67,5 +72,3 @@ a:-webkit-any-link, th {
     text-decoration: underline;
     cursor: auto;
 }
-
-/* FONT EFFECTS */
