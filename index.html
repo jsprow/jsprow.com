@@ -95,6 +95,9 @@
       <img id="ta2-img" class="thumb" src="img/ta2.png" alt="ta2" />
     </li>
 </ul>
+<div class="space-invader-box">
+<div class="space-invader"></div>
+</div>
     <script>
         $(document).ready(function() {
             $("#index").mouseenter(function() {
@@ -150,14 +153,14 @@
                 $("#ta2-img").fadeTo(100, 0)
             });
             $("#ema").mouseenter(function() {
-                $(this).addClass("animated swing")
+                $(this).addClass("animated bounce")
                 $("#body-duh").removeClass()
                 $("#body-duh").addClass("stripey-5")
                 $(".ema-row").fadeTo(200, 0)
                 $("#ema-img").fadeTo(200, 1)
             });
             $("#ema").mouseleave(function() {
-                $(this).removeClass("animated swing")
+                $(this).removeClass("animated bounce")
                 // $("#body-duh").removeClass("stripey-4")
                 $(".ema-row").fadeTo(100, 1)
                 $("#ema-img").fadeTo(100, 0)
