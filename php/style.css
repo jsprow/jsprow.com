@@ -1,0 +1,229 @@
+body {
+    background-color: #ece8e5;
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 11pt;
+}
+nav {
+    padding: 0;
+    min-height: 40px;
+    width: 100%;
+    background: #455868;
+    font-weight: bold;
+    border-bottom: 2px solid #283744;
+}
+nav ul {
+    padding: 0;
+    margin: 0 auto;
+    width: 600px;
+    height: 40px;
+}
+nav li {
+    display: inline;
+    float: left;
+}
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+nav a {
+    color: #fff;
+    display: inline-block;
+    width: calc(600px / 4);
+    text-align: center;
+    text-decoration: none;
+    line-height: 40px;
+    text-shadow: 1px 1px 0 #283744;
+}
+nav li a {
+    border-right: 1px solid #576979;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+nav li:first-child a {
+    border-left: 1px solid #576979;
+}
+nav a:hover, nav a:active {
+    background-color: #8c99a4;
+}
+#pull {
+    display: none;
+}
+@media (max-width: 600px) {
+    nav {
+        height: auto;
+    }
+    nav ul {
+        width: 100%;
+        display: block;
+        height: auto;
+    }
+    nav li {
+        width: 50%;
+        float: left;
+        position: relative;
+    }
+    nav a {
+        text-align: left;
+        width: 100%;
+        text-indent: 25px;
+    }
+}
+@media (max-width: 480px) {
+    nav {
+        border-bottom: 0;
+    }
+    nav ul {
+        display: none;
+        height: auto;
+    }
+    #pull {
+        display: block;
+        background-color: #283744;
+        width: 100%;
+        position: relative;
+    }
+    #pull:after {
+        content: "";
+        background: url('nav-icon.png') no-repeat;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+    }
+}
+@media (max-width: 320px) {
+    nav li {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+    nav li a {
+        border-bottom: 1px solid #576979;
+    }
+}
+
+/*Tabs*/
+
+body {
+    font-family: Arial;
+    color: #333;
+}
+section {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 90vw;
+}
+.tab-label {
+    background: #eee;
+    border: 1px solid #ddd;
+    padding: .7em 1em;
+    cursor: pointer;
+    z-index: 1;
+    margin-left: -1px;
+}
+.tab-label:first-of-type {
+    margin-left: 0;
+}
+div {
+    min-width: 100%;
+    margin-top: -1px;
+    padding: 1em;
+    border: 1px solid #ddd;
+    -webkit-order: 1;
+    order: 1;
+}
+input[type=radio], div {
+    display: none;
+}
+input[type=radio]:checked+ label {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+input[type=radio]:checked+ label+ div {
+    display: block;
+}
+
+/*Form*/
+
+form {
+    display: flex;
+    flex-direction: column;
+    font-size: 16pt;
+    align-items: center;
+}
+form label {
+    width: 600px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+label p {
+    min-width: 300px;
+    text-align: right;
+    padding-right: 20px;
+}
+label span {
+    display: inline-flex;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: rgb(208, 82, 22);
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
+    /*text-shadow:
+    rgba(0, 0, 0, 0.5) 3px 0 0,
+    rgba(0, 0, 0, 0.5) -1px -1px 0,
+    rgba(0, 0, 0, 0.5) -1px 1px 0,
+    rgba(0, 0, 0, 0.5) 1px -1px 0,
+    rgba(0, 0, 0, 0.5) 1px 1px 0;*/
+}
+select {
+    display: flex;
+    padding: 10px 42px 10px 10px;
+    background: #f8f8f8;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    font-size: 14pt;
+    content: '>';
+    color: #444;
+}
+button {
+    margin-top: 20px;
+    border-radius: 0.5em;
+    height: 3em;
+    width: 12em;
+    font-size: 16pt;
+    font-weight: bold;
+    text-shadow:
+    lightgrey 0 0 10px,
+    grey 2px 2px 0,
+    grey 0 2px 0;
+}
+button:focus, button:active {
+    outline: none;
+    color: rgb(208, 82, 22);
+}
+input[type=text] {
+    display: flex;
+    border: 1px solid #A6A6A6;
+    padding: 10px 42px 10px 10px;
+    font-size: 14pt;
+    max-width: 250px;
+}
+select, option {
+    width: 250px;
+}
