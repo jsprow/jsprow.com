@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 
-	<link rel="stylesheet" href="/css/print.css">
+	<link rel="stylesheet" href="css/print.css">
   <title>EMA Catering Menu</title>
 </head>
 <body>
