@@ -11,7 +11,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
   <script src="js/main.js" type="text/javascript"></script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="shortcut icon" href="favicon.ico">
 
@@ -126,8 +126,7 @@
           <button class="accordion">
             <h2>Early Risers</h2></button>
           <div class="panel menu-items">
-            <h3><i class="fa fa-asterisk" aria-hidden="true"></i>
-&nbsp;All breakfast selections include the continental breakfast</h3>
+            <h3 class="menu-caption"><i class="fa fa-asterisk" aria-hidden="true"></i>&nbsp;All breakfast selections include the continental breakfast</h3>
             <div class="item item-hover">
               <img class="item-img" src="img/continental-breakfast.jpg" alt="continental-breakfast" />
               <p><span>Continental Breakfast</span> $6.50/person

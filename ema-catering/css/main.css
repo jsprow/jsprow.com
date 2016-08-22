@@ -1,4 +1,6 @@
 body {
+  font-size: 16px;
+  color: #444;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6,18 +8,39 @@ body {
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  color: #444;
   font-family: 'PT Sans Narrow', sans-serif;
   background-color: #eee;
   background-image: url("../img/table-cloth.jpg");
   background-attachment: fixed;
+  background-size: cover;
   background-repeat: no-repeat;
   margin: 0;
   padding-top: 78px;
   width: 100%;
 }
+
+body{font-size:110%;}
+
+@media(min-width:60em){body{font-size: 90%}}
+
+p {
+  font-size: 1em;
+  text-align: center;
+  margin: 0;
+}
+h3 {
+  font-size: 1.5em;
+}
+h2 {
+  font-size: 2.25em;
+}
+h1 {
+  font-size: 3.375em;
+}
 .banner {
   -webkit-box-pack: center;
+    -moz-box-pack: center;
+      -ms-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -31,7 +54,6 @@ body {
   margin: 0 auto;
   color: #eee;
   background: none;
-  font-size: 6em;
   line-height: 1.1;
   text-align: center;
   text-shadow: 1px 1px 1px #444, 2px 2px 1px #666;
@@ -48,21 +70,20 @@ body {
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   -webkit-box-pack: center;
+    -moz-box-pack: center;
+      -ms-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
+    -moz-box-align: center;
+      -ms-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: #f9f5e3;
   box-shadow: 2px 2px 8px #444;
   margin: 3em 0;
-}
-p {
-  font-size: 1em;
-  text-align: center;
-  margin: 0;
 }
 nav {
   z-index: 1;
@@ -74,11 +95,17 @@ nav {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
+    -moz-box-align: center;
+      -ms-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+      -ms-box-orient: horizontal;
   -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+      -ms-box-direction: normal;
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
@@ -102,6 +129,8 @@ nav {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+      -ms-box-flex: 1;
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -142,12 +171,18 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+      -ms-box-orient: horizontal;
   -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+      -ms-box-direction: normal;
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   text-align: center;
   -webkit-box-pack: center;
+    -moz-box-pack: center;
+      -ms-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -165,6 +200,8 @@ section {
 }
 .block {
   -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+      -ms-box-flex: 1;
   -webkit-flex: 1 1 25%;
       -ms-flex: 1 1 25%;
           flex: 1 1 25%;
@@ -189,6 +226,8 @@ section {
   text-align: center;
   border: none;
   -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+      -o-transition: 0.4s;
           transition: 0.4s;
   margin: 0;
 }
@@ -201,6 +240,8 @@ section {
   max-height: 0;
   overflow-y: auto;
   -webkit-transition: 0.6s ease-in-out;
+    -moz-transition: 0.6s ease-in-out;
+      -o-transition: 0.6s ease-in-out;
           transition: 0.6s ease-in-out;
   opacity: 0;
   filter: alpha(opacity=0);
@@ -225,10 +266,14 @@ section {
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   -webkit-box-pack: center;
+    -ms-box-pack: center;
+  -moz-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
+    -moz-box-align: center;
+      -ms-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
@@ -242,7 +287,7 @@ section {
 }
 .menu-heading {
   font-weight: bold;
-  font-size: 4em;
+  font-size: 3.325em;
   text-shadow: 1px 1px 1px #444, 2px 2px 1px #666;
   color: #666;
   width: 20%
@@ -250,7 +295,6 @@ section {
 .menu-print {
   position: relative;
   width: 20%;
-  font-size: 1em;
   margin-left: auto;
   margin-right: 1em;
   padding: 0.5em 0;
@@ -278,10 +322,9 @@ section {
           flex-flow: row wrap;
   height: 100vh;
 }
-h3 {
+.menu-caption {
   width: 100%;
-  color: #666;
-  margin-top: 10px;
+  height: auto;
 }
 .item {
   display: -webkit-box;
@@ -292,11 +335,15 @@ h3 {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   -webkit-box-pack: start;
+    -moz-box-pack: start;
+      -ms-box-pack: start;
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin: 10px;
   -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+      -ms-box-flex: 1;
   -webkit-flex: 1 1 240px;
       -ms-flex: 1 1 240px;
           flex: 1 1 240px;
@@ -346,6 +393,8 @@ figure {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+      -ms-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -385,10 +434,14 @@ footer {
   background-color: #333;
   color: #eee;
   -webkit-box-pack: center;
+    -moz-box-pack: center;
+      -ms-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
+    -moz-box-align: center;
+      -ms-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
