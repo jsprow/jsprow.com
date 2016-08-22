@@ -126,8 +126,7 @@
           <button class="accordion">
             <h2>Early Risers</h2></button>
           <div class="panel menu-items">
-            <h3><i class="fa fa-asterisk" aria-hidden="true"></i>
-&nbsp;All breakfast selections include the continental breakfast</h3>
+            <h3 class="menu-caption"><i class="fa fa-asterisk" aria-hidden="true"></i>&nbsp;All breakfast selections include the continental breakfast</h3>
             <div class="item item-hover">
               <img class="item-img" src="img/continental-breakfast.jpg" alt="continental-breakfast" />
               <p><span>Continental Breakfast</span> $6.50/person

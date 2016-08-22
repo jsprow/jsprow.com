@@ -3,8 +3,24 @@
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 
-	<link rel="stylesheet" href="css/print.css">
   <title>EMA Catering Menu</title>
+
+	<style>
+	body {
+		font-family: 'PT Sans Narrow', sans-serif;
+		display: flex;
+		flex-flow: row wrap;
+	}
+	h1 {
+		text-align: center;
+		width: 100%;
+	}
+	.item {
+		outline: 1px solid black;
+		padding: 2%;
+		margin: 2%;
+  }
+	</style>
 </head>
 <body>
   <h1>EMA Catering Menu</h1>
@@ -18,14 +34,13 @@
 		$html = file_get_html('index.php');
 		foreach ($html->find('div.printable') as $div) {
 			foreach ($div->find('h2') as $h2) {
-				print '<div class="item"><ul>' . $h2;
+				echo '<div class="item"><ul>' . $h2;
 			};
 			foreach ($div->find('p[!class]') as $p) {
-				print '<li>' . $p . '</li>';
+				echo '<li>' . $p . '</li>';
 			}
 		}
-		print '</ul></div>';
-		// print $e;
+		echo '</ul></div>';
 	?>
 </body>
 </html>
