@@ -9,10 +9,10 @@
 
   <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous" type="text/javascript"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
-  <script src="/js/main.js" type="text/javascript"></script>
+  <script src="js/main.js" type="text/javascript"></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="css/main.css">
   <link rel="shortcut icon" href="favicon.ico">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -129,7 +129,7 @@
             <h3><i class="fa fa-asterisk" aria-hidden="true"></i>
 &nbsp;All breakfast selections include the continental breakfast</h3>
             <div class="item item-hover">
-              <img class="item-img" src="/img/continental-breakfast.jpg" alt="continental-breakfast" />
+              <img class="item-img" src="img/continental-breakfast.jpg" alt="continental-breakfast" />
               <p><span>Continental Breakfast</span> $6.50/person
               </p>
               <br>
