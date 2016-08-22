@@ -3,9 +3,6 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
   color: #444;
   font-family: 'PT Sans Narrow', sans-serif;
   background-color: #eee;
@@ -17,10 +14,7 @@ body {
   width: 100%;
 }
 .banner {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: 100%;
   height: calc(100vh - 78px);
   background-image: url("img/space.jpg");
@@ -44,16 +38,8 @@ body {
   display: flex;
   width: 100%;
   height: 6em;
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
           align-items: center;
   background-color: #f9f5e3;
   box-shadow: 2px 2px 8px #444;
@@ -69,18 +55,8 @@ nav {
   box-shadow: 2px 2px 8px #444;
   position: fixed;
   top: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
           flex-direction: row;
   max-height: 60px;
   min-width: 100%;
@@ -89,27 +65,15 @@ nav {
   padding: 15px 0;
 }
 .logo img {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   height: 3em;
   margin-left: 1em;
 }
 .nav-gap {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
           flex-grow: 1;
 }
 nav ul {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   padding: 0;
   margin: 0;
@@ -137,22 +101,10 @@ nav li:active {
   box-shadow: inset 0 2px 2px 1px #111;
 }
 section {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
           flex-direction: row;
   text-align: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
           justify-content: center;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
           flex-wrap: wrap;
 }
 .anchor {
@@ -164,9 +116,6 @@ section {
   visibility: hidden;
 }
 .block {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 25%;
-      -ms-flex: 1 1 25%;
           flex: 1 1 25%;
   background-color: #eee;
   margin: 0 2%;
@@ -188,7 +137,6 @@ section {
   min-width: 100%;
   text-align: center;
   border: none;
-  -webkit-transition: 0.4s;
           transition: 0.4s;
   margin: 0;
 }
@@ -200,7 +148,6 @@ section {
   padding: 0 10px;
   max-height: 0;
   overflow-y: auto;
-  -webkit-transition: 0.6s ease-in-out;
           transition: 0.6s ease-in-out;
   opacity: 0;
   filter: alpha(opacity=0);
@@ -221,16 +168,8 @@ section {
   display: flex;
   width: 100%;
   height: 6em;
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
           align-items: center;
   background-color: #f9f5e3;
   box-shadow: 2px 2px 8px #444;
@@ -273,8 +212,6 @@ section {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   height: 100vh;
 }
@@ -288,17 +225,9 @@ h3 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
           justify-content: flex-start;
   margin: 10px;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 240px;
-      -ms-flex: 1 1 240px;
           flex: 1 1 240px;
   padding: 10px 20px;
   cursor: pointer;
@@ -306,8 +235,6 @@ h3 {
 }
 .item-img {
   width: 100%;
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
           align-self: center;
 }
 .payment {
@@ -342,12 +269,7 @@ figure {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0;
   padding-top: 10px;
@@ -384,21 +306,12 @@ footer {
   display: flex;
   background-color: #333;
   color: #eee;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
           align-items: center;
   height: 60px;
   margin-top: 60px;
 }
 footer p {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
