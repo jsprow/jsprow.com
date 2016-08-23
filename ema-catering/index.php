@@ -25,7 +25,7 @@
       <div class="logo">
         <img src="img/ema_catering.svg" alt="" />
       </div>
-      <div class="nav-gap"></div>
+      <!-- <div class="nav-gap"></div> -->
       <ul>
         <li>
           <a href="#about">About</a>
@@ -69,7 +69,7 @@
     </section>
     <span id="menu" class="anchor"> </span>
     <section>
-      <div class="menu">
+      <div class="menu-heading-box">
         <div class="menu-gap"></div>
         <div class="menu-heading">Menu</div>
         <iframe src="print.php" style="display:none" name="frame"></iframe>
@@ -79,7 +79,8 @@
         <div class="accordion-block">
           <button class="accordion">
             <h2>Ordering Options</h2></button>
-          <div class="panel menu-items">
+          <div class="panel show">
+            <div class="menu-items">
             <div class="item">
               <p><span>Food/Beverage</span>
                 <br> Food and beverage are available in individual and group servings. Catering orders come with all necessary plates, cups, utensils, napkins, serving utensils and condiments.
@@ -121,11 +122,14 @@
               <img class="payment" src="img/discover.png" alt="discover" />
             </div>
           </div>
+          <div class="menu-img"></div>
+          </div>
         </div>
         <div class="printable accordion-block">
-          <button class="accordion">
-            <h2>Early Risers</h2></button>
-          <div class="panel menu-items">
+        <button class="accordion">
+          <h2>Early Risers</h2></button>
+        <div class="panel show">
+          <div class="menu-items">
             <h3 class="menu-caption"><i class="fa fa-asterisk" aria-hidden="true"></i>&nbsp;All breakfast selections include the continental breakfast</h3>
             <div class="item item-hover">
               <img class="item-img" src="img/continental-breakfast.jpg" alt="continental-breakfast" />
@@ -156,35 +160,36 @@
               <p><span>Omlette Bar</span> $12.50/person</p>
             </div>
             <div class="item">
-              <div class="item-box">
-                <p><span>Sides</span> $2/person</p>
-                <figure>
-                  <div>
-                    <figcaption>Meats</figcaption>
-                    <ul>
-                      <li>Bacon</li>
-                      <li>Sausage</li>
-                      <li>Sausage Links</li>
-                      <li>Carved Ham</li>
-                      <li>Chicken Links</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <figcaption>Others</figcaption>
-                    <ul>
-                      <li>Eggs</li>
-                      <li>Hashbrowns</li>
-                      <li>Bagels</li>
-                      <li>Muffins</li>
-                      <li>Home Fries</li>
-                    </ul>
-                  </div>
-                </figure>
-              </div>
+            <div class="item-box">
+              <p><span>Sides</span> $2/person</p>
+              <figure>
+                <div>
+                  <figcaption>Meats</figcaption>
+                  <ul>
+                    <li>Bacon</li>
+                    <li>Sausage</li>
+                    <li>Sausage Links</li>
+                    <li>Carved Ham</li>
+                    <li>Chicken Links</li>
+                  </ul>
+                </div>
+                <div>
+                  <figcaption>Others</figcaption>
+                  <ul>
+                    <li>Eggs</li>
+                    <li>Hashbrowns</li>
+                    <li>Bagels</li>
+                    <li>Muffins</li>
+                    <li>Home Fries</li>
+                  </ul>
+                </div>
+              </figure>
             </div>
-            <div class="panel-bottom"></div>
           </div>
+          </div>
+          <div class="menu-img"></div>
         </div>
+      </div>
         <div class="accordion-block">
           <button class="accordion">
             <h2>Lunch Time</h2></button>
