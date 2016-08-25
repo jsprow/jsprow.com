@@ -1,4 +1,19 @@
 #sticky {
+  display: inline-block;
+  position: fixed;
+  writing-mode: tb-rl;
+  right: calc(100vw - 50px);
+  width: 50px;
+  height: 100%;
+  outline: 1px solid red;
+  text-align: center;
+  padding: 10px;
+}
+
+
+
+
+/*#sticky {
   position: fixed;
   width: 50px;
   height: 100vh;
@@ -9,10 +24,16 @@
   position: absolute;
   display: inline-block;
   top: 2em;
+  right: -3em;
   transform: rotate(90deg);
+  transform-origin: top left 0;
   color: white;
+}*/
+#title {
+  padding: 1em 0;
 }
-main {
-  padding-left: 50px;
-  padding-top: 1em;
+.pink {
+  background-color: #A4267C;
+  width: 100%;
+  height: 100%;
 }
