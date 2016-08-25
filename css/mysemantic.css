@@ -1,0 +1,18 @@
+#sticky {
+  position: fixed;
+  width: 50px;
+  height: 100vh;
+  background-color: grey;
+  cursor: pointer;
+}
+.navtext {
+  position: absolute;
+  display: inline-block;
+  top: 2em;
+  transform: rotate(90deg);
+  color: white;
+}
+main {
+  padding-left: 50px;
+  padding-top: 1em;
+}
