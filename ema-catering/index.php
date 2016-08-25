@@ -194,7 +194,65 @@
           <button class="accordion">
             <h2>Lunch Time</h2></button>
           <div class="panel">
-            <p>Lorem ipsum...</p>
+            <div class="menu-items">
+              <h3 class="menu-caption"><i class="fa fa-asterisk" aria-hidden="true"></i>&nbsp;All breakfast selections include the continental breakfast</h3>
+              <div class="item item-hover">
+                <img class="item-img" src="img/continental-breakfast.jpg" alt="continental-breakfast" />
+                <p><span>Continental Breakfast</span> $6.50/person
+                </p>
+                <br>
+                <p class="to-hide hidden-item">
+                  <br> Includes: muffins, pastries, juice, and Water Street Coffee.
+                  <br>
+                  <br> * Fresh fruit, yogurt, and granola available for an additional charge.</p>
+              </div>
+              <div class="item">
+                <p><span>Oatmeal or Yogurt Bar</span> $9.50/person</p>
+              </div>
+              <div class="item">
+                <p><span>Breakfast Sandwich or Wrap</span> $9.50/person</p>
+              </div>
+              <div class="item">
+                <p><span>Our Famous Biscuits and Gravy</span> $10.50/person</p>
+              </div>
+              <div class="item">
+                <p><span>Classic Skillet</span> $10/person</p>
+              </div>
+              <div class="item">
+                <p><span>Breakfast Casserole</span> $10.75/person</p>
+              </div>
+              <div class="item">
+                <p><span>Omlette Bar</span> $12.50/person</p>
+              </div>
+              <div class="item">
+              <div class="item-box">
+                <p><span>Sides</span> $2/person</p>
+                <figure>
+                  <div>
+                    <figcaption>Meats</figcaption>
+                    <ul>
+                      <li>Bacon</li>
+                      <li>Sausage</li>
+                      <li>Sausage Links</li>
+                      <li>Carved Ham</li>
+                      <li>Chicken Links</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <figcaption>Others</figcaption>
+                    <ul>
+                      <li>Eggs</li>
+                      <li>Hashbrowns</li>
+                      <li>Bagels</li>
+                      <li>Muffins</li>
+                      <li>Home Fries</li>
+                    </ul>
+                  </div>
+                </figure>
+              </div>
+            </div>
+            </div>
+            <div class="menu-img"></div>
           </div>
         </div>
         <div class="accordion-block">

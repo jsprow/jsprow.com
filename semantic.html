@@ -6,9 +6,6 @@
   <meta charset="utf-8">
   <title>Semantic Practice</title>
 
-  <script language="javascript" src="http://code.jquery.com/jquery.min.js"></script>
-  <script type="text/javascript" src="semantic/semantic.js"></script>
-
   <link rel="stylesheet" href="semantic/semantic.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="css/mysemantic.css" media="screen" title="no title" charset="utf-8">
 
@@ -16,8 +13,8 @@
 
 <body>
   <div class="ui left vertical menu sidebar">
-    <a class="item">
-        Item 1
+    <a class="item" href="#home">
+        Home
       </a>
     <a class="item">
         Item 2
@@ -26,10 +23,12 @@
         Item 3
       </a>
   </div>
+  <div id="sticky" class="fixed sticky">
+    <div class="navburger image"></div>
+  </div>
   <div class="pusher">
-    <h3 id="sticky" class="sticky">Navigate</h3>
-    <div class="main ui container">
-      <h1 id="title" class="ui centered header">Semantic Is So Clean</h1>
+    <main class="main ui container">
+      <h1 id="home" class="ui centered header" style="padding: 1em 1em 0.5em 1em">Semantic Is So Clean</h1>
       <div class="ui container">
         <div class="ui two column grid">
           <div class="ten wide column">
@@ -157,20 +156,47 @@
             </div>
           </div>
           <div class="six wide column">
-            <div class="ui segment inverted pink">
+            <div class="ui card pinkbox">
+              <div class="bg-pink"></div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      <div class="ui container">
+        <h1 class="ui centered dividing header" style="padding: 1em 1em 0.5em 1em">Lorem</h1>
+        <div class="ui three column grid">
+          <div class="two wide column">
+
+          </div>
+          <div class="four wide column">
+
+          </div>
+          <div class="four wide column">
+
+          </div>
+          <div class="four wide column">
+
+          </div>
+          <div class="two wide column">
+
+          </div>
+        </div>
+      </div>
+    </main>
   </div>
+
+  <script language="javascript" src="http://code.jquery.com/jquery.min.js"></script>
+  <script type="text/javascript" src="semantic/semantic.js"></script>
   <script type="text/javascript">
-    $(".sticky").click(function() {
-      $('.left.vertical.menu.sidebar').sidebar('toggle');
-    });
     $(function() {
-      $('.ui.sticky')
-        .sticky({});
+      $(".sticky").click(function() {
+        $('.left.vertical.menu.sidebar').sidebar('toggle');
+      });
+      $(function() {
+        $('.ui.sticky')
+          .sticky({
+          });
+      })
     })
   </script>
 </body>
