@@ -20,6 +20,11 @@
      js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
+  function myFacebookLogin() {
+  	FB.login(function(){
+  		  FB.api('/me/feed', 'post', {message: 'Hello, world!'});
+	}, {scope: 'publish_actions'});
+	};
 </script>
 <h1>hello</h1>
 
@@ -30,11 +35,8 @@
   data-width="450"
   data-show-faces="true">
 </div>
-<?php 
-GET /oauth/access_token
-    ?client_id={1803330163281004}
-    &client_secret={69548fe6ce9df357f079f61d2c760f8d}
-    &grant_type=client_credentials
-?>
+
+<button onclick="myFacebookLogin()">Login with Facebook</button>
+
 </body>
 </html>
