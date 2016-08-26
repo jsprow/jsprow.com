@@ -40,14 +40,6 @@
 <button onclick="myFacebookLogin()">Login with Facebook</button>
 
 <?php 
-$request = new FacebookRequest(
-  $session,
-  'GET',
-  '/me',
-  array(
-    'fields' => 'id,name'
-  )
-);
 $fb = new Facebook\Facebook([/* . . . */]);
 
 // Sets the default fallback access token so we don't have to pass it to each request
