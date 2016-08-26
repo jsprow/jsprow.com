@@ -30,25 +30,11 @@
   data-width="450"
   data-show-faces="true">
 </div>
-
 <?php 
-/* PHP SDK v5.0.0 */
-/* make the API call */
-$request = new FacebookRequest(
-  $session,
-  'POST',
-  '/{1803330163281004}/subscriptions',
-  array (
-    'object' => 'page',
-    'callback_url' => 'https://jsprow.com/fb-test.php',
-    'fields' => 'about, picture',
-    'verify_token' => 'thisisaverifystring',
-  )
-);
-
-$response = $request->execute();
-$graphObject = $response->getGraphObject();
-/* handle the result */
+GET /oauth/access_token
+    ?client_id={1803330163281004}
+    &client_secret={69548fe6ce9df357f079f61d2c760f8d}
+    &grant_type=client_credentials
 ?>
 </body>
 </html>
