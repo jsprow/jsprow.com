@@ -1,3 +1,5 @@
 #Ignore everything except for ./node_modules/semantic-ui/
-node_modules/
-!node_modules/semantic-ui/dist/
+/node_modules/*
+!/node_modules
+!/node_modules/semantic-ui/
+!/node_modules/semantic-ui/dist/
