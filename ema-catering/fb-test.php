@@ -38,5 +38,19 @@
 
 <button onclick="myFacebookLogin()">Login with Facebook</button>
 
+<?php 
+$request = new FacebookRequest(
+  $session,
+  'GET',
+  '/me',
+  array(
+    'fields' => 'id,name'
+  )
+);
+
+$response = $request->execute();
+$graphObject = $response->getGraphObject();
+/* handle the result */
+?>
 </body>
 </html>
