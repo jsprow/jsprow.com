@@ -26,25 +26,6 @@
 	}, {scope: 'publish_actions'});
 	};
 
-	$fb = new Facebook\Facebook([/* . . . */]);
-
-	// Sets the default fallback access token so we don't have to pass it to each request
-	$fb->setDefaultAccessToken('{access-token}');
-
-	try {
-	  $response = $fb->get('/me');
-	  $userNode = $response->getGraphUser();
-	} catch(Facebook\Exceptions\FacebookResponseException $e) {
-	  // When Graph returns an error
-	  echo 'Graph returned an error: ' . $e->getMessage();
-	  exit;
-	} catch(Facebook\Exceptions\FacebookSDKException $e) {
-	  // When validation fails or other local issues
-	  echo 'Facebook SDK returned an error: ' . $e->getMessage();
-	  exit;
-}
-
-echo 'Logged in as ' . $userNode->getName();
 </script>
 <h1>hello</h1>
 
@@ -67,6 +48,26 @@ $request = new FacebookRequest(
     'fields' => 'id,name'
   )
 );
+$fb = new Facebook\Facebook([/* . . . */]);
+
+// Sets the default fallback access token so we don't have to pass it to each request
+$fb->setDefaultAccessToken('{access-token}');
+
+try {
+  $response = $fb->get('/me');
+  $userNode = $response->getGraphUser();
+} catch(Facebook\Exceptions\FacebookResponseException $e) {
+  // When Graph returns an error
+  echo 'Graph returned an error: ' . $e->getMessage();
+  exit;
+} catch(Facebook\Exceptions\FacebookSDKException $e) {
+  // When validation fails or other local issues
+  echo 'Facebook SDK returned an error: ' . $e->getMessage();
+  exit;
+}
+
+echo 'Logged in as ' . $userNode->getName();
+
 
 $response = $request->execute();
 $graphObject = $response->getGraphObject();
