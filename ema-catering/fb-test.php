@@ -40,32 +40,16 @@
 <button onclick="myFacebookLogin()">Login with Facebook</button>
 
 <?php 
-session_start();
-include_once('vendor/facebook/php-sdk-v4/src/Facebook/autoload.php');
-
-use Facebook\FacebookSession;
-use Facebook\FacebookRequest;
-
-FacebookSession::setDefaultApplication('1803330163281004', '69548fe6ce9df357f079f61d2c760f8d');
-
-// If you're making app-level requests:
-$session = FacebookSession::newAppSession();
-
-// To validate the session:
-
-if($session->validate()){
-    echo 'okay';
-}
-
+/* PHP SDK v5.0.0 */
+/* make the API call */
 $request = new FacebookRequest(
   $session,
   'GET',
-  '/1829286997357726/ratings'
+  '/{page-id}/ratings'
 );
 $response = $request->execute();
 $graphObject = $response->getGraphObject();
 /* handle the result */
-
 ?>
 </body>
 </html>
