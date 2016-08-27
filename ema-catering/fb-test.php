@@ -40,30 +40,32 @@
 <button onclick="myFacebookLogin()">Login with Facebook</button>
 
 <?php 
-$fb = new Facebook\Facebook([/* . . . */]);
+session_start();
+include_once('vendor/facebook/php-sdk-v4/src/Facebook/autoload.php');
 
-// Sets the default fallback access token so we don't have to pass it to each request
-$fb->setDefaultAccessToken('{access-token}');
+use Facebook\FacebookSession;
+use Facebook\FacebookRequest;
 
-try {
-  $response = $fb->get('/me');
-  $userNode = $response->getGraphUser();
-} catch(Facebook\Exceptions\FacebookResponseException $e) {
-  // When Graph returns an error
-  echo 'Graph returned an error: ' . $e->getMessage();
-  exit;
-} catch(Facebook\Exceptions\FacebookSDKException $e) {
-  // When validation fails or other local issues
-  echo 'Facebook SDK returned an error: ' . $e->getMessage();
-  exit;
+FacebookSession::setDefaultApplication('1803330163281004', '69548fe6ce9df357f079f61d2c760f8d');
+
+// If you're making app-level requests:
+$session = FacebookSession::newAppSession();
+
+// To validate the session:
+
+if($session->validate()){
+    echo 'okay';
 }
 
-echo 'Logged in as ' . $userNode->getName();
-
-
+$request = new FacebookRequest(
+  $session,
+  'GET',
+  '/1829286997357726/ratings'
+);
 $response = $request->execute();
 $graphObject = $response->getGraphObject();
 /* handle the result */
+
 ?>
 </body>
 </html>
