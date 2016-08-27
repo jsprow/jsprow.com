@@ -42,6 +42,9 @@
 <?php 
 /* PHP SDK v5.0.0 */
 /* make the API call */
+session_start();
+
+require_once '/vendor/facebook/php-sdk-v4/src/Facebook/autoload.php';
 $request = new FacebookRequest(
   $session,
   'GET',
