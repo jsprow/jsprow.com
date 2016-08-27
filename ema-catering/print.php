@@ -7,6 +7,7 @@
 
 	<style>
 	body {
+		position: relative;
 	    font-size: 16px;
 		font-family: 'PT Sans Narrow', sans-serif;
 	}
@@ -18,18 +19,45 @@
 		width: 100%;
 	    font-size: 3.236em;
 	}
+	h2 {
+		position: relative;
+		page-break-before: always;
+		width: 100%;
+	}
+	h3, h4 {
+		max-width: 100%;
+	}
 	p, li {
+		display: inline-block;
 		font-size: 1em;
     	line-height: 1.618em;
 	}
+	table {
+
+	}
 	.printable {
+		position:relative;
 		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		width: 100%;
+		max-height: 300vh;
 	}
 	.item {
+		display: flex;
+		flex-flow: column wrap;
+		flex: 1 0 40%;
 		outline: 1px solid black;
-		padding: 2%;
-		margin: 2%;
+		padding: 1%;
+		margin: 1%;
 		font-size: 80%;
+	}
+	.description {
+		display: block;
+		width: 100%;
+	}
+	.longlist {
+		max-height: 100vh;
 	}
 	/*@media all and (min-width: 960px) {
 	    body{
@@ -58,12 +86,18 @@
 		<p>Please call us at either number below </p>
 		<p><strong>269-207-9381 / 269-254-5388</strong></p>
 	</header>
-	<?php
-		include('simple_html_dom.php');
-		$html = file_get_html('ema-content.html');
-		foreach ($html->find('div.printable') as $div) {
-			echo $div . '</div>';
-		};
-	?>
+	<main>
+		<table>
+			<td>
+			<?php
+				include('simple_html_dom.php');
+				$html = file_get_html('ema-content.html');
+				foreach ($html->find('div.printable') as $div) {
+
+					echo '<div>' . $div . '</div> </div> </td>';
+				};
+			?>
+		</table>
+	</main>
 </body>
 </html>
