@@ -44,7 +44,7 @@
 /* make the API call */
 session_start();
 
-require_once 'autoload.php';
+require_once ($base.'src/facebook/autoload.php');
 
 use Facebook\FacebookRequest;
 
