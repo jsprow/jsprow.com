@@ -94,7 +94,7 @@
 				$html = file_get_html('ema-content.html');
 				foreach ($html->find('div.printable') as $div) {
 
-					echo '<div>' . $div . '</div> </div> </td>';
+					echo $div . '</div> </td>';
 				};
 			?>
 		</table>
