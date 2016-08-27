@@ -44,7 +44,10 @@
 /* make the API call */
 session_start();
 
-require_once '/vendor/facebook/php-sdk-v4/src/Facebook/autoload.php';
+require_once 'autoload.php';
+
+use Facebook\FacebookRequest;
+
 $request = new FacebookRequest(
   $session,
   'GET',
