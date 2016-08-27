@@ -46,6 +46,8 @@ session_start();
 
 require_once 'vendor/autoload.php';
 
+use Facebook\FacebookRequest;
+
 $request = new FacebookRequest(
   $session,
   'GET',
