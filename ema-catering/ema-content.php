@@ -9,6 +9,7 @@
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+  <script src="js/ema.js" type="text/javascript"></script>
   <script>
     function swapStyleSheet(sheet){
       document.getElementById('pagestyle').setAttribute('href', sheet);
@@ -274,18 +275,19 @@
     <h2>Send Us a Message</h2>
     <form class="email" action="email.php" method="post">
       <label>Name
-        <input type="text" name="name">
+        <input id="name" type="text" name="name" required="">
       </label>
       <br>
       <label>Email
-        <input type="email" name="email">
+        <input id="email" type="email" name="email" required="">
       </label>
       <br>
-      <label>
-        <input type="phone" name="phone">
+      <label>Phone Number
+        <input id="phone" type="phone" name="phone" required="" pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$">
       </label>
+      <br>
       <label>Message
-        <input type="textarea" name="message">
+        <input id="message" type="textarea" name="message" required="">
       </label>
       <br>
       <button type="submit" value="Submit">Submit</button>

@@ -132,6 +132,15 @@ section {
 section:first-of-type {
 	margin-top: 6em;
 }
+.error {
+	background-color: #F1C4C2;
+}
+input:valid {
+	background-color: #C2E9C2;
+}
+input:invalid {
+	background-color: #F1C4C2;
+}
 footer {
 	width: 100%;
 }
