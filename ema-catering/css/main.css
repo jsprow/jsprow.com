@@ -1,5 +1,48 @@
+@media all and (min-width: 960px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width: 959px) and (min-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media all and (max-width: 599px) and (min-width: 320px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+h1 {
+  font-size: 2.441em;
+}
+
+h2 {
+  font-size: 1.953em;
+}
+
+h3 {
+  font-size: 1.563em;
+}
+
+h4 {
+  font-size: 1.25em;
+}
+
+p,
+li,
+a,
+input {
+  font-size: 1em;
+}
+nav a {
+  font-size:  1.25em;
+}
+
 body {
-  font-size: 16px;
   color: #444;
   line-height: 1.2;
   display: -webkit-box;
@@ -7,8 +50,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
   font-family: 'PT Sans Narrow', sans-serif;
   background-color: white;
   background-image: url("../img/table-cloth.jpg");
@@ -20,48 +63,26 @@ body {
   width: 100%;
 }
 
-html{
-  font-size:80%;
-}
-
-@media(max-width: 800px){
-  html{
-    font-size: 120%;
-  }
-  .menu-img {
-    display: none;
-  }
-
-}
-
-p, a, ul, li, span {
-  font-size: 16px;
-}
-h3 {
-  font-size: 1.5em;
-}
-h2 {
-  font-size: 2.25em;
-}
 h1 {
   font-weight: bold;
-  font-size: 3.325em;
   text-shadow: 1px 1px 1px #444, 2px 2px 1px #666;
   color: #666;
 }
+
 .banner {
   -webkit-box-pack: center;
-    -moz-box-pack: center;
-      -ms-box-pack: center;
+  -moz-box-pack: center;
+  -ms-box-pack: center;
   -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 100%;
   height: calc(100vh - 78px);
   background-image: url("../img/space.jpg");
   background-position: left bottom;
   background-size: cover;
 }
+
 .caption {
   margin: 0 auto;
   color: white;
@@ -71,6 +92,7 @@ h1 {
   text-shadow: 1px 1px 1px #444, 2px 2px 1px #666;
   box-shadow: none;
 }
+
 .h1-box {
   display: -webkit-box;
   display: -webkit-flex;
@@ -85,6 +107,7 @@ h1 {
   box-shadow: 2px 2px 8px #444;
   margin: 3em 0;
 }
+
 nav {
   z-index: 1;
   box-shadow: 2px 2px 8px #444;
@@ -100,36 +123,43 @@ nav {
   background-color: #2F4070;
   color: white;
 }
-.logo, .logo img {
+
+.logo,
+.logo img {
   height: 4em;
   margin-left: 1em;
   margin-right: auto;
 }
+
 nav ul {
   display: flex;
   flex-flow: row wrap;
   margin-right: 2em;
 }
+
 nav li {
   display: inline-block;
   border-radius: 0.5em;
   margin: 0 0.5em;
   padding: 0.5em;
 }
+
 nav li:hover {
   background-color: #26335b;
 }
+
 nav li:active {
   box-shadow: inset 0 2px 2px 1px #111;
 }
+
 nav a {
-  font-size: 1.5em;
   display: inline-block;
   min-width: 100%;
   text-align: center;
   text-decoration: none;
   color: white;
 }
+
 section {
   width: 100vw;
   display: -webkit-box;
@@ -137,25 +167,26 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
-    -moz-box-orient: horizontal;
-      -ms-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -ms-box-orient: horizontal;
   -webkit-box-direction: normal;
-    -moz-box-direction: normal;
-      -ms-box-direction: normal;
+  -moz-box-direction: normal;
+  -ms-box-direction: normal;
   -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   text-align: center;
   -webkit-box-pack: center;
-    -moz-box-pack: center;
-      -ms-box-pack: center;
+  -moz-box-pack: center;
+  -ms-box-pack: center;
   -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
+
 .anchor {
   display: block;
   width: 100%;
@@ -164,6 +195,7 @@ section {
   left: 0;
   visibility: hidden;
 }
+
 .menu-heading-box {
   display: flex;
   width: 100%;
@@ -175,17 +207,20 @@ section {
   box-shadow: 2px 2px 8px #444;
   margin: 3em 0;
 }
+
 .menu-gap {
   margin-right: auto;
   width: 20%;
 }
+
 .menu-heading {
+  font-size: 2.441em;
   font-weight: bold;
-  font-size: 3.325em;
   text-shadow: 1px 1px 1px #444, 2px 2px 1px #666;
   color: #666;
   width: 20%
 }
+
 .menu-print {
   position: relative;
   width: 20%;
@@ -197,15 +232,18 @@ section {
   text-decoration: none;
   color: #666;
 }
+
 .menu-print:hover {
   background-color: #e0dcca;
   cursor: pointer;
 }
+
 .menu-print:active {
   position: relative;
   top: 2px;
   box-shadow: inset 0 2px 2px 1px #444;
 }
+
 .block {
   max-width: calc(100vw - 8%);
   flex: 1 1 25%;
@@ -214,13 +252,16 @@ section {
   box-shadow: 2px 2px 8px #444;
   padding: 0 20px 20px 20px;
 }
+
 .block p {
   text-align: left;
 }
+
 .accordion-block {
   margin: 4% 0;
   box-shadow: 2px 2px 8px #444;
 }
+
 .accordion {
   background-color: white;
   color: #444;
@@ -232,9 +273,12 @@ section {
   transition: 0.4s;
   margin: 0;
 }
-.active, .accordion:hover {
+
+.active,
+.accordion:hover {
   background-color: lightgrey;
 }
+
 .panel {
   display: flex;
   flex-flow: row nowrap;
@@ -245,6 +289,7 @@ section {
   opacity: 0;
   filter: alpha(opacity=0);
 }
+
 .show {
   /*display: flex;*/
   /*flex-flow: row nowrap;*/
@@ -253,27 +298,32 @@ section {
   max-height: 200vh;
   opacity: 1;
 }
+
 .panel-bottom {
   height: 20px;
   width: 100%;
 }
+
 .menu-items {
   flex: 1 0;
   display: flex;
   flex-flow: row wrap;
   width: 100%;
 }
+
 .menu-caption {
   width: 100%;
   text-align: center;
   margin-top: 20px;
 }
+
 .menu-img {
   flex: 1 0;
   background-image: url("../img/continental-breakfast-tall.jpg");
   margin: 10px;
   box-shadow: 2px 2px 8px #666;
 }
+
 .item {
   background-color: white;
   display: flex;
@@ -286,55 +336,69 @@ section {
   box-shadow: 2px 2px 8px #666;
   text-align: left;
 }
+
 .item-img {
   width: 100%;
   -webkit-align-self: center;
-      -ms-flex-item-align: center;
-          align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
+
 .payment {
   height: 2em;
   margin-left: auto;
   box-shadow: 1px 1px 4px #666;
 }
+
 .payment:last-of-type {
   margin-right: auto;
 }
-.item p, .item-box p {
+
+.item p,
+.item-box p {
   width: 100%;
   padding-top: 10px;
 }
+
 .item span {
   font-weight: bold;
 }
+
 .item-list {
   text-align: left;
   padding: 0 10px;
   list-style-position: inside;
 }
+
 .item-list li {
   margin: 0 0 10px 0;
 }
+
 .item-box {
   width: 100%;
   text-align: left;
 }
+
 figure {
   display: flex;
   flex-flow: row wrap;
   margin: 0;
   padding-top: 10px;
 }
+
 figure div {
   margin-right: auto;
 }
+
 figcaption {
   font-weight: bold;
   text-align: left;
 }
+
 figure ul {
   list-style-type: none;
 }
+
 .to-hide {
   display: block;
   max-width: 25%;
@@ -343,9 +407,11 @@ figure ul {
   padding: 0 2% 2% 2%;
   box-shadow: 2px 2px 8px #444;
 }
+
 .hidden-item {
   display: none;
 }
+
 footer {
   width: 100%;
   display: -webkit-box;
@@ -355,25 +421,27 @@ footer {
   background-color: #333;
   color: white;
   -webkit-box-pack: center;
-    -moz-box-pack: center;
-      -ms-box-pack: center;
+  -moz-box-pack: center;
+  -ms-box-pack: center;
   -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-    -moz-box-align: center;
-      -ms-box-align: center;
+  -moz-box-align: center;
+  -ms-box-align: center;
   -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 60px;
   margin-top: 60px;
 }
+
 footer p {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
+
 
 /* For IE 6/7 (trigger hasLayout) */

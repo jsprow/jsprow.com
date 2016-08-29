@@ -92,7 +92,7 @@
 	</header>
 	<?php
 		include('simple_html_dom.php');
-		$html = file_get_html('ema-content.html');
+		$html = file_get_html('ema-content.php');
 		foreach ($html->find('div.printable') as $div) {
 			echo $div . '</div>';
 		};
