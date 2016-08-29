@@ -15,8 +15,9 @@ show_error("E-mail address not valid");
 /* Let's prepare the message for the e-mail */
 $message = "
 
-Name: $name
+Customer Name: $name
 E-mail: $email
+Phone: $phone
 Subject: EMA Catering Website email from $email
 
 Message:
@@ -25,7 +26,7 @@ $message
 ";
 
 /* Send the message using mail() function */
-mail($myemail, $subject, $message, "-f mail@jsprow.com");
+mail($myemail, $subject, $message);
 
 /* Redirect visitor to the thank you page */
 header('Location: thanks.html');
