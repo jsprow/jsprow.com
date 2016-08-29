@@ -25,7 +25,7 @@ $message
 ";
 
 /* Send the message using mail() function */
-mail($myemail, $subject, $message);
+mail($myemail, $subject, $message, "-f mail@jsprow.com");
 
 /* Redirect visitor to the thank you page */
 header('Location: thanks.html');
