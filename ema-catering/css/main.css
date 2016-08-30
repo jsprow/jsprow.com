@@ -94,6 +94,7 @@ nav {
   height: 4em;
   margin-left: 1em;
   margin-right: auto;
+  flex-basis: auto;
 }
 
 nav ul {
@@ -102,6 +103,7 @@ nav ul {
   -ms-flex-flow: row wrap;
       flex-flow: row wrap;
   margin-right: 2em;
+  flex-basis: auto;
 }
 
 nav li {
