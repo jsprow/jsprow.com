@@ -83,8 +83,7 @@ nav {
   color: white;
 }
 
-.logo,
-.logo img {
+.logo {
   flex: 0 0 auto;
   height: 4em;
   margin-left: 1em;
