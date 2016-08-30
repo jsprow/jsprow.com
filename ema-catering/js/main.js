@@ -13,12 +13,24 @@ $(document).ready(function() {
     });
     $(function() {
         $( "#accordion" ).accordion({
-            collapsable: true,
+            collapsible: true,
             heightStyle: 'content'
         });
-        $('#accordion').bind('accordionactivate', function(event, ui) {
-            $( ui.newHeader ).ScrollTo({
-            });
-        });
+        $(function() {
+                $("#accordion").accordion({
+                    autoHeight: false,
+                    collapsible: true,
+                    heightStyle: "content",
+                    active: 0,
+                    animate: 300 // collapse will take 300ms
+                });
+                $('#accordion h3').bind('click',function(){
+                    var self = this;
+                    setTimeout(function() {
+                        theOffset = $(self).offset();
+                        $('body,html').animate({ scrollTop: theOffset.top - 100 });
+                    }, 310); // ensure the collapse animation is done
+                });
+        }); 
     });
 })

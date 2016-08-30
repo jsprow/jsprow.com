@@ -3,13 +3,12 @@
 
 <head>
   <meta charset="utf-8">
-  <meta item="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta item="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, height=calc(100vh - 60px)">
   <title>EMA Catering</title>
   
   <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous" type="text/javascript"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
   <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
-  <script src="js/jquery-scrollto.js" type="text/javascript"></script>
   <script src="js/main.js" type="text/javascript"></script>
   
   <link rel="stylesheet" href="css/reset.css">
@@ -86,7 +85,7 @@
                   <br> EMA Catering is only permitted to sell wine and beer off premises. Any alcohol purchases by the customer cannot be returned. EMA Catering will supply a bartender at $20 per hour charge. 1 bartender 100 guests is required.
                 </p>
               </div>
-              <div class="item item-box item-long">
+              <div class="item item-box">
                 <div>
                   <p><span>Event Services</span>
                     <br> Food and beverage are available in individual and group servings. Catering orders come with all necessary plates, cups, utensils, napkins, serving utensils and condiments.
@@ -111,10 +110,12 @@
               <div class="item">
                 <p><span>Payment</span>
                   <br> EMA Catering accepts Visa, Mastercard, American Express, and Discover.</p>
+                <div class="payment-block">
                   <img class="payment" src="img/visa.png" alt="visa" />
                   <img class="payment" src="img/mastercard.png" alt="mastercard" />
                   <img class="payment" src="img/amex.png" alt="amex" />
                   <img class="payment" src="img/discover.png" alt="discover" />
+                </div>
               </div>
             </div>
             <div class="menu-img"></div>
@@ -156,7 +157,7 @@
                 <img class="item-img" src="img/continental-breakfast.jpg" alt="continental-breakfast">
                 <p><span>Omlette Bar</span> $12.50/person</p>
               </div>
-              <div class="item item-long">
+              <div class="item">
                 <img class="item-img" src="img/continental-breakfast.jpg" alt="continental-breakfast">
                 <div class="item-box">
                   <p><span>Sides</span> $2/person</p>
@@ -189,11 +190,140 @@
           </div>
           <h3 class="accordion-heading">Lunch Time</h3>
           <div class="accordion-content">
-            <p>Words</p>
+            <div class="menu-items">
+              <div class="item">
+                <h3>Portable Salad Bar</h3>
+                <h4>$9.50/person</h4>
+                <p><em>15 person minimum • For smaller groups please ask.</em>
+                  <br>
+                  <br>Brought to your business. Includes fresh salad items, hot soup or assortment of wraps or sandwiches.</p>
+              </div>
+              <div class="item">
+                <h3>Taco Bar</h3>
+                <h4>$10.50/person</h4>
+                <p>Your choice of pulled pork, pulled chicken, taco meat, or chicken strips. Sides: hard or soft shell tortillas, salsa, sour cream, shredded cheese, onions, refried beans, lettuce, and tomato.</p>
+              </div>
+              <div class="item">
+                <h3>Hot Dog Bar</h3>
+                <h4>$10.50/person</h4>
+                <p>We believe we have the best hot dogs in Kalamazoo!
+                  <br>
+                  <br>A quarter pound all beef hot dog on a special grilled hot dog bun with chili, cheese, ketchup, mustard, relish, and onion.
+                  <br>
+                  <br>Also comes with chips and two side dishes.
+                  <br>
+                  <br><strong>We grill our buns on site!</strong></p>
+              </div>
+              <div class="item">
+                <h3>Baked Potato Bar with Salad</h3>
+                <h4>$10.50/person</h4>
+                <p>Brought to your business. Includes butter, sour cream, bacon, chili &amp; broccoli, fresh salad items.</p>
+              </div>
+              <div class="item">
+                <h3>Deli Bar</h3>
+                <h4>$9.50/person</h4>
+                <p>Comes with turkey, ham, roast beef and chicken salad. American and Swiss cheese. Tomato, lettuce, onions, pickles, sliced green peppers, mayo, spicy and yellow mustard.</p>
+              </div>
+              <div class="item">
+                <h3>Lunch in a Basket</h3>
+                <h4>$8.50/person</h4>
+                <p>Wraps or sandwiches are arranged in an attractive basket or tray with chips and a side dish.</p>
+              </div>
+              <div class="item">
+                <h3>Signature Soups</h3>
+                <h4>$2.75/person</h4>
+                <p>Chili, Broccoli Cheese, Hot Pepper Crab, Chicken Noodle, and Wisconsin Cheese Soup.
+                  <br>
+                  <br><em>Special soup requests require a 48 hour notice</em></p>
+              </div>
+              <div class="item">
+                <h3>Executive Black Box Lunch</h3>
+                <h4>$7.75/person</h4>
+                <p>Your choice of turkey, ham, roast beef, egg salad, tuna, apple chicken salad, chicken strips, or chicken salad with lettuce, tomato, mustard and mayo as a sandwich or wrap. Wraps include shredded cheese and ranch.
+                  <br>
+                  <br>OR
+                  <br>
+                  <br>A veggie wrap with assorted delicious vegetables. Add guacamole for $0.50.
+                  <br>
+                  <br>* To complete your lunch, you will find chips, a side dish, and dessert.</p>
+              </div>
+              <div class="item">
+                <h3>Kid's Meals</h3>
+                <h4>$4.99/person</h4>
+                <p>Mac and cheese, hot dogs, peanut butter and jelly, 1/4 lb hamburger or Dino Nuggets.
+                  <br>
+                  <br>Includes chips, a cookie, and drink.
+                  <br>
+                  <br>Add fries for $1.00.</p>
+              </div>
+            </div>
           </div>
           <h3 class="accordion-heading">Create-a-Meal</h3>
           <div class="accordion-content">
-            <p>Words</p>
+            <div class="menu-items">
+              <div class="description">
+                <p>Create a customized dinner menu with your own personal selections from the list below. All meals include your choice of 3 of the following side dishes and a variety of assorted dinner rolls.</p>
+                <p>
+                  <ul>
+                    <li>1 Entree Meal $12/person</li>
+                    <li>1 Entree Meal $14/person</li>
+                    <li>3 Entree Meal $16/person</li>
+                  </ul>
+                </p>
+              </div>
+              <div class="item longlist">
+                <h3>Entrees</h3>
+                <p>St. Louis Style BBQ Ribs (Market Price) <i class="fa fa-cutlery"></i></p>
+                <p>Grilled Chicken Breast</p>
+                <p>BBQ Pulled Pork</p>
+                <p>Apple Bourbon Chicken</p>
+                <p>Carved Pork Loin</p>
+                <p>Chicken Monterey</p>
+                <p>Carved Ham</p>
+                <p>BBQ Chicken Breast</p>
+                <p>Carved Turkey</p>
+                <p>BBQ Pulled Chicken</p>
+                <p>Carved Roast Beef</p>
+                <p>Fried Chicken</p>
+                <p>Beef Tenderloin (Market Price)</p>
+                <p>Italian Lasagna</p>
+                <p>Signature Burger</p>
+                <p>Spinach Lasagna</p>
+                <p>Prime Rib (Market Price)</p>
+                <p>Cheese Lasagna</p>
+                <p>New York Strip Steak</p>
+                <p>Stuffed Shells</p>
+                <p>Filet (Market Price)</p>
+                <p>Eggplant Parmesan</p>
+                <p>Grilled Salmon</p>
+                <p>Portabella Mushroom Ravioli</p>
+                <p>Bourbon Salmon</p>
+                <p>White Cheddar Mac</p>
+              </div>
+              <div class="item longlist">
+                <h3>Side Dishes</h3>
+                <p>Signature Items</p>
+                <p>Tossed Salad </p>
+                <p>Roasted Vegetables</p>
+                <p>Caesar Salad </p>
+                <p>Apple Broccoli Salad</p>
+                <p>Salad (spinach-seasonal)</p>
+                <p>Red Skin Potatoes /or Mashed</p>
+                <p>Pasta Salad </p>
+                <p>Green Beans</p>
+                <p>Cole Slaw</p>
+                <p>Macaroni-n-Cheese</p>
+                <p>Baked Potatoes</p>
+                <p>Rice Pilaf</p>
+                <p>Green Bean Medley</p>
+                <p>Pulled Pork Baked Beans</p>
+                <p>Baby Carrots</p>
+                <p>Potato Salad</p>
+                <p>Mashed Potatoes and Gravy</p>
+                <p>Macaroni Salad</p>
+                <p>German Potato Salad</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
