@@ -4,15 +4,18 @@
   }
 }
 
-@media all and (max-width: 959px) and (min-width: 600px) {
+@media all and (max-width: 959px) and (min-width: 609px) {
   body {
     font-size: 16px;
   }
 }
 
-@media all and (max-width: 599px) and (min-width: 320px) {
+@media all and (max-width: 608px) and (min-width: 320px) {
   body {
     font-size: 12px;
+  }
+  .menu-img {
+    display: none;
   }
 }
 
@@ -45,19 +48,14 @@ nav a {
 body {
   color: #444;
   line-height: 1.2;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
   font-family: 'PT Sans Narrow', sans-serif;
   background-color: white;
   background-image: url("../img/table-cloth.jpg");
   background-attachment: fixed;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   margin: 0;
   padding-top: 78px;
   width: 100%;
@@ -69,48 +67,9 @@ h1 {
   color: #666;
 }
 
-.banner {
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -ms-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  height: calc(100vh - 78px);
-  background-image: url("../img/space.jpg");
-  background-position: left bottom;
-  background-size: cover;
-}
-
-.caption {
-  margin: 0 auto;
-  color: white;
-  background: none;
-  line-height: 1.1;
-  text-align: center;
-  text-shadow: 1px 1px 1px #444, 2px 2px 1px #666;
-  box-shadow: none;
-}
-
-.h1-box {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 6em;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  box-shadow: 2px 2px 8px #444;
-  margin: 3em 0;
-}
-
 nav {
-  z-index: 1;
-  box-shadow: 2px 2px 8px #444;
+  z-index: 20;
+  box-shadow: 2px 2px 8px #000;
   position: fixed;
   top: 0;
   min-width: 100%;
@@ -160,31 +119,30 @@ nav a {
   color: white;
 }
 
-section {
-  width: 100vw;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+.banner {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  -ms-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  -ms-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  text-align: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -ms-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
+  flex-flow: column nowrap;
   justify-content: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  align-content: center;
+  width: 100%;
+  height: calc(100vh - 78px);
+  background-image: url("../img/space.jpg");
+  background-position: left bottom;
+  background-size: cover;
+  box-shadow: 4px 4px 16px #444;
+}
+
+.caption {
+  font-size: 4.768em;
+  color: white;
+  background: none;
+  line-height: 1.1;
+  text-align: center;
+  text-shadow: 1px 1px 1px #444, 2px 2px 1px #666;
+  box-shadow: none;
+}
+
+section {
 }
 
 .anchor {
@@ -196,6 +154,19 @@ section {
   visibility: hidden;
 }
 
+.h1-box {
+  display: flex;
+  width: 100%;
+  height: 6em;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: 2px 2px 8px #444;
+  margin-top: 3em;
+  z-index: 10;
+}
+
 .menu-heading-box {
   display: flex;
   width: 100%;
@@ -205,7 +176,8 @@ section {
   align-items: center;
   background-color: white;
   box-shadow: 2px 2px 8px #444;
-  margin: 3em 0;
+  margin-top: 3em;
+  z-index: 10;
 }
 
 .menu-gap {
@@ -214,6 +186,7 @@ section {
 }
 
 .menu-heading {
+  text-align: center;
   font-size: 2.441em;
   font-weight: bold;
   text-shadow: 1px 1px 1px #444, 2px 2px 1px #666;
@@ -245,103 +218,75 @@ section {
 }
 
 .block {
-  max-width: calc(100vw - 8%);
-  flex: 1 1 25%;
-  background-color: lightgrey;
-  margin: 0 2%;
+  width: calc(100vw - 8%);
+  margin: 0 4%;
+  background-color: #e0dcca;
   box-shadow: 2px 2px 8px #444;
-  padding: 0 20px 20px 20px;
 }
 
 .block p {
   text-align: left;
 }
 
-.accordion-block {
-  margin: 4% 0;
+.accordion {
   box-shadow: 2px 2px 8px #444;
 }
 
-.accordion {
-  background-color: white;
+.accordion-heading {
+  background-color: #F5F3ED;
   color: #444;
-  padding: 2%;
-  cursor: pointer;
-  min-width: 100%;
-  text-align: center;
-  border: none;
-  transition: 0.4s;
-  margin: 0;
+  outline: 1px solid #BBB;
 }
 
-.active,
-.accordion:hover {
-  background-color: lightgrey;
-}
-
-.panel {
+.accordion-content {
   display: flex;
   flex-flow: row nowrap;
-  padding: 0 10px;
-  max-width: 100%;
-  max-height: 0;
-  transition: 0.6s ease-in-out;
-  opacity: 0;
-  filter: alpha(opacity=0);
-}
-
-.show {
-  /*display: flex;*/
-  /*flex-flow: row nowrap;*/
-  /*padding: 0 10px;*/
-  /*max-width: 100%;*/
-  max-height: 200vh;
-  opacity: 1;
-}
-
-.panel-bottom {
-  height: 20px;
+  background-color: #EAE8DC;
   width: 100%;
 }
-
+.accordion:hover {
+  background-color: #E0DCCA;
+}
 .menu-items {
-  flex: 1 0;
   display: flex;
   flex-flow: row wrap;
-  width: 100%;
+  justify-content: space-between;
+  flex: 2 0;
+  max-height: 200vh;
 }
 
 .menu-caption {
-  width: 100%;
   text-align: center;
-  margin-top: 20px;
+  width: 100%;
+  margin: 1em 1em 0 1em;
 }
 
 .menu-img {
   flex: 1 0;
   background-image: url("../img/continental-breakfast-tall.jpg");
-  margin: 10px;
   box-shadow: 2px 2px 8px #666;
 }
 
 .item {
-  background-color: white;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  margin: 10px;
-  flex: 1 0 20%;
-  padding: 10px 20px;
-  cursor: pointer;
+  flex-flow: column nowrap;
+  justify-content: stretch;
+  align-items: center;
+  flex: 1 0 40%;
+  margin: 1em;
+  padding: 1em;
+  background-color: white;
   box-shadow: 2px 2px 8px #666;
-  text-align: left;
 }
-
+.item-long {
+  flex: 2 0 40%;
+}
+.full-width {
+  flex: 1 0 80%;
+}
 .item-img {
-  width: 100%;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
+  width: 280px;
+  height: 210px;
 }
 
 .payment {
@@ -414,32 +359,16 @@ figure ul {
 
 footer {
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   background-color: #333;
   color: white;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -ms-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -ms-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
   height: 60px;
   margin-top: 60px;
 }
 
 footer p {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 

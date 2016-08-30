@@ -11,17 +11,14 @@ $(document).ready(function() {
             }
         }
     });
-    $('.item-hover').hover(function(e) {
-      $(this).children('.to-hide').toggleClass('hidden-item');
+    $(function() {
+        $( "#accordion" ).accordion({
+            collapsable: true,
+            heightStyle: 'content'
+        });
+        $('#accordion').bind('accordionactivate', function(event, ui) {
+            $( ui.newHeader ).ScrollTo({
+            });
+        });
     });
-
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-    for (i = 0; i < acc.length; i++) {
-        acc[i].onclick = function() {
-            this.classList.toggle("active");
-            this.nextElementSibling.classList.toggle("show");
-            this.lastElementSibling.classList.toggle("show");
-        };
-    }
-});
+})
