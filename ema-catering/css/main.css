@@ -48,10 +48,8 @@ nav a {
 body {
   color: #444;
   line-height: 1.2;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
+  flex-flow: row wrap;
   font-family: 'PT Sans Narrow', sans-serif;
   background-color: white;
   background-image: url("../img/table-cloth.jpg");
@@ -74,15 +72,12 @@ nav {
   box-shadow: 2px 2px 8px #000;
   position: fixed;
   top: 0;
+  width: 100%;
   min-width: 100%;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: start;
-      justify-content: flex-start;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
   max-height: 60px;
   padding: 15px;
   background-color: #2F4070;
@@ -94,18 +89,12 @@ nav {
   height: 4em;
   margin-left: 1em;
   margin-right: auto;
-  -ms-flex-preferred-size: auto;
-      flex-basis: auto;
 }
 
 nav ul {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
+  flex-flow: row wrap;
   margin-right: 2em;
-  -ms-flex-preferred-size: auto;
-      flex-basis: auto;
 }
 
 nav li {
@@ -132,14 +121,10 @@ nav a {
 }
 
 .banner {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: column nowrap;
-      flex-flow: column nowrap;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
   width: 100%;
   height: calc(100vh - 78px);
   background-image: url("../img/space.jpg");
@@ -173,16 +158,12 @@ section {
 
 .h1-box {
   position: relative;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 6em;
-  -ms-flex-flow: row nowrap;
-      flex-flow: row nowrap;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   background-color: white;
   box-shadow: 2px 2px 8px #444;
   margin-top: 3em;
@@ -191,16 +172,12 @@ section {
 
 .menu-heading-box {
   position: relative;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 6em;
-  -ms-flex-flow: row nowrap;
-      flex-flow: row nowrap;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   background-color: white;
   box-shadow: 2px 2px 8px #444;
   margin-top: 3em;
@@ -279,22 +256,16 @@ section {
   background-color: #E0DCCA;
 }
 .accordion-content {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row nowrap;
-      flex-flow: row nowrap;
+  flex-flow: row nowrap;
   background-color: #EAE8DC;
   width: 100%;
 }
 .menu-items {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex: 2 0;
-      flex: 2 0;
+  flex-flow: row wrap;
+  justify-content: center;
+  flex: 2 0;
   padding: 0.5em;
   /* max-height: 230vh; */
 }
@@ -306,21 +277,16 @@ section {
 }
 
 .menu-img {
-  -ms-flex: 1 0;
-      flex: 1 0;
+  flex: 1 0;
   background-image: url("../img/continental-breakfast-tall.jpg");
   box-shadow: 2px 2px 8px #666;
 }
 
 .item {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: column nowrap;
-      flex-flow: column nowrap;
-  -ms-flex-pack: stretch;
-      justify-content: stretch;
-  -ms-flex-align: center;
-      align-items: center;
+  flex-flow: column nowrap;
+  justify-content: stretch;
+  align-items: center;
   width: 16em;
   margin: 0.5em;
   padding: 1em;
@@ -328,18 +294,15 @@ section {
   box-shadow: 2px 2px 8px #666;
 }
 .full-width {
-  -ms-flex: 1 0 80%;
-      flex: 1 0 80%;
+  flex: 1 0 80%;
 }
 .item-img {
   width: 15em;
   height: 11.25em;
 }
 .payment-block {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row nowrap;
-      flex-flow: row nowrap;
+  flex-flow: row nowrap;
   width: 100%;
 }
 .payment {
@@ -371,8 +334,7 @@ section {
   margin: 0 0 10px 0;
 }
 .item-box {
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
+  flex-flow: row wrap;
   text-align: left;
 }
 .item-box p {
@@ -381,13 +343,9 @@ section {
   margin-bottom: 1em;
 }
 .longlist {
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  -ms-flex-align: baseline;
-      -ms-grid-row-align: baseline;
-      align-items: baseline;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: baseline;
   width: auto;
 }
 .longlist h3 {
@@ -395,18 +353,15 @@ section {
   width: 100%;
 }
 .longlist p {
-  -ms-flex: 1 0 20%;
-      flex: 1 0 20%;
+  flex: 1 0 20%;
   width: auto;
   padding: 0;
   margin: 0.5em 0.2em;
 }
 
 figure {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
+  flex-flow: row wrap;
   margin: 0;
   padding-top: 10px;
 }
@@ -439,20 +394,16 @@ figure ul {
 
 footer {
   width: 100%;
-  display: -ms-flexbox;
   display: flex;
   background-color: #333;
   color: white;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
+  justify-content: center;
+  align-items: center;
   height: 60px;
   margin-top: 60px;
 }
 
 footer p {
-  display: -ms-flexbox;
   display: flex;
 }
 
