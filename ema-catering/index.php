@@ -344,13 +344,13 @@
             <h2>Send Us a Message</h2>
             <form class="email" action="email.php" method="post">
               <label for="#name">Name</label>
-                <input id="name" type="text" name="name" autocomplete="true" required="" placeholder="Mike Leeuw">
+                <input id="name" type="text" name="name" required="" placeholder="Mike Leeuw">
               <label for="#email">Email</label>
-                <input id="email" type="email" name="email" autocomplete="true" required="" pattern="(?!(^[.-].*|[^@]*[.-]@|.*\.{2,}.*)|^.{254}.)([a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@)(?!-.*|.*-\.)([a-zA-Z0-9-]{1,63}\.)+[a-zA-Z]{2,15}" placeholder="mike@leeuw.com">
+                <input id="email" type="email" name="email" required="" pattern="(?!(^[.-].*|[^@]*[.-]@|.*\.{2,}.*)|^.{254}.)([a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@)(?!-.*|.*-\.)([a-zA-Z0-9-]{1,63}\.)+[a-zA-Z]{2,15}" placeholder="mike@leeuw.com">
               <label for="#phone">Phone Number</label>
-                <input id="phone" type="phone" name="phone" autocomplete="true" required="" pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$" placeholder="(269) 344-1415">
+                <input id="phone" type="phone" name="phone" required="" pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$" placeholder="(269) 344-1415">
               <label for="#message">Message</label>
-                <textarea id="message" type="textarea" name="message" autocomplete="true" required="" placeholder="Please let us know how we can help you."></textarea>
+                <textarea id="message" type="textarea" name="message" required="" placeholder="Please let us know how we can help you."></textarea>
               <button id="email-submit" type="submit" value="Submit"><i class=""></i><span>Submit</span></button>
             </form>
           </div>
