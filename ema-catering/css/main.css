@@ -55,7 +55,7 @@ body {
   background-color: white;
   background-image: url("../img/table-cloth.jpg");
   background-attachment: fixed;
-  background-size: cover;
+  background-size: 100vw;
   background-repeat: repeat;
   margin: 0;
   padding-top: 78px;
