@@ -38,7 +38,8 @@ h4 {
 p,
 li,
 a,
-input {
+input,
+textarea {
   font-size: 1em;
 }
 nav a {
@@ -73,37 +74,40 @@ nav {
   position: fixed;
   top: 0;
   min-width: 100%;
-  max-height: 90px;
+  max-height: 80px;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   padding: 15px;
   background-color: #2F4070;
   color: white;
 }
 
 .logo {
-  flex: 0 0 auto;
+  flex: 1 1 auto;
   height: 4em;
   margin-left: 1em;
   margin-right: auto;
 }
+.logo img {
+  height: 4em;
+}
 
 nav ul {
   display: flex;
-  flex-flow: row wrap;
-  flex: 1 0 auto;
+  flex-flow: row nowrap;
+  flex: 0 1 auto;
   margin-right: 2em;
   margin-left: auto;
 }
 
 nav li {
   display: inline-block;
-  flex: 1 0 auto;
+  flex: 1 1 auto;
   border-radius: 0.5em;
+  width: 5em;
   margin: 0 0.5em;
-  padding: 0.5em;
 }
 
 nav li:hover {
@@ -117,6 +121,7 @@ nav li:active {
 nav a {
   display: inline-block;
   min-width: 100%;
+  margin: 0.5em 0;
   text-align: center;
   text-decoration: none;
   color: white;
@@ -202,13 +207,14 @@ section {
 
 .menu-print {
   position: relative;
-  width: 20%;
+  width: 12%;
   margin-left: auto;
-  margin-right: 1em;
+  margin-right: 3em;
   padding: 0.5em 0;
   border-radius: 0.5em;
   display: inline-block;
   text-decoration: none;
+  text-align: center;
   color: #666;
 }
 
@@ -393,7 +399,84 @@ figure ul {
 .hidden-item {
   display: none;
 }
+.contact-item {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  flex: 1 0;
+  width: auto;
+}
+form {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  margin-top: 1em
+}
+form label {
+  flex: 0 1 20%;
+  max-height: 2em;
+  text-align: right;
+  margin: 0 0.5em 0.5em 0;
+  padding: 0.5em 0;
+}
+form input, form textarea {
+  flex: 0 1 70%;
+  max-height: 2em;
+  color: #444;
+  outline: none;
+  border: 1px solid #BBB;
+  margin-bottom: 0.5em;
+  padding-left: 0.5em;
+  box-shadow: inset 2px 2px 4px #BBB;
+}
+form textarea {
+  max-height: none;
+  min-height: 4em;
+  padding-top: 0.5em;
+  resize: vertical;
+}
+input:focus:invalid {
+  background-color: #F1C4C2;
+}
+input:valid {
+  background-color: #FFF;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+:-moz-placeholder { /* Firefox 18- */
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+#email-submit {
+  position: relative;
+  display: inline-block;
+  background-color: #FFF;
+  padding: 0.5em 0;
+  border: 1px solid #EEE;
+  border-radius: 0.5em;
+  width: 5em;
+  margin: 0 auto;
+  outline: none;
+  font-size: 1em;
+  text-decoration: none;
+  color: #666;
+}
+#email-submit:hover {
+  background-color: #e0dcca;
+  cursor: pointer;
+}
 
+#email-submit:active {
+  position: relative;
+  top: 2px;
+  box-shadow: inset 0 2px 2px 1px #444;
+}
 footer {
   width: 100%;
   display: flex;

@@ -37,7 +37,6 @@
           <a href="#social">Social</a>
         </li>
       </ul>
-      <a href="#"></a>
     </nav>
   </header>
   <main>
@@ -52,14 +51,19 @@
         <h1>About Us</h1>
       </div>
       <div class="block">
-        <h2>Our Story</h2>
-        <p>EMA Enterprises, based in the Kalamazoo, Michigan, is owned and operated by Mike Leeuw. EMA has three divisions; restaurants, catering, and concessions. Currently, EMA owns and operates eight restaurants. EMA also operates a catering company that caters a wide range of events serving 4 to 40,000 people. The concession sector of the company includes Western Michigan University, the Kalamazoo Expo, and the Lansing Airport. Within the Lansing Airport the company franchises a Biggby Coffee.
-          <br>
-          <br> Mike Leeuw began the company in 2006 with one restaurant, and has continued to grow the company into what EMA is today. All three children have been heavily involved in the growing of the company, and continue to work for EMA when they return home from their respective locations around the country.</p>
-      </div>
-      <div class="block">
-        <h2>Our Story</h2>
-        <p>People and places related to the restaurant</p>
+        <div class="menu-items">
+          <div class="item">
+            <h2>Our Story</h2>
+            <p>EMA Enterprises, based in the Kalamazoo, Michigan, is owned and operated by Mike Leeuw. EMA has three divisions; restaurants, catering, and concessions. Currently, EMA owns and operates eight restaurants. EMA also operates a catering company that caters a wide range of events serving 4 to 40,000 people. The concession sector of the company includes Western Michigan University, the Kalamazoo Expo, and the Lansing Airport. Within the Lansing Airport the company franchises a Biggby Coffee.
+              <br>
+              <br> Mike Leeuw began the company in 2006 with one restaurant, and has continued to grow the company into what EMA is today. All three children have been heavily involved in the growing of the company, and continue to work for EMA when they return home from their respective locations around the country.</p>
+          </div>
+          <div class="item">
+            <h2>Heading</h2>
+            <p>Words and words and words and...</p>
+            <img class="item-img" src="img/continental-breakfast.jpg" alt="continental-breakfast">
+          </div>
+        </div>
       </div>
     </section>
     <span id="menu" class="anchor"> </span>
@@ -335,7 +339,29 @@
         <h1>Contact</h1>
       </div>
       <div class="block">
-        <p>A list of the food we serve</p>
+        <div class="menu-items">
+          <div class="item contact-item">
+            <h2>Send Us a Message</h2>
+            <form class="email" action="email.php" method="post">
+              <label for="#name">Name</label>
+                <input id="name" type="text" name="name" autocomplete="true" required="" placeholder="Mike Leeuw">
+              <label for="#email">Email</label>
+                <input id="email" type="email" name="email" autocomplete="true" required="" pattern="(?!(^[.-].*|[^@]*[.-]@|.*\.{2,}.*)|^.{254}.)([a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@)(?!-.*|.*-\.)([a-zA-Z0-9-]{1,63}\.)+[a-zA-Z]{2,15}" placeholder="mike@leeuw.com">
+              <label for="#phone">Phone Number</label>
+                <input id="phone" type="phone" name="phone" autocomplete="true" required="" pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$" placeholder="(269) 344-1415">
+              <label for="#message">Message</label>
+                <textarea id="message" type="textarea" name="message" autocomplete="true" required="" placeholder="Please let us know how we can help you."></textarea>
+              <button id="email-submit" type="submit" value="Submit"><i class=""></i><span>Submit</span></button>
+            </form>
+          </div>
+          <div class="item contact-item">
+            <h2>Get in Touch</h2>
+            <p>4010 Gull rd. Kalamazoo, MI</p>
+            <p>
+              <a href="tel:2693441415"><i class="fa fa-phone"></i> (269) 344-1415</a>
+            </p>
+          </div>
+        </div>
       </div>
     </section>
     <span id="social" class="anchor"> </span>
@@ -344,7 +370,7 @@
         <h1>Social</h1>
       </div>
       <div class="block">
-        <p>A list of the food we serve</p>
+        <p>Some words about other words.</p>
       </div>
     </section>
   </main>

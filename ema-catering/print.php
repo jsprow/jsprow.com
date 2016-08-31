@@ -6,81 +6,64 @@
   	<title>EMA Catering Menu</title>
 
 	<style>
-	body {
-	    font-size: 16px;
-		font-family: 'PT Sans Narrow', sans-serif;
-	}
-	header {
-		text-align: center;
-		width: 100%;
-	}
-	h1, h2, h3, h4, p, ul, li {
-		margin: 0;
-	}
-	h1 {
-		width: 100%;
-	    font-size: 3.236em;
-	}
-	h2 {
-		width: 100%;
-	}
-	h3, h4 {
-		max-width: 100%;
-	}
-	p, li {
-		display: inline-block;
-		font-size: 1em;
-    	line-height: 1.618em;
-	}
-	.printable {
-		page-break-inside: avoid;
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-between;
-		width: 100%;
-		max-height: 300vh;
-	}
-	.item {
-		display: flex;
-		flex-flow: column wrap;
-		flex: 1 1 25%;
-		outline: 1px solid black;
-		padding: 1%;
-		margin: 1%;
-		font-size: 80%;
-	}
-	.item li, .description li {
-		padding: 0 1em;
-		border-right: 1px solid black;
-	}
-	.item li:first-of-type, .description li:first-of-type {
-		border-left: 1px solid black;
-	}
-	.description {
-		display: block;
-		width: 100%;
-	}
-	.longlist {
-		max-height: 30vh;
-	}
-	/*@media all and (min-width: 960px) {
-	    body{
-	        font-size: 18px;
-    	}
-	}
-	 
-	@media all and (max-width: 959px) and (min-width: 600px) {
-	    body{
-	        font-size: 16px;
-	    }
-	}
-	 
-	@media all and (max-width: 599px) and (min-width: 320px) {
-	    body{
-	        font-size: 12px;
-	    }
-	 
-	}*/
+		body {
+		    font-size: 16px;
+			font-family: 'PT Sans Narrow', sans-serif;
+			width: 95%;
+		}
+		header {
+			text-align: center;
+			width: 100%;
+		}
+		h1, h2, h3, h4, p, ul, li {
+			margin: 0;
+		}
+		h1 {
+			width: 100%;
+		    font-size: 3.236em;
+		}
+		h2 {
+			width: 100%;
+		}
+		h3, h4 {
+			max-width: 100%;
+		}
+		p, li {
+			display: inline-block;
+			font-size: 1em;
+	    	line-height: 1.618em;
+		}
+		.printable {
+			page-break-inside: avoid;
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-flow: row wrap;
+			    flex-flow: row wrap;
+			-ms-flex-pack: justify;
+			    justify-content: space-between;
+			width: 100%;
+		}
+		.item {
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-flow: column wrap;
+			    flex-flow: column wrap;
+			-ms-flex: 1 1 25%;
+			    flex: 1 1 25%;
+			outline: 1px solid black;
+			padding: 1%;
+			margin: 1%;
+			font-size: 80%;
+		}
+		.item li, .description li {
+			padding: 0 1em;
+		}
+		.description {
+			display: block;
+			width: 100%;
+		}
+		.longlist {
+		}
 	</style>
 </head>
 <body>
