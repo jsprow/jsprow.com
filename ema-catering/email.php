@@ -13,21 +13,20 @@ Phone: $phone
 
 Message:
 $message
-
 ";
 
 /* Send the message using mail() function */
 mail($to, $subject, $message);
 
 /* Redirect visitor to the thank you page */
-// header('Location: thanks.html');
-// exit();
-
-echo '<script language="javascript">';
-echo 'alert("Thank you for contacting us. We will get back to you shortly.")';
-echo '</script>';
-header('Location: index.php');
+header('Location: thanks.html');
 exit();
+
+// echo '<script language="javascript">';
+// echo 'alert("Thank you for contacting us. We will get back to you shortly.")';
+// echo '</script>';
+// header('Location: index.php');
+// exit();
 
 /* Functions we used */
 function check_input($data, $problem='')
