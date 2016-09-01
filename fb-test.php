@@ -89,3 +89,4 @@ if ( isset( $session ) ) {
 			echo 'Facebook (get) request error: '.$e->getMessage();
 		}
 	}
+}
