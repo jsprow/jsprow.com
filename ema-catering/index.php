@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name=viewport content="width=device-width, initial-scale=1">  
-  
+
   <title>EMA Catering</title>
 
   <link async rel="stylesheet" href="css/reset.css">
@@ -348,9 +348,6 @@
             <h2>Our Location</h2>
             <div class="map-container">
               <div class="map">
-                <div class="map-caption">
-                  <strong><h2>Click To Use</h2></strong>
-                </div>
                 <iframe height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed/v1/search?q=4010+Gull+Road,+Kalamazoo,+MI,+United+States&amp;key=AIzaSyCCGx7iveK21dme8OuLgX9Je7TUDDCw3_A"></iframe>
               </div>
             </div>

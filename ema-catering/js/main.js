@@ -21,12 +21,6 @@ $(document).ready(function() {
   $('.map-container').hover(function() {
         $(this).toggleClass('map-hover');
     });
-  $('.map').hover(function() {
-        $(this).find('.map-caption').fadeIn();
-    });
-  $('.map-container').click(function() {
-        $(this).find('map-caption').fadeOut();
-  })
   $(function() {
     $("#accordion").accordion({
       autoHeight: false,
