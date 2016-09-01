@@ -145,12 +145,12 @@ nav {
 
 .logo {
   flex: 1 1 auto;
-  height: 4em;
+  max-height: 4em;
   margin-left: 1em;
   margin-right: auto;
 }
 .logo img {
-  height: 4em;
+  max-height: 4em;
 }
 
 nav ul {
