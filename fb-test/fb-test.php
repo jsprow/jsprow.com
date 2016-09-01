@@ -17,9 +17,9 @@
       function (response) {
         if (response && !response.error) {
           /* handle the result */
-          alert('success');
+          console.log('success');
         } else {
-          alert('failure');
+          console.log('failure');
         }
       }
     );
