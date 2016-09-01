@@ -12,7 +12,7 @@ $api_key = '1803330163281004';
 $api_secret = '69548fe6ce9df357f079f61d2c760f8d';
 $redirect_login_url = 'https://jsprow.com/fb-test.php';
 
-/ initialize your app using your key and secret
+// initialize your app using your key and secret
 FacebookSession::setDefaultApplication($api_key, $api_secret);
 
 // create a helper opject which is needed to create a login URL
