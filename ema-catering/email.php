@@ -10,6 +10,7 @@ $email = check_input($_POST['email'], "Enter a valid email address");
 $phone = check_input($_POST['phone'], "Enter a valid phone number");
 $message = check_input($_POST['message'], "Write your message");
 
+$subject = "Catering Email from $name"
 // /* If e-mail is not valid show error message */
 // if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email))
 // {
@@ -21,7 +22,6 @@ $message = "
 Customer Name: $name
 E-mail: $email
 Phone: $phone
-Subject: EMA Catering Website email from $email
 
 Message:
 $message

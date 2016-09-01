@@ -19,8 +19,8 @@ $(document).ready(function() {
       $(this).find('iframe').removeClass('clicked')
     });
   $('.map-container').hover(function() {
-        $(this).toggleClass('map-hover');
-    });
+    $(this).toggleClass('map-hover');
+  });
   $(function() {
     $("#accordion").accordion({
       autoHeight: false,

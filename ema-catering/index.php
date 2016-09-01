@@ -11,6 +11,10 @@
   <link async rel="stylesheet" href="css/main.css">
   <link async rel="shortcut icon" href="favicon.ico">
   <link async rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script src="js/main.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -372,10 +376,6 @@
       </script>
     </p>
   </footer>
-  <script async src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous" type="text/javascript"></script>
-  <script async src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
-  <script async src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
-  <script async src="js/main.js" type="text/javascript"></script>
 </body>
 
 </html>
