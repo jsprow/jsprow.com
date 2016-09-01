@@ -25,6 +25,8 @@ h1 {
 
 h2 {
   font-size: 1.953em;
+  width: 100%;
+  text-align: center;
 }
 
 h3 {
@@ -52,11 +54,6 @@ body {
   display: flex;
   flex-flow: row wrap;
   font-family: 'PT Sans Narrow', sans-serif;
-/*   background-color: white;
-  background-image: url("../img/table-cloth.jpg");
-  background-attachment: fixed;
-  background-size: 100vw;
-  background-repeat: repeat; */
   background-color: rgb(136, 0, 0);
   background-image:
     -webkit-linear-gradient(
@@ -118,6 +115,7 @@ body {
       rgba(136, 0, 0, 0.7) 100%
       );
       background-size: 100px 100px;
+  background-attachment: fixed;
   margin: 0;
   padding-top: 78px;
   width: 100%;
@@ -169,6 +167,7 @@ nav li {
   border-radius: 0.5em;
   width: 5em;
   margin: 0 0.5em;
+  padding: 0.5em 0;
 }
 
 nav li:hover {
@@ -178,11 +177,12 @@ nav li:hover {
 nav li:active {
   box-shadow: inset 0 2px 2px 1px #111;
 }
-
+nav li:active a {
+  transform: translateY(2px);
+}
 nav a {
   display: inline-block;
   min-width: 100%;
-  margin: 0.5em 0;
   text-align: center;
   text-decoration: none;
   color: white;
@@ -298,11 +298,6 @@ section {
   z-index: 5;
 }
 
-.block p {
-  text-align: left;
-  margin: 1em;
-}
-
 .accordion {
   position: relative;
   box-shadow: 2px 2px 8px #444;
@@ -336,13 +331,23 @@ section {
   justify-content: center;
   flex: 2 0;
   padding: 0.5em;
-  /* max-height: 230vh; */
 }
 
 .menu-caption {
   text-align: center;
   width: 100%;
-  margin: 1em 1em 0 1em;
+  margin: 1em;
+}
+
+.menu-caption ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  margin-top: 1em;
+}
+.menu-caption ul li {
+  display: inline-block;
+  margin: 0 auto;
 }
 
 .menu-img {
@@ -354,6 +359,7 @@ section {
 .item {
   display: flex;
   flex-flow: column nowrap;
+  flex: 1 0 25%;
   justify-content: stretch;
   align-items: center;
   width: 16em;
@@ -368,6 +374,7 @@ section {
 .item-img {
   width: 15em;
   height: 11.25em;
+  margin-bottom: 1em;
 }
 .payment-block {
   display: flex;
@@ -386,7 +393,7 @@ section {
 
 .item p {
   width: 100%;
-  padding-top: 10px;
+  margin-bottom: 0.5em;
 }
 
 .item span {
@@ -412,27 +419,32 @@ section {
   margin-bottom: 1em;
 }
 .longlist {
+  display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: baseline;
   align-items: baseline;
-  width: auto;
+  text-align: left;
 }
 .longlist h3 {
   text-align: center;
   width: 100%;
 }
 .longlist p {
-  flex: 1 0 20%;
-  width: auto;
-  padding: 0;
-  margin: 0.5em 0.2em;
+  display: inline-block;
+  flex: 1 0 45%;
+  margin-left: 1em;
 }
-
+.longlist .fa {
+  font-size: 70%;
+}
+.signature {
+  color: rgba(136, 0, 0, 0.7);
+}
 figure {
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-evenly;
   margin: 0;
-  padding-top: 10px;
 }
 
 figure div {
@@ -446,19 +458,7 @@ figcaption {
 
 figure ul {
   list-style-type: none;
-}
-
-.to-hide {
-  display: block;
-  max-width: 25%;
-  position: absolute;
-  background: white;
-  padding: 0 2% 2% 2%;
-  box-shadow: 2px 2px 8px #444;
-}
-
-.hidden-item {
-  display: none;
+  margin-right: 1em;
 }
 .contact-item {
   display: flex;
@@ -537,6 +537,75 @@ input:valid {
   position: relative;
   top: 2px;
   box-shadow: inset 0 2px 2px 1px #444;
+}
+.map-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+    margin: 1em 0;
+}
+.map:hover {
+  transform: translate(1px, 2px);
+}
+.map:active {
+  transform: translate(2px, 4px);  
+}
+.map-container.map-hover:before, .map-container.map-hover:after, .map.map-hover:before, .map-hover:after {
+    position: absolute;
+    display: block;
+    box-shadow: 0 0 8px 2px #666;
+    content: '';
+    z-index: 5;
+}
+.map-container.map-hover:before {
+    top: -5px;
+    left: 0;
+    right: 0;
+    height: 5px;
+}
+.map-container.map-hover:after {
+    left: -5px;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+}
+.map.map-hover:before{
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 5px;
+}
+.map.map-hover:after{
+    left: -5px;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+}
+#map {
+    width: inherit;
+    height: inherit;
+}
+.map-caption {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 3em;
+  top: calc(50% - 1.5em);
+  text-align: center;
+  color: #FFF;
+  text-shadow: 0 0 1px #666, 0 0 20px #2F4070;
+  z-index: 10;
+}
+.map iframe {
+  width: 100%;
+  display: block;
+  pointer-events: none;
+  position: relative; /* IE needs a position other than static */
+  z-index: 0;
+}
+.map iframe.clicked{
+  pointer-events: auto;
 }
 footer {
   width: 100%;

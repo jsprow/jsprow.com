@@ -85,8 +85,7 @@
       <div class="item">
         <h3>Breakfast Sandwich or Wrap</h3>
         <h4>$9.50/person</h4>
-        <p>
-          Homemade fresh English muffin or tortilla with egg, sausage and cheese.</p>
+        <p>Homemade fresh English muffin or tortilla with egg, sausage and cheese.</p>
       </div>
       <div class="item">
         <h3>Our Famous Biscuits and Gravy</h3>
