@@ -48,8 +48,6 @@
 
   curl_close ($ch);
 
-  if ($server_output == "OK") { "yay" } else { "boo" };
-
   die();
 ?> 
   curl -F 'method=get'\
