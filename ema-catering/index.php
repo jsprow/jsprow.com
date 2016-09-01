@@ -3,16 +3,14 @@
 
 <head>
   <meta charset="utf-8">
-  <meta item="viewport" content="width=device-width, initial-scale=1 />
+  <meta item="viewport" content="width=device-width, initial-scale=1">
+  
   <title>EMA Catering</title>
-  <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous" type="text/javascript"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
-  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
-  <script src="js/main.js" type="text/javascript"></script>
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <link async rel="stylesheet" href="css/reset.css">
+  <link async rel="stylesheet" href="css/main.css">
+  <link async rel="shortcut icon" href="favicon.ico">
+  <link async rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -377,6 +375,10 @@
       </script>
     </p>
   </footer>
+  <script async src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous" type="text/javascript"></script>
+  <script async src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+  <script async src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+  <script async src="js/main.js" type="text/javascript"></script>
 </body>
 
 </html>
