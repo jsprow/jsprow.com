@@ -21,10 +21,10 @@
         <a href="#table">Table</a>
       </li>
     </ul>
-  </nav>
     <a id="form"></a>
     <a id="newname"></a>
     <a id="table"></a>
+  </nav>
   <section class="shade">
     <img class="arrow" src="php/img/Black_Down_Arrow.png">
     <div class="bar bar1"></div>
