@@ -1,7 +1,8 @@
 body {
     background-color: #E1DEDB;
     font-family: 'PT Sans', Arial, sans-serif;
-    font-size: 11pt;
+    font-size: 16px;
+    width: 100vw;
     height: 422.5vh;
     margin: 0;
 }
