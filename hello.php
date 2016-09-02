@@ -136,14 +136,14 @@
     $(window).scroll(function() {
       var height = $(window).scrollTop();
       var position = $('.second').position().top;
-      // if(position <= height) {
-      //   $('.first').css('display','none');
-      //   $('.third').css('display','flex');
-      // };
-      // if(position > height) {
-      //   $('.first').css('display','flex');
-      //   $('.third').css('display','none');
-      // };
+      if(position <= height) {
+        $('.first').css('display','none');
+        $('.third').css('display','flex');
+      };
+      if(position > height) {
+        $('.first').css('display','flex');
+        $('.third').css('display','none');
+      };
       console.log(height);
       console.log(position)
     });

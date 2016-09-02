@@ -6,7 +6,7 @@
   
 </head>
 <?php
-  $con = mysqli_connect('localhost', "root", "hyha2527", "form");
+  $con = mysqli_connect('localhost', "root", "root", "form");
 
   if($con === false) {
     echo "Error connecting";
@@ -15,7 +15,7 @@
   $YourName = $_REQUEST['YourName'] ;
   $FavoriteWord = $_REQUEST['FavoriteWord'] ;
 
-  $sql = "INSERT INTO words (your_name, favorite_word) VALUES ('$YourName', '$FavoriteWord')";
+  $sql = "INSERT INTO badwords (your_name, favorite_word) VALUES ('$YourName', '$FavoriteWord')";
 
   if ($con->query($sql) === TRUE) {
     echo "You put the thing in the thing";
