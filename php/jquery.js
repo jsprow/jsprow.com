@@ -1,16 +1,9 @@
 $(function() {
-    var pull = $('#pull');
-    menu = $('nav ul');
-    menuHeight = menu.height();
-
-    $(pull).on('click', function(e) {
-        e.preventDefault();
-        menu.slideToggle();
-    });
-});
-$(window).resize(function() {
-    var w = $(window).width();
-    if (w > 320 && menu.is(':hidden')) {
-        menu.removeAttr('style');
-    }
+    var waypoint = new Waypoint({
+        element: document.getElementById('basic-waypoint'),
+        handler: function(direction) {
+            $('#form').fadeOut()
+        },
+        offset: 25%
+    })
 });

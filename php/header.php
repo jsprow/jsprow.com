@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Header</title>
+</head>
+<body>
 <header>
   <nav class="clearfix">
     <ul class="clearfix">
@@ -9,3 +15,6 @@
     <a href="#" id="pull">Menu</a>
   </nav>
 </header>
+
+</body>
+</html>
