@@ -44,7 +44,6 @@ section {
     z-index: 10;
 }
 .third {
-    display: none;
     position: fixed;
     z-index: 5;
 }

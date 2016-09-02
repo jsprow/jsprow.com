@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="php/style.css">
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script src="https://s3.amazonaws.com/menumaker/menumaker.min.js"></script>
-  <script src="php/waypoints/lib/jquery.waypoints.js"></script>
 </head>
 
 <body>
@@ -25,7 +24,7 @@
           <p>My <span>name</span> is:</p>
           <select name="YourName">
             <?php
-                $con = mysqli_connect('localhost', "root", "hyha2527", "words");
+                $con = mysqli_connect("'localhost':'8889'", "root", "hyha2527", "words");
 
                 if ($con === false) {
                   echo "Error connecting";
@@ -77,7 +76,7 @@
         <button type="submit" name="submitName">Who Knew?!</button>
       </form>
       <?php
-          $con = mysqli_connect('localhost', "root", "hyha2527", "words");
+          $con = mysqli_connect('localhost', "root", "root", "words");
 
           if ($con === false) {
             echo "Error connecting";
@@ -101,7 +100,7 @@
         ?>
     </div>
   </section>
-  <section id="basic-waypoint" class="third">
+  <section id="summary" class="third">
     <div class="content">
       <h1>Summary</h1>
       <table>
@@ -133,18 +132,18 @@
     </div>
   </section>
   <script type="text/javascript">
-  $(document).ready(function () {
+  $(function () {
     $(window).scroll(function() {
       var height = $(window).scrollTop();
       var position = $('.second').position().top;
-      if(position <= height) {
-        $('.first').css('display','none');
-        $('.third').css('display','flex');
-      };
-      if(position > height) {
-        $('.first').css('display','flex');
-        $('.third').css('display','none');
-      };
+      // if(position <= height) {
+      //   $('.first').css('display','none');
+      //   $('.third').css('display','flex');
+      // };
+      // if(position > height) {
+      //   $('.first').css('display','flex');
+      //   $('.third').css('display','none');
+      // };
       console.log(height);
       console.log(position)
     });
