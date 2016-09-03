@@ -2,7 +2,7 @@
 /* Make sure to set /etc/apache2/envvars APACHE_RUN_USER and GROUP to 'mail' or somesuch */
 
 /* Set e-mail recipient */
-$myemail = "jsprow@gmail.com";
+$myemail = "jleeuw@ema-enterprises.com";
 
 /* Check all form inputs using check_input function */
 $name = check_input($_POST['name'], "Enter your name");

@@ -33,10 +33,10 @@
         <li>
           <a href="#contact">Contact</a>
         </li>
-        <li>
+<!--         <li>
           <a href="#social">Social</a>
         </li>
-      </ul>
+ -->      </ul>
     </nav>
   </header>
   <main>
@@ -360,7 +360,7 @@
       </div>
     </section>
     <span id="social" class="anchor"> </span>
-    <section>
+<!--     <section>
       <div class="h1-box">
         <h1>Social</h1>
       </div>
@@ -368,7 +368,7 @@
         <p>Some words about other words.</p>
       </div>
     </section>
-  </main>
+ -->  </main>
   <footer>
     <p>Designed by KzooToYou &copy;
       <script language="javascript" type="text/javascript">
