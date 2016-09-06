@@ -21,7 +21,7 @@
   <header>
     <nav>
       <div class="logo">
-        <img src="img/ema_catering.svg" alt="" />
+        <img src="img/ema_catering_new.svg" alt="" />
       </div>
       <ul>
         <li>
@@ -42,7 +42,8 @@
   <main>
     <section>
       <div class="banner">
-        <h1 class="caption">EMA Catering</h1>
+<!--         <h1 class="caption">EMA Catering</h1> -->  
+        <img height="50%" src="img/ema_catering_new.svg" alt="" />
       </div>
     </section>
     <span id="about" class="anchor"> </span>
@@ -69,7 +70,6 @@
     <span id="menu" class="anchor"></span>
     <section>
       <div class="menu-heading-box">
-        <div class="menu-gap"></div>
         <div class="menu-heading">Menu</div>
         <iframe src="print.php" style="display:none" name="frame"></iframe>
         <a id="menu-print-button" onclick="frames['frame'].print()" value="menu-print" class="menu-print"><i class="fa fa-print"></i> Click Here to Print</a>

@@ -32,7 +32,7 @@
   <section class="first">
     <div class="content">
       <h1>New Name</h1>
-      <form action="<?php echo $_SERVER[" PHP_SELF "];?>" method=post>
+      <form action="" method="post">
         <h3>Add someone's name to the naughty list</h3>
         <label for="NewName">
           <p>And the next <span>contestant</span> is...</p>
@@ -118,8 +118,8 @@
             $YourName     = $_REQUEST['YourName'];
             $FavoriteWord = $_REQUEST['FavoriteWord'];
 
-            $sql = "INSERT INTO names (name, favorite_word) VALUES ('$YourName', '$FavoriteWord')
-              ON DUPLICATE KEY UPDATE favorite_word='$FavoriteWord'";
+            $sql = "INSERT INTO names (name, word) VALUES ('$YourName', '$FavoriteWord')
+              ON DUPLICATE KEY UPDATE word='$FavoriteWord'";
 
             if ($con->query($sql) === TRUE) {
               echo "You put the thing in the thing";
@@ -154,14 +154,14 @@
                 $con = mysqli_init();
                 $success = mysqli_real_connect($con, $host, $user, $password, $db, $port);
 
-            $sql = "SELECT name, favorite_word FROM names WHERE ((name IS NOT NULL AND name != '' ) AND (favorite_word IS NOT NULL AND favorite_word != '' )) ";
+            $sql = "SELECT name, word FROM names WHERE ((name IS NOT NULL AND name != '' ) AND (word IS NOT NULL AND word != '' )) ";
 
             $result = $con->query($sql);
 
             if ($result->num_rows > 0) {
               while ($row = mysqli_fetch_assoc($result)) {
                 $name = ucwords($row['name']);
-                $word = ucwords($row['favorite_word']);
+                $word = ucwords($row['word']);
                 echo "<tr><td>" . $name . "</td>" . "<td>" . $word . "</td></tr>";
               }
             } else {
