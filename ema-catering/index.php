@@ -54,15 +54,20 @@
       <div class="block">
         <div class="menu-items">
           <div class="item">
+            <h2>Mike</h2>
+            <img class="item-img" src="img/mike_leeuw.gif" alt="mike_leeuw">
+            <p>Something nice to say about Mike</p>
+          </div>
+          <div class="item">
             <h2>Our Story</h2>
             <p>EMA Enterprises, based in the Kalamazoo, Michigan, is owned and operated by Mike Leeuw. EMA has three divisions; restaurants, catering, and concessions. Currently, EMA owns and operates eight restaurants. EMA also operates a catering company that caters a wide range of events serving 4 to 40,000 people. The concession sector of the company includes Western Michigan University, the Kalamazoo Expo, and the Lansing Airport. Within the Lansing Airport the company franchises a Biggby Coffee.
             </p>
             <p>Mike Leeuw began the company in 2006 with one restaurant, and has continued to grow the company into what EMA is today. All three children have been heavily involved in the growing of the company, and continue to work for EMA when they return home from their respective locations around the country.</p>
           </div>
           <div class="item">
-            <h2>Heading</h2>
-            <p>Words and words and words and...</p>
-            <img class="item-img" src="img/continental-breakfast.jpg" alt="continental-breakfast">
+            <h2>Jane</h2>
+            <img class="item-img" src="img/jane_leeuw.gif" alt="jane_leeuw">
+            <p>Something nice to say about Jane</p>
           </div>
         </div>
       </div>
@@ -130,37 +135,37 @@
                 <p>* Fresh fruit, yogurt, and granola available for an additional charge.</p>
               </div>
               <div class="item">
-                <img class="item-img" src="img/continental-breakfast.jpg" alt="continental-breakfast">
+                <img class="item-img" src="img/oatmeal.jpg" alt="oatmeal">
                 <p><span>Oatmeal or Yogurt Bar</span> $9.50/person</p>
                 <p>Your choice of build-your-own oatmeal or yogurt with toppings including fresh fruit, granola, brown sugar and more.</p>
               </div>
               <div class="item">
-                <img class="item-img" src="img/continental-breakfast.jpg" alt="continental-breakfast">
+                <img class="item-img" src="img/breakfast_sandwich.jpg" alt="breakfast sandwich">
                 <p><span>Breakfast Sandwich or Wrap</span> $9.50/person</p>
                 <p>Homemade fresh English muffin or tortilla with egg, sausage and cheese.</p>
               </div>
               <div class="item">
-                <img class="item-img" src="img/continental-breakfast.jpg" alt="continental-breakfast">
+                <img class="item-img" src="img/biscuits.jpg" alt="biscuits">
                 <p><span>Our Famous Biscuits and Gravy</span> $10.50/person</p>
                 <p>Hot biscuits served with our homemade gravy.</p>
               </div>
               <div class="item">
-                <img class="item-img" src="img/continental-breakfast.jpg" alt="continental-breakfast">
+                <img class="item-img" src="img/breakfast_skillet.jpg" alt="breakfast skillet">
                 <p><span>Classic Skillet</span> $10/person</p>
                 <p>Traditional scrambler complete with eggs, hashbrowns, green peppers, and onions, all smothered with melted cheddar cheese.</p>
               </div>
               <div class="item">
-                <img class="item-img" src="img/continental-breakfast.jpg" alt="continental-breakfast">
+                <img class="item-img" src="img/breakfast_casserole.jpg" alt="breakfast casserole">
                 <p><span>Breakfast Casserole</span> $10.75/person</p>
                 <p>EMA's breakfast casserole. Eggs, cheese, bacon, seasoning, and baked to a golden brown. Also available vegetarian.</p>
               </div>
               <div class="item">
-                <img class="item-img" src="img/continental-breakfast.jpg" alt="continental-breakfast">
+                <img class="item-img" src="img/omlette.jpg" alt="omlette">
                 <p><span>Omlette Bar</span> $12.50/person</p>
                 <p>Variety of meat, cheese, and vegetable toppings, cooked to order (18% service charge).</p>
               </div>
               <div class="item">
-                <img class="item-img" src="img/continental-breakfast.jpg" alt="continental-breakfast">
+                <img class="item-img" src="img/bacon.jpg" alt="bacon">
                 <div class="item-box">
                   <p><span>Sides</span> $2/person</p>
                   <figure>
@@ -355,6 +360,10 @@
                 <iframe height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed/v1/search?q=4010+Gull+Road,+Kalamazoo,+MI,+United+States&amp;key=AIzaSyCCGx7iveK21dme8OuLgX9Je7TUDDCw3_A"></iframe>
               </div>
             </div>
+          </div>
+          <div class="item contact-item">
+            <h2>Call Us</h2>
+            <h2><a href="tel:2693441415"><i class="fa fa-phone"></i> (269) 344-1415</a></h2>
           </div>
         </div>
       </div>
