@@ -33,16 +33,12 @@
         <li>
           <a href="#contact">Contact</a>
         </li>
-<!--         <li>
-          <a href="#social">Social</a>
-        </li>
- -->      </ul>
+      </ul>
     </nav>
   </header>
   <main>
     <section>
       <div class="banner">
-<!--         <h1 class="caption">EMA Catering</h1> -->  
         <img height="50%" src="img/ema_catering_new.svg" alt="" />
       </div>
     </section>
@@ -56,7 +52,6 @@
           <div class="item">
             <h2>Mike</h2>
             <img class="item-img" src="img/mike_leeuw.gif" alt="mike_leeuw">
-            <p>Something nice to say about Mike</p>
           </div>
           <div class="item">
             <h2>Our Story</h2>
@@ -67,7 +62,6 @@
           <div class="item">
             <h2>Jane</h2>
             <img class="item-img" src="img/jane_leeuw.gif" alt="jane_leeuw">
-            <p>Something nice to say about Jane</p>
           </div>
         </div>
       </div>
@@ -369,15 +363,7 @@
       </div>
     </section>
     <span id="social" class="anchor"> </span>
-<!--     <section>
-      <div class="h1-box">
-        <h1>Social</h1>
-      </div>
-      <div class="block">
-        <p>Some words about other words.</p>
-      </div>
-    </section>
- -->  </main>
+   </main>
   <footer>
     <p>Designed by KzooToYou &copy;
       <script language="javascript" type="text/javascript">
