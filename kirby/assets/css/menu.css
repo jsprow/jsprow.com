@@ -1,0 +1,36 @@
+body {
+	background-color: #DDD !important;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: stretch;
+}
+body h1 {
+	width: 100%;
+}
+.logo, .logo img {
+	width: 5em !important;
+}
+main {
+	display: flex !important;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+.item {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	flex: 1 0 30%;
+	max-width: 50%;
+	margin: 1em;
+	padding: 1em;
+	background-color: #EEE;
+	box-shadow: 2px 2px 4px #555;
+}
+.item img {
+	width: 100%;
+	box-shadow: 1px 1px 2px #555;
+}
+.item h2 {
+	margin-top: 0.5em;
+	text-shadow: 1px 1px 2px #555;
+}

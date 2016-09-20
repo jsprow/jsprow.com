@@ -1,0 +1,33 @@
+Title: Menu
+
+----
+
+Author: jsprow
+
+----
+
+Items: 
+
+- 
+  item_image: breakfast_sandwich.jpg
+  item_name: Sangwich
+  item_description: Eat it, sucka!
+- 
+  item_image: breakfast_casserole.jpg
+  item_name: Brkfst Casse... BARREL ROLL
+  item_description: |
+    It's in a pan! You're not!
+    
+    Get in the pan!
+- 
+  item_image: pizza_with_tomatoes.jpg
+  item_name: Pizzzzzzzza
+  item_description: '**Eatsa Pizza**'
+- 
+  item_image: oatmeal.jpg
+  item_name: oatmeal
+  item_description: It tastes like oats
+- 
+  item_image: bacon.jpg
+  item_name: Bacon
+  item_description: "It's bacon!!"

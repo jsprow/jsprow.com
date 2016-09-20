@@ -1,0 +1,71 @@
+title: Test
+
+deletable: false
+
+options:
+  preview: true
+
+fields:
+  title:
+    label: Title
+    type: text
+    required: true
+  about:
+    label: About Us
+    type: textarea
+    required: true
+  orderinfo:
+    label: Ordering Information
+    type: structure
+    entry: >
+      {{item_name}}<br />
+      {{item_description}}
+    fields:
+      item_name:
+        label: Item Name
+        type: text
+        required: true
+      item_description:
+        label: Item Description
+        type: textarea
+        required: true  
+  breakfast:
+    label: Early Risers
+    type: structure
+    entry: >
+      {{item_image}}<br />
+      {{item_name}}<br />
+      {{item_description}}
+    fields:
+      item_image:
+        label: Item Image
+        type: image
+        required: true
+      item_name:
+        label: Item Name
+        type: text
+        required: true
+      item_description:
+        label: Item Description
+        type: textarea
+        required: true
+  lunch:
+    label: Lunch Time
+    type: structure
+    entry: >
+      {{item_image}}<br />
+      {{item_name}}<br />
+      {{item_description}}
+    fields:
+      item_image:
+        label: Item Image
+        type: image
+        required: true
+      item_name:
+        label: Item Name
+        type: text
+        required: true
+      item_description:
+        label: Item Description
+        type: textarea
+        required: true

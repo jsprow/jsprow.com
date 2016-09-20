@@ -1,3 +1,4 @@
+<?php require_once( 'couch/cms.php' ); ?>
 <!DOCTYPE html>
 <html>
 
@@ -48,10 +49,12 @@
     </header>
     <div class="printable">
       <h2>Ordering Information</h2>
-      <div class="item">
-        <h3>Food/Beverage</h3>
-        <p>Food and beverage are available in inpidual and group servings. Catering orders come with all necessary plates, cups, utensils, napkins, serving utensils and condiments.</p>
-      </div>
+      <cms:editable name="menuitem" type="text">
+        <div class="item">
+          <h3>Food/Beverage</h3>
+          <p>Food and beverage are available in inpidual and group servings. Catering orders come with all necessary plates, cups, utensils, napkins, serving utensils and condiments.</p>
+        </div>
+      </cms:editable>
       <div class="item">
         <h3>Events with Alcoholic Beverages</h3>
         <p>EMA Catering is only permitted to sell wine and beer off premises. Any alcohol purchases by the customer cannot be returned. EMA Catering will supply a bartender at $20 per hour charge. 1 bartender 100 guests is required.</p>
@@ -305,3 +308,4 @@
 </body>
 
 </html>
+<?php COUCH::invoke(); ?>
