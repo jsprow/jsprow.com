@@ -32,78 +32,38 @@
   <section class="first">
     <div class="content">
       <h1>New Name</h1>
-      <form action="" method="post">
+      <form id="submitName" class="submitName" method="post">
         <h3>Add someone's name to the naughty list</h3>
-        <label for="NewName">
+        <label for="newName">
           <p>And the next <span>contestant</span> is...</p>
         </label>
-        <input type="text" name="NewName">
+        <input type="text" id="newName" name="newName">
         <div class="buttondiv">
-          <button type="submit" name="submitName">Who Knew?!</button>
+          <button id="nameButton" name="submitName" type="submit">Who Knew?!</button>
         </div>
       </form>
-      <?php
-          $user = 'root';
-                $password = 'hyha2527';
-                $db = 'words';
-                $host = 'localhost';
-                $port = 8889;
-
-                $con = mysqli_init();
-                $success = mysqli_real_connect($con, $host, $user, $password, $db, $port);
-
-          if ($con === false) {
-            echo "Error connecting";
-          };
-          if ($_POST) {
-            if (isset($_POST['submitName'])) {
-              $NewName = $_REQUEST['NewName'];
-
-              $sql = "INSERT INTO names (name) VALUES ('$NewName')
-                ON DUPLICATE KEY UPDATE name=name";
-
-              if ($con->query($sql) === TRUE) {
-                echo "You put the thing in the thing";
-                header("Location: " . $_SERVER['PHP_SELF']);
-              } else {
-                echo "Error: " . $sql . "<br>" . $con->error;
-              };
-            };
-          };
-          mysqli_close($con);
-        ?>
     </div>
   </section>
   <section class="second">
     <div class="bar bar2"></div>
     <div class="content">
       <h1>Form</h1>
-      <form action="<?php echo $_SERVER[" PHP_SELF "];?>" method=post>
+      <form id="submitWord" action="" method=post>
         <h3>What's your favorite naughty word?</h3>
-        <label class="dropdown" for="YourName">
+        <label class="dropdown" for="yourName">
           <p>My <span>name</span> is:</p>
         </label>
-        <select name="YourName">
-          <?php
-                $user = 'root';
-                $password = 'hyha2527';
-                $db = 'words';
-                $host = 'localhost';
-                $port = 8889;
+        <select name="yourName">
+<?php
+require 'submit.php';
 
-                $con = mysqli_init();
-                $success = mysqli_real_connect($con, $host, $user, $password, $db, $port);
+$getNames = mysqli_query($con, "SELECT name FROM names ORDER BY name ASC");
 
-                if ($con === false) {
-                  echo "Error connecting";
-                };
-
-                $sql = mysqli_query($con, "SELECT name FROM names ORDER BY name ASC");
-
-                while ($row = mysqli_fetch_array($sql)) {
-                  echo "<option name=\"name\" value=\"" . $row['name'] . "\">" . $row['name'] . "</option>";
-                };
-              ?>
+while ($row = mysqli_fetch_array($getNames)) {
+    echo "<option name=\"name\" value=\"" . $row['name'] . "\">" . $row['name'] . "</option>";
+}
+;
+?>
         </select>
         <label for="FavoriteWord">
           <p>...and this is my <span>dirty word</span>:</p>
@@ -113,23 +73,6 @@
           <button type="submit" name="submitWord">That's Right!</button>
         </div>
       </form>
-      <?php
-          if (isset($_POST['submitWord'])) {
-            $YourName     = $_REQUEST['YourName'];
-            $FavoriteWord = $_REQUEST['FavoriteWord'];
-
-            $sql = "INSERT INTO names (name, word) VALUES ('$YourName', '$FavoriteWord')
-              ON DUPLICATE KEY UPDATE word='$FavoriteWord'";
-
-            if ($con->query($sql) === TRUE) {
-              echo "You put the thing in the thing";
-              header("Location: " . $_SERVER['PHP_SELF']);
-            } else {
-              echo "Error: " . $sql . "<br>" . $con->error;
-            }
-          };
-          mysqli_close($con);
-        ?>
     </div>
     <div class="bar bar3"></div>
   </section>
@@ -142,70 +85,77 @@
             <th>It's name</th>
             <th>A naughty word</th>
           </tr>
+<?php
+if ($result->num_rows > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        $name = ucwords($row['name']);
+        $word = ucwords($row['word']);
+        echo "<tr><td>" . $name . "</td>" . "<td>" . $word . "</td></tr>";
+    }
+} else {
+    echo "0 results";
+}
+;?>
         </thead>
         <tbody>
-          <?php
-            $user = 'root';
-                $password = 'hyha2527';
-                $db = 'words';
-                $host = 'localhost';
-                $port = 8889;
-
-                $con = mysqli_init();
-                $success = mysqli_real_connect($con, $host, $user, $password, $db, $port);
-
-            $sql = "SELECT name, word FROM names WHERE ((name IS NOT NULL AND name != '' ) AND (word IS NOT NULL AND word != '' )) ";
-
-            $result = $con->query($sql);
-
-            if ($result->num_rows > 0) {
-              while ($row = mysqli_fetch_assoc($result)) {
-                $name = ucwords($row['name']);
-                $word = ucwords($row['word']);
-                echo "<tr><td>" . $name . "</td>" . "<td>" . $word . "</td></tr>";
-              }
-            } else {
-              echo "0 results";
-            };
-            mysqli_close($con);
-          ?>
         </tbody>
       </table>
     </div>
   </section>
-  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://s3.amazonaws.com/menumaker/menumaker.min.js"></script>
   <script type="text/javascript">
-  $(function() {
-    $(window).scroll(function() {
-      var height = $(window).scrollTop();
-      var position = $('.second').position().top;
-      if (position <= height) {
-        $('.first').css('display', 'none');
-        $('.third').css('display', 'flex');
-      };
-      if (position > height) {
-        $('.first').css('display', 'flex');
-        $('.third').css('display', 'none');
-      };
-      console.log(height);
-      console.log(position)
-    });
     $(function() {
-      $('a[href*="#"]:not([href="#"])').click(function() {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-          if (target.length) {
-            $('html, body').animate({
-              scrollTop: target.offset().top
-            }, 1000);
-            return false;
+        $('#nameButton').on('click', function(e) {
+          e.preventDefault();
+
+          $("#submitName").css('opacity', '0.5'); //dim submit button
+
+          var myData = 'newName='+ $("#newName").val(); //build a post data structure
+          jQuery.ajax({
+            type: "POST", // HTTP method POST or GET
+            url: "submit.php", //Where to make Ajax calls
+            dataType:"text", // Data type, HTML, json etc.
+            data:myData, //Form variables
+            success:function(response){
+              console.log(response);
+              $("#newName").val(''); //empty text field on successful
+              $("#submitName").css('opacity', '1'); //un-dim submit button
+
+            },
+            error:function (xhr, ajaxOptions, thrownError){
+              $("#submitName").css('opacity', '0.5'); //un-dim submit button
+              console.log(thrownError);
+            }
+          });
+        });
+      $(window).scroll(function() {
+        var height = $(window).scrollTop();
+        var position = $('.second').position().top;
+        if (position <= height) {
+          $('.first').css('display', 'none');
+          $('.third').css('display', 'flex');
+        };
+        if (position > height) {
+          $('.first').css('display', 'flex');
+          $('.third').css('display', 'none');
+        };
+      });
+      $(function() {
+        $('a[href*="#"]:not([href="#"])').click(function() {
+          if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+              $('html, body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
           }
-        }
+        });
       });
     });
-  });
   </script>
 </body>
 
