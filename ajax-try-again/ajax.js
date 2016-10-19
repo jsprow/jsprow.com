@@ -3,7 +3,7 @@ $(document).ready(function() {
     $("#FormSubmit").click(function(e) {
         e.preventDefault();
         if ($("#contentText").val() === '') {
-            alert("Please enter some text!");
+            $("#contentText").append('<div id="error"><p>Whatsyername?</p></div>');
             return false;
         }
         $("#FormSubmit").hide(); //hide submit button

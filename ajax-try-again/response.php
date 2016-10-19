@@ -9,17 +9,16 @@ if(isset($_POST["content_txt"]) && strlen($_POST["content_txt"])>0)
 	$contentToSave = filter_var($_POST["content_txt"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH); 
 	
 	// Insert sanitize string in record
-	$insert_row = $con->query("INSERT INTO add_delete_record(content) VALUES('".$contentToSave."')");
+	$insert_row = $con->query("INSERT INTO add_delete_record(name) VALUES('".$contentToSave."') ON DUPLICATE KEY UPDATE name=name");
 	
 	if($insert_row)
 	{
 		 //Record was successfully inserted, respond result back to index page
 		  $my_id = $con->insert_id; //Get ID of last inserted row from MySQL
-		  echo '<li id="item_'.$my_id.'">';
-		  echo '<div class="del_wrapper"><a href="#" class="del_button" id="del-'.$my_id.'">';
-		  echo '<img src="icon_del.gif" border="0" />';
-		  echo '</a></div>';
-		  echo $contentToSave.'</li>';
+      echo '<li id="item_' . $my_id . '"><p>' . $contentToSave . '</p>';
+  		echo '<div class="del_wrapper"><a href="#" class="del_button" id="del-' . $my_id . '">';
+    	echo '<img src="icon_del.gif" border="0" /></a></div></li>';
+
 		  $con->close(); //close db connection
 
 	}else{
