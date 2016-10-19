@@ -1,11 +1,11 @@
 
 <?php
-require_once __DIR__ . '/var/www/html/jsprow.com/public_html/classroom/vendor/autoload.php';
+require_once __DIR__ . '/var/www/html/jsprow.com/classroom/vendor/autoload.php';
 
 
 define('APPLICATION_NAME', 'Classroom API PHP Quickstart');
 define('CREDENTIALS_PATH', '~/.credentials/classroom-php-quickstart.json');
-define('CLIENT_SECRET_PATH', __DIR__ . '/var/www/html/jsprow.com/public_html/classroom/client_secret.json');
+define('CLIENT_SECRET_PATH', __DIR__ . '/var/www/html/jsprow.com/classroom/client_secret.json');
 // If modifying these scopes, delete your previously saved credentials
 // at ~/.credentials/classroom-php-quickstart.json
 define('SCOPES', implode(' ', array(
