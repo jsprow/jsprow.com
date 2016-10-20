@@ -48,7 +48,7 @@ service.authorization = authorize
 # response = service.list_courses(page_size: 10)
 
 # List coursework
-response = service.courses.courseWork.list
+response = service.courses.courseWork.me
 
 puts "Courses:"
 puts "No courses found" if response.courses.empty?
