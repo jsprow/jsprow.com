@@ -45,10 +45,8 @@ service.client_options.application_name = APPLICATION_NAME
 service.authorization = authorize
 
 # List the first 10 courses the user has access to.
-# response = service.list_courses(page_size: 10)
+response = service.list_courses(page_size: 10)
 
-# List coursework
-response = service.courses.courseWork.me
 
 puts "Courses:"
 puts "No courses found" if response.courses.empty?
