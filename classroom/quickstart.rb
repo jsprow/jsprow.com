@@ -39,17 +39,17 @@ def authorize
   credentials
 end
 
-# Initialize the API
-service = Google::Apis::ClassroomV1::ClassroomService.new
-service.client_options.application_name = APPLICATION_NAME
-service.authorization = authorize
+# # Initialize the API
+# service = Google::Apis::ClassroomV1::ClassroomService.new
+# service.client_options.application_name = APPLICATION_NAME
+# service.authorization = authorize
 
-# List the first 10 courses the user has access to.
-response = service.list_courses(page_size: 10)
+# # List the first 10 courses the user has access to.
+# response = service.list_courses(page_size: 10)
 
 
-puts "Courses:"
-puts "No courses found" if response.courses.empty?
-response.courses.each do |course|
-  puts "- #{course.name} (#{course.id})"
-end
+# puts "Courses:"
+# puts "No courses found" if response.courses.empty?
+# response.courses.each do |course|
+#   puts "- #{course.name} (#{course.id})"
+# end
