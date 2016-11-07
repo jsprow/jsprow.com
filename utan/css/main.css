@@ -173,10 +173,10 @@ nav {
   filter: grayscale(100%) url(#monochrome);
 }
 .content__img__tanning-bed {
-  background-image: url('/img/tanning-bed.jpg');
+  background-image: url('../img/tanning-bed.jpg');
 }
 .content__img__beach-lady {
-  background-image: url('/img/beach-lady.jpg');
+  background-image: url('../img/beach-lady.jpg');
 }
 .map-box {
 	position: relative;
