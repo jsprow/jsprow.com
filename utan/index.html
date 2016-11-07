@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+    <title>UTan</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Lora|Montserrat|Open+Sans+Condensed:300|Oswald|PT+Sans|Raleway|Roboto+Condensed|Slabo+27px|Source+Sans+Pro" rel="stylesheet"/>
+    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <nav class="scroll-nav">
+      <div class="scroll-nav__wrapper">
+        <span class="scroll-nav__heading">
+          <ol class="scroll-nav__list">
+            <li class="scroll-nav__item">
+              <a class="scroll-nav__link"></a>
+            </li>
+          </ol>
+        </span>
+      </div>
+    </nav>
+    <div class="banner">
+      <img src="img/utan-logo.png"></img>
+    </div>
+    <main>
+      <div class="content">
+        <h1>About</h1>
+        <div class="content__text">
+          <p>U Tan is Southwest Michigan's largest tanning facility, featuring 30 tanning units, a clean facility, and great customer service. U Tan has been selected as a Top 250 Tanning Facility in the United States in both 2008 and 2009. We continually strive to bring the top technology in tanning to our customers.</p>
+          <ul>
+            <li><span>Mystic Tan&nbsp;</span>The 30 second UV-free sunless tan--an instant tan that's great for any special occasion (wedding, prom, party, etc.)</li>
+            <li><span>Hydro Massage Bed&nbsp;</span>A great 30 minute warm-water massage--recommended by the Chiropractic Industry</li>
+            <li><span>Medium Pressure VHR Beds&nbsp;</span>For that quick 12-minute tan</li>
+            <li><span>Regular Beds&nbsp;</span>For your base tan</li>
+            <li><span>No Appointments at U Tan&nbsp;</span>See our hours of operation <a href="#timeDivMat">below</a></li>
+            <li><span>Great Customer Service</span></li>
+          </ul>
+          <p>Home of the $4.00 tan, U Tan's prices and service will never be beaten!</p>
+        </div>
+        <svg class="img-filter">
+          <filter id="monochrome" color-interpolation-filters="sRGB"
+            x="0" y="0" height="100%" width="100%">
+          <feColorMatrix type="matrix"
+            values="0.18 0 0 0 0.92 
+                    0.79 0 0 0 0.31  
+                    0.73 0 0 0 0.37 
+                    0 0 0 1 0" />
+          </filter>
+        </svg>
+        <div class="content__img-shadow">
+          <div class="content__img content__img__tanning-bed"></div>
+        </div>
+      </div>
+      <div class="content">
+        <h1 id="locations">Locations</h1>
+          <div class="map-box">
+            <div class="noscroll" onclick="style.pointerEvents='none'"></div>
+            <iframe class="map" frameborder="0" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d189212.8570022596!2d-85.9113760546996!3d42.18342587446395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xca85b8e498f4c90b!2sU+Tan+Salon+%26+Spa!5e0!3m2!1sen!2sus!4v1476189087193">
+            </iframe>
+            <div class="location">
+            <h3>Mattawan</h3>
+            <a class="tel" href="tel:2696684441">(269) 668-4441</a>
+            <div id="timeDivMat" class="timeDiv"></div>
+              <label class="viewOpen" for="modal__state">View Hours&nbsp;&nbsp;<i class="fa fa-clock-o"></i></label>
+              <input type="checkbox" name="modal__state" id="modal__state">
+              <div class="modal__overlay">
+                <label for="modal__state" class="modal__overlay-close"></label>
+                <div class="modal">
+                  <label class="modal__button-close" for="modal__state"><i class="fa fa-times"></i></label>
+                  <h2>Hours</h2>
+                  <div id="Wednesday" class="dateTime">
+                    <div class="day">Wednesday</div>
+                    <div class="time">9am - 9pm</div>
+                  </div>
+                  <div id="Thursday" class="dateTime">
+                    <div class="day">Thursday</div>
+                    <div class="time">9am - 9pm</div>
+                  </div>
+                  <div id="Friday" class="dateTime">
+                    <div class="day">Friday</div>
+                    <div class="time">9am - 8pm</div>
+                  </div>
+                  <div id="Saturday" class="dateTime">
+                    <div class="day">Saturday</div>
+                    <div class="time">9am - 9pm</div>
+                  </div>
+                  <div id="Sunday" class="dateTime">
+                    <div class="day">Sunday</div>
+                    <div class="time">12pm - 6pm</div>
+                  </div>
+                  <div id="Monday" class="dateTime">
+                    <div class="day">Monday</div>
+                    <div class="time">9am - 9pm</div>
+                  </div>
+                  <div id="Tuesday" class="dateTime">
+                    <div class="day">Tuesday</div>
+                    <div class="time">9am - 9pm</div>
+                  </div>
+                </div>                
+              </div>
+            </div>
+          </div>
+          <div class="map-box">
+            <div class="noscroll" onclick="style.pointerEvents='none'"></div>
+            <iframe class="map" frameborder="0" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11804.843433209177!2d-85.6589626!3d42.295366!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7b45d90f19209fcd!2sUniversity+Tan+U+Tan!5e0!3m2!1sen!2sus!4v1476188928999">
+            </iframe>
+            <div class="location">
+              <h3>Kalamazoo</h3>
+              <a class="tel" href="tel:2693448826">(269) 344-8826</a>            
+              <div id="timeDivKal" class="timeDiv"></div>
+                <label class="viewOpen" for="modal__state">View Hours&nbsp;&nbsp;<i class="fa fa-clock-o"></i></label>
+                <input type="checkbox" name="modal__state" id="modal__state">
+                <div class="modal__overlay">
+                  <label for="modal__state" class="modal__overlay-close"></label>
+                  <div class="modal">
+                    <label class="modal__button-close" for="modal__state"><i class="fa fa-times"></i></label>
+                    <h2>We're Open At These Times</h2>
+                    <div id="Wednesday" class="dateTime">
+                      <div class="day">Wednesday</div>
+                      <div class="time">9am - 9pm</div>
+                    </div>
+                    <div id="Thursday" class="dateTime">
+                      <div class="day">Thursday</div>
+                      <div class="time">9am - 9pm</div>
+                    </div>
+                    <div id="Friday" class="dateTime">
+                      <div class="day">Friday</div>
+                      <div class="time">9am - 8pm</div>
+                    </div>
+                    <div id="Saturday" class="dateTime">
+                      <div class="day">Saturday</div>
+                      <div class="time">9am - 9pm</div>
+                    </div>
+                    <div id="Sunday" class="dateTime">
+                      <div class="day">Sunday</div>
+                      <div class="time">12pm - 6pm</div>
+                    </div>
+                    <div id="Monday" class="dateTime">
+                      <div class="day">Monday</div>
+                      <div class="time">9am - 9pm</div>
+                    </div>
+                    <div id="Tuesday" class="dateTime">
+                      <div class="day">Tuesday</div>
+                      <div class="time">9am - 9pm</div>
+                    </div>
+                  </div>                
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <h1>Contact</h1>
+        <form action="email.php" class="content__form" method="post">
+          <label for="#name">Name</label>
+          <input id="name" name="name" placeholder="First Last" required="" type="text"/>
+          <label for="#email">Email</label>
+          <input id="email" name="email" pattern="(?!(^[.-].*|[^@]*[.-]@|.*\.{2,}.*)|^.{254}.)([a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@)(?!-.*|.*-\.)([a-zA-Z0-9-]{1,63}\.)+[a-zA-Z]{2,15}" placeholder="you@example.com" required="" type="email"/>
+          <label for="#phone">Phone Number</label>
+          <input id="phone" name="phone" pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$" placeholder="xxx-xxx-xxxx" required="" type="phone"/>
+          <label for="#message">Message</label>
+          <textarea id="message" name="message" placeholder="Please let us know how we can help you." required="" type="textarea"></textarea>
+          <button class="content__form-button" id="email-submit" type="submit" value="Submit">
+            <i class="fa fa-envelope"></i>
+            <span>Submit</span>
+          </button>
+        </form>
+        <div class="content__img-shadow">
+          <div class="content__img content__img__beach-lady"></div>
+        </div>
+      </div>
+      <div class="content">
+        <h1>More</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="content">
+        <h1>More</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/scroll-nav.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://use.fontawesome.com/27a0b013e2.js"></script>
+    <script>
+      $(function() {
+        $('main').scrollNav({
+          showTopLink: false,
+          onRender: function() {
+            $('.scroll-nav__heading').html('<i class="fa fa-bars"></i>')
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
