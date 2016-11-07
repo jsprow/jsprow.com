@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: calc(12px + (16 - 12)*(100vw - 400px)/(800 - 400));
+      background-color: #FFFEEE;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between
+      color: #333;
+      margin: 0;
+    }
+    section {
+      flex: 0 1 45%;
+      margin: 2em;
+    }
+    h1 {
+      box-shadow: 2px 2px 2px;
+      padding: 0.5em 1em;
+    }
+    span {
+      font-weight: bold;
+      color: darkred;
+    }
+    .gradeform {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+    }
+    .titlegrp,
+    .inputgrp {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    .titlegrp {
+      justify-content: flex-end;
+    }
+    .inputgrp {
+      margin: 1em 0 0 0;
+    }
+    .gpaform {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+    }
+    .gpaform p {
+      display: flex;
+      width: 10em;
+      margin: 1em auto 0 auto;
+    }
+    select {
+      font-size: 1em;
+      width: 6em;
+      margin: 0 2em 0 auto;
+      border: none;
+      padding: 0.25em 0.5em;
+      box-shadow: 1px 1px 1px;
+      outline: none;
+    }
+    select:active,
+    button:active {
+      box-shadow: 0 0 1px;
+    }
+    .gpaform label {
+      margin-right: auto;
+      align-self: center;
+    }
+    h4 {
+      text-align: center;
+      margin: 0;
+    }
+    .titlegrp h4 {
+      padding: 0.5em;
+      margin: 0 0.5em;
+      width: 6em;
+    }
+    label {
+      width: 6em;
+    }
+    input {
+      font-size: 1em;
+      text-align: center;
+      border: none;
+      box-shadow: 1px 1px 2px;
+      padding: 0.5em;
+      margin: 0 0.5em;
+      width: 6em;
+    }
+    input:focus:valid {
+      box-shadow: 2px 2px 3px darkgreen;
+      outline: none;
+    }
+    input:invalid {
+      box-shadow: 2px 2px 3px darkred;
+      background-color: hsl(0, 80%, 60%);
+      color: white;
+      outline: red;
+    }
+    .hyphead {
+      box-shadow: 1px 1px 2px;
+    }
+    .hypinput,
+    .hyphead {
+      background-color: #EEE;
+    }
+    button {
+      position: relative;
+      font-size: 1em;
+      font-weight: bold;
+      width: 8em;
+      margin: 2em auto 0 auto;
+      padding: 0.5em 0;
+      border: none;
+      box-shadow: 2px 2px 2px;
+      outline: none;
+    }
+    button:active {
+      top: 1px;
+      box-shadow: 1px 1px 2px;
+    }
+    #grade {
+      font-size: 2em;
+      font-weight: bold;
+      color: darkred;
+      text-align: center;
+      margin-top: 0.5em;
+    }
+    #grade {
+      color: darkgreen;
+    }
+    #gpa {
+      font-size: 2em;
+      font-weight: bold;
+      color: darkred;
+      text-align: center;
+      margin-top: 0.5em;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h1>Grade Calculator</h1>
+    <p>Use the table below to calculate your grade. If there is an assignment that hasn't been graded, you can use the <span>hypothetical</span> columns to see how it will change your overall percentage.</p>
+    <form class="gradeform">
+      <div class="titlegrp">
+        <h4 id="firsth4">Weight</h4>
+        <h4>Points Earned</h4>
+        <h4>Points Possible</h4>
+        <h4 class="hyphead">Hypothetical Earned</h4>
+        <h4 class="hyphead">Hypothetical Possible</h4>
+      </div>
+      <div class="inputgrp grp1">
+        <label for="grp1">
+          <h4>Category 1</h4>
+        </label>
+        <input type="number" min="0" max="100" id="cat1weight" autocomplete="off">
+        <input type="number" min="0" step="any" name="cat1earned" id="cat1earned" autocomplete="off">
+        <input type="number" min="0" step="any" name="cat1possible" id="cat1possible" autocomplete="off">
+        <input type="number" min="0" step="any" class="hypinput" name="cat1earnedhyp" id="cat1earnedhyp" autocomplete="off">
+        <input type="number" min="0" step="any" class="hypinput" name="cat1possiblehyp" id="cat1possiblehyp" autocomplete="off">
+      </div>
+      <div class="inputgrp grp2">
+        <label for="grp2">
+          <h4>Category 2</h4>
+        </label>
+        <input type="number" min="0" max="100" name="cat2weight" id="cat2weight" autocomplete="off">
+        <input type="number" min="0" step="any" name="cat2earned" id="cat2earned" autocomplete="off">
+        <input type="number" min="0" step="any" name="cat2possible" id="cat2possible" autocomplete="off">
+        <input type="number" min="0" step="any" class="hypinput" name="cat2earnedhyp" id="cat2earnedhyp" autocomplete="off">
+        <input type="number" min="0" step="any" class="hypinput" name="cat2possiblehyp" id="cat2possiblehyp" autocomplete="off">
+      </div>
+      <div class="inputgrp grp3">
+        <label for="grp3">
+          <h4>Category 3</h4>
+        </label>
+        <input type="number" min="0" max="100" name="cat3weight" id="cat3weight" autocomplete="off">
+        <input type="number" min="0" step="any" name="cat3earned" id="cat3earned" autocomplete="off">
+        <input type="number" min="0" step="any" name="cat3possible" id="cat3possible" autocomplete="off">
+        <input type="number" min="0" step="any" class="hypinput" name="cat3earnedhyp" id="cat3earnedhyp" autocomplete="off">
+        <input type="number" min="0" step="any" class="hypinput" name="cat3possiblehyp" id="cat3possiblehyp" autocomplete="off">
+      </div>
+      <div class="inputgrp grp4">
+        <label for="grp4">
+          <h4>Category 4</h4>
+        </label>
+        <input type="number" min="0" max="100" name="cat4weight" id="cat4weight" autocomplete="off">
+        <input type="number" min="0" step="any" name="cat4earned" id="cat4earned" autocomplete="off">
+        <input type="number" min="0" step="any" name="cat4possible" id="cat4possible" autocomplete="off">
+        <input type="number" min="0" step="any" class="hypinput" name="cat4earnedhyp" id="cat4earnedhyp" autocomplete="off">
+        <input type="number" min="0" step="any" class="hypinput" name="cat4possiblehyp" id="cat4possiblehyp" autocomplete="off">
+      </div>
+      <div class="inputgrp grp5">
+        <label for="grp5">
+          <h4>Category 5</h4>
+        </label>
+        <input type="number" min="0" max="100" name="cat5weight" id="cat5weight" autocomplete="off">
+        <input type="number" min="0" step="any" name="cat5earned" id="cat5earned" autocomplete="off">
+        <input type="number" min="0" step="any" name="cat5possible" id="cat5possible" autocomplete="off">
+        <input type="number" min="0" step="any" class="hypinput" name="cat5earnedhyp" id="cat5earnedhyp" autocomplete="off">
+        <input type="number" min="0" step="any" class="hypinput" name="cat5possiblehyp" id="cat5possiblehyp" autocomplete="off">
+      </div>
+      <button id="gradebtn" type="button">Get Grade</button>
+      <div id="weightalert">
+        <div id="grade">
+        </div>
+    </form>
+  </section>
+  <section>
+    <h1>GPA Calculator</h1>
+    <p>Choose grades for each of your periods from the drop-down boxes. If you have a <span>Seminar</span>, the grade doesn't count toward your GPA, so leave the selection blank.</p>
+    <form class="gpaform">
+      <p>
+        <select name="period1" id="period1" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <label for="period1">Period 1</label>
+      </p>
+      <p>
+        <select name="period2" id="period2" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <label for="period2">Period 2</label>
+      </p>
+      <p>
+        <select name="period3" id="period3" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <label for="period3">Period 3</label>
+      </p>
+      <p>
+        <select name="period4" id="period4" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <label for="period4">Period 4</label>
+      </p>
+      <p>
+        <select name="period5" id="period5" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <label for="period5">Period 5</label>
+      </p>
+      <p>
+        <select name="period6" id="period6" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <label for="period6">Period 6</label>
+      </p>
+      <p>
+        <select name="period7" id="period7" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <label for="period7">Period 7</label>
+      </p>
+      <button id="gpabtn" type="button">Get GPA</button>
+      <div id="gpa"></div>
+    </form>
+  </section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>
+    $(function() {
+      $('#gradebtn').click(function() {
+
+        var cat1weight = parseFloat(document.getElementById('cat1weight').value);
+        if (isNaN(cat1weight)) {
+          var cat1weight = 0
+        }
+        var cat1earned = parseFloat(document.getElementById('cat1earned').value);
+        var cat1possible = parseFloat(document.getElementById('cat1possible').value);
+        var cat1earnedhyp = parseFloat(document.getElementById('cat1earnedhyp').value);
+        if (isNaN(cat1earnedhyp)) {
+          var cat1earnedhyp = 0
+        }
+        var cat1possiblehyp = parseFloat(document.getElementById('cat1possiblehyp').value);
+        if (isNaN(cat1possiblehyp)) {
+          var cat1possiblehyp = 0
+        }
+        var cat1 = parseFloat((cat1weight / 100) * ((cat1earned + cat1earnedhyp) / (cat1possible + cat1possiblehyp)));
+        if (isNaN(cat1)) {
+          var cat1 = 0
+        }
+
+        var cat2weight = parseFloat(document.getElementById('cat2weight').value);
+        if (isNaN(cat2weight)) {
+          var cat2weight = 0
+        }
+        var cat2earned = parseFloat(document.getElementById('cat2earned').value);
+        var cat2possible = parseFloat(document.getElementById('cat2possible').value);
+        var cat2earnedhyp = parseFloat(document.getElementById('cat2earnedhyp').value);
+        if (isNaN(cat2earnedhyp)) {
+          var cat2earnedhyp = 0
+        }
+        var cat2possiblehyp = parseFloat(document.getElementById('cat2possiblehyp').value);
+        if (isNaN(cat2possiblehyp)) {
+          var cat2possiblehyp = 0
+        }
+        var cat2 = parseFloat((cat2weight / 100) * ((cat2earned + cat2earnedhyp) / (cat2possible + cat2possiblehyp)));
+        if (isNaN(cat2)) {
+          var cat2 = 0
+        }
+
+        var cat3weight = parseFloat(document.getElementById('cat3weight').value);
+        if (isNaN(cat3weight)) {
+          var cat3weight = 0
+        }
+        var cat3earned = parseFloat(document.getElementById('cat3earned').value);
+        var cat3possible = parseFloat(document.getElementById('cat3possible').value);
+        var cat3earnedhyp = parseFloat(document.getElementById('cat3earnedhyp').value);
+        if (isNaN(cat3earnedhyp)) {
+          var cat3earnedhyp = 0
+        }
+        var cat3possiblehyp = parseFloat(document.getElementById('cat3possiblehyp').value);
+        if (isNaN(cat3possiblehyp)) {
+          var cat3possiblehyp = 0
+        }
+        var cat3 = parseFloat((cat3weight / 100) * ((cat3earned + cat3earnedhyp) / (cat3possible + cat3possiblehyp)));
+        if (isNaN(cat3)) {
+          var cat3 = 0
+        }
+
+        var cat4weight = parseFloat(document.getElementById('cat4weight').value);
+        if (isNaN(cat4weight)) {
+          var cat4weight = 0
+        }
+        var cat4earned = parseFloat(document.getElementById('cat4earned').value);
+        var cat4possible = parseFloat(document.getElementById('cat4possible').value);
+        var cat4earnedhyp = parseFloat(document.getElementById('cat4earnedhyp').value);
+        if (isNaN(cat4earnedhyp)) {
+          var cat4earnedhyp = 0
+        }
+        var cat4possiblehyp = parseFloat(document.getElementById('cat4possiblehyp').value);
+        if (isNaN(cat4possiblehyp)) {
+          var cat4possiblehyp = 0
+        }
+        var cat4 = parseFloat((cat4weight / 100) * ((cat4earned + cat4earnedhyp) / (cat4possible + cat4possiblehyp)));
+        if (isNaN(cat4)) {
+          var cat4 = 0
+        }
+
+        var cat5weight = parseFloat(document.getElementById('cat5weight').value);
+        if (isNaN(cat5weight)) {
+          var cat5weight = 0
+        }
+        var cat5earned = parseFloat(document.getElementById('cat5earned').value);
+        var cat5possible = parseFloat(document.getElementById('cat5possible').value);
+        var cat5earnedhyp = parseFloat(document.getElementById('cat5earnedhyp').value);
+        if (isNaN(cat5earnedhyp)) {
+          var cat5earnedhyp = 0
+        }
+        var cat5possiblehyp = parseFloat(document.getElementById('cat5possiblehyp').value);
+        if (isNaN(cat5possiblehyp)) {
+          var cat5possiblehyp = 0
+        }
+        var cat5 = parseFloat((cat5weight / 100) * ((cat5earned + cat5earnedhyp) / (cat5possible + cat5possiblehyp)));
+        if (isNaN(cat5)) {
+          var cat5 = 0
+        }
+
+        var grade = Math.round((cat1 + cat2 + cat3 + cat4 + cat5) * 100, 3);
+        if ((cat1weight + cat2weight + cat3weight + cat4weight + cat5weight) == 100) {
+          $('#grade').html(grade + '%')
+        }
+      });
+      $('#gpabtn').click(function() {
+        var period1 = document.getElementById('period1');
+        if (isNaN(period1.options[period1.selectedIndex].value)) {
+          var selected1 = null;
+        } else {
+          var selected1 = parseFloat(period1.options[period1.selectedIndex].value);
+        };
+        var period2 = document.getElementById('period2');
+        if (isNaN(period2.options[period2.selectedIndex].value)) {
+          var selected2 = null;
+        } else {
+          var selected2 = parseFloat(period2.options[period2.selectedIndex].value);
+        };
+        var period3 = document.getElementById('period3');
+        if (isNaN(period3.options[period3.selectedIndex].value)) {
+          var selected3 = null;
+        } else {
+          var selected3 = parseFloat(period3.options[period3.selectedIndex].value);
+        };
+        var period4 = document.getElementById('period4');
+        if (isNaN(period4.options[period4.selectedIndex].value)) {
+          var selected4 = null;
+        } else {
+          var selected4 = parseFloat(period4.options[period4.selectedIndex].value);
+        };
+        var period5 = document.getElementById('period5');
+        if (isNaN(period5.options[period5.selectedIndex].value)) {
+          var selected5 = null;
+        } else {
+          var selected5 = parseFloat(period5.options[period5.selectedIndex].value);
+        };
+        var period6 = document.getElementById('period6');
+        if (isNaN(period6.options[period6.selectedIndex].value)) {
+          var selected6 = null;
+        } else {
+          var selected6 = parseFloat(period6.options[period6.selectedIndex].value);
+        };
+        var period7 = document.getElementById('period7');
+        if (isNaN(period7.options[period7.selectedIndex].value)) {
+          var selected7 = null;
+        } else {
+          var selected7 = parseFloat(period7.options[period7.selectedIndex].value);
+        };
+        var array = [selected1, selected2, selected3, selected4, selected5, selected6, selected7];
+        var array = array.filter(function(value) {
+          return value !== null
+        });
+        var count = array.filter(function(value) {
+          return value !== null
+        }).length;
+
+        var gpa = ((selected1 + selected2 + selected3 + selected4 + selected5 + selected6 + selected7) / count).toFixed(2);
+        $('#gpa').html(gpa + '!');
+      });
+    });
+  </script>
+</body>
+
+</html>
