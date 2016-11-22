@@ -6,142 +6,147 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
   <style>
     body {
-      font-family: 'Source Sans Pro', sans-serif;
-      font-size: calc(12px + (16 - 12)*(100vw - 400px)/(800 - 400));
-      background-color: #FFFEEE;
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-between
-      color: #333;
-      margin: 0;
+      font-family: "Source Sans Pro", sans-serif;
+      counter-reset: category;
+      padding: 2em;
     }
-    section {
-      flex: 0 1 45%;
-      margin: 2em;
-    }
-    h1 {
-      box-shadow: 2px 2px 2px;
-      padding: 0.5em 1em;
-    }
-    span {
-      font-weight: bold;
-      color: darkred;
+    input,
+    select,
+    button {
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 1em;
     }
     .gradeform {
       display: flex;
-      flex-flow: column nowrap;
-      justify-content: space-between;
+      flex-flow: row wrap;
     }
-    .titlegrp,
     .inputgrp {
       display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-between;
+      flex-flow: row wrap;
+      width: 100%;
+    }
+    .inputgrp h4,
+    .inputgrp input {
+      font-family: "Source Sans Pro", sans-serif;
+      display: inline-block;
+      width: 8.2em;
+      margin: 0 1em 1em 0;
+      padding: 0.25em;
+    }
+    .inputgrp h4 {
+      width: 100%;
+    }
+    .inputgrp h4::before {
+      counter-increment: category;
+      content: "Category " counter(category);
+      width: 20em;
+    }
+    .inputgrp input:invalid {
+      color: red;
+      box-shadow: 0 0 8px red;
+      outline: none;
+      border: 1px solid red;
+    }
+    .outputgrp {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
       align-items: center;
       width: 100%;
     }
-    .titlegrp {
-      justify-content: flex-end;
+    .outputgrp button {
+      display: block;
+      margin: 0 1em 1em 0;
+      width: 9em;
+      min-height: 2em;
+      border: none;
+      background-color: #fff;
+      outline: 1px solid black;
     }
-    .inputgrp {
-      margin: 1em 0 0 0;
+    #grade, #gpa {
+      width: 100%;
+      height: 2em;
+      margin: 0;
+      color: hsl(255, 50%, 30%);
+    }
+    #catbtnadd:hover {
+      outline: 1px solid hsl(100, 50%, 50%);
+      color: hsl(100, 50%, 50%);
+      background-color: hsl(100, 50%, 90%);
+    }
+    #catbtnadd:active {
+      outline: 1px solid hsl(100, 50%, 30%);
+      color: hsl(100, 50%, 30%);
+      background-color: hsl(100, 50%, 70%);
+    }
+    #catbtnrem:hover {
+      outline: 1px solid hsl(0, 50%, 50%);
+      color: hsl(0, 50%, 50%);
+      background-color: hsl(0, 50%, 90%);
+    }
+    #catbtnrem:active {
+      outline: 1px solid hsl(0, 50%, 30%);
+      color: hsl(0, 50%, 30%);
+      background-color: hsl(0, 50%, 70%);
+    }
+    .pointgrp {
+      display: flex;
+      flex-flow: row nowrap;
     }
     .gpaform {
       display: flex;
+      flex-flow: row wrap;
+    }
+    .gpa,
+    .gpalabels,
+    .semgpa {
+      display: flex;
       flex-flow: column nowrap;
       justify-content: space-between;
+      margin-right: 1em;
     }
-    .gpaform p {
-      display: flex;
-      width: 10em;
-      margin: 1em auto 0 auto;
-    }
-    select {
-      font-size: 1em;
-      width: 6em;
-      margin: 0 2em 0 auto;
-      border: none;
-      padding: 0.25em 0.5em;
-      box-shadow: 1px 1px 1px;
-      outline: none;
-    }
-    select:active,
-    button:active {
-      box-shadow: 0 0 1px;
-    }
-    .gpaform label {
-      margin-right: auto;
-      align-self: center;
-    }
-    h4 {
-      text-align: center;
+    .gpahead {
+      height: 1.5em;
       margin: 0;
-    }
-    .titlegrp h4 {
-      padding: 0.5em;
-      margin: 0 0.5em;
-      width: 6em;
-    }
-    label {
-      width: 6em;
-    }
-    input {
-      font-size: 1em;
+      color: hsl(255, 50%, 30%);
       text-align: center;
-      border: none;
-      box-shadow: 1px 1px 2px;
-      padding: 0.5em;
-      margin: 0 0.5em;
-      width: 6em;
     }
-    input:focus:valid {
-      box-shadow: 2px 2px 3px darkgreen;
+    .gpa select,
+    .semgpa h4,
+    .gpalabels h4 {
+      display: inline-block;
+      font-size: 1em;
+      margin: 0 0 0.5em 0;
+      height: 1.5em;
+      width: 4em;
+      text-align: center;
+      padding: 0 0.5em;
+      box-shadow: -2px 1px 0 1px #eee;
+    }
+    .gpa select {
+      border: none;
+      border-radius: 0;
+      -webkit-appearance: none;
+      background-color: transparent;
       outline: none;
     }
-    input:invalid {
-      box-shadow: 2px 2px 3px darkred;
-      background-color: hsl(0, 80%, 60%);
-      color: white;
-      outline: red;
+    .gpa select::after {
+      content: "\f09b";
+      font-family: FontAwesome;
+      left: 0;
+      z-index: 10;
     }
-    .hyphead {
-      box-shadow: 1px 1px 2px;
+    .gpa select:hover {
+      background-color: #eee;
+      box-shadow: -2px 1px 0 1px hsl(255, 50%, 60%);
     }
-    .hypinput,
-    .hyphead {
-      background-color: #EEE;
+    .gpalabels h3,
+    .gpalabels h4 {
+      color: hsl(255, 50%, 60%);
+      text-align: left;
     }
-    button {
-      position: relative;
-      font-size: 1em;
-      font-weight: bold;
-      width: 8em;
-      margin: 2em auto 0 auto;
-      padding: 0.5em 0;
-      border: none;
-      box-shadow: 2px 2px 2px;
-      outline: none;
-    }
-    button:active {
-      top: 1px;
-      box-shadow: 1px 1px 2px;
-    }
-    #grade {
-      font-size: 2em;
-      font-weight: bold;
-      color: darkred;
-      text-align: center;
-      margin-top: 0.5em;
-    }
-    #grade {
-      color: darkgreen;
-    }
-    #gpa {
-      font-size: 2em;
-      font-weight: bold;
-      color: darkred;
-      text-align: center;
-      margin-top: 0.5em;
+    .yrgpa * {
+      color: hsl(140, 50%, 50%);
     }
   </style>
 </head>
@@ -151,75 +156,44 @@
     <h1>Grade Calculator</h1>
     <p>Use the table below to calculate your grade. If there is an assignment that hasn't been graded, you can use the <span>hypothetical</span> columns to see how it will change your overall percentage.</p>
     <form class="gradeform">
-      <div class="titlegrp">
-        <h4 id="firsth4">Weight</h4>
-        <h4>Points Earned</h4>
-        <h4>Points Possible</h4>
-        <h4 class="hyphead">Hypothetical Earned</h4>
-        <h4 class="hyphead">Hypothetical Possible</h4>
+      <div class="outputgrp">
+        <button type="button" id="catbtnadd">Add Category</button>
+        <button type="button" id="catbtnrem">Remove Category</button>
+        <h1 id="grade">Grade:</h1>
       </div>
-      <div class="inputgrp grp1">
-        <label for="grp1">
-          <h4>Category 1</h4>
-        </label>
-        <input type="number" min="0" max="100" id="cat1weight" autocomplete="off">
-        <input type="number" min="0" step="any" name="cat1earned" id="cat1earned" autocomplete="off">
-        <input type="number" min="0" step="any" name="cat1possible" id="cat1possible" autocomplete="off">
-        <input type="number" min="0" step="any" class="hypinput" name="cat1earnedhyp" id="cat1earnedhyp" autocomplete="off">
-        <input type="number" min="0" step="any" class="hypinput" name="cat1possiblehyp" id="cat1possiblehyp" autocomplete="off">
-      </div>
-      <div class="inputgrp grp2">
-        <label for="grp2">
-          <h4>Category 2</h4>
-        </label>
-        <input type="number" min="0" max="100" name="cat2weight" id="cat2weight" autocomplete="off">
-        <input type="number" min="0" step="any" name="cat2earned" id="cat2earned" autocomplete="off">
-        <input type="number" min="0" step="any" name="cat2possible" id="cat2possible" autocomplete="off">
-        <input type="number" min="0" step="any" class="hypinput" name="cat2earnedhyp" id="cat2earnedhyp" autocomplete="off">
-        <input type="number" min="0" step="any" class="hypinput" name="cat2possiblehyp" id="cat2possiblehyp" autocomplete="off">
-      </div>
-      <div class="inputgrp grp3">
-        <label for="grp3">
-          <h4>Category 3</h4>
-        </label>
-        <input type="number" min="0" max="100" name="cat3weight" id="cat3weight" autocomplete="off">
-        <input type="number" min="0" step="any" name="cat3earned" id="cat3earned" autocomplete="off">
-        <input type="number" min="0" step="any" name="cat3possible" id="cat3possible" autocomplete="off">
-        <input type="number" min="0" step="any" class="hypinput" name="cat3earnedhyp" id="cat3earnedhyp" autocomplete="off">
-        <input type="number" min="0" step="any" class="hypinput" name="cat3possiblehyp" id="cat3possiblehyp" autocomplete="off">
-      </div>
-      <div class="inputgrp grp4">
-        <label for="grp4">
-          <h4>Category 4</h4>
-        </label>
-        <input type="number" min="0" max="100" name="cat4weight" id="cat4weight" autocomplete="off">
-        <input type="number" min="0" step="any" name="cat4earned" id="cat4earned" autocomplete="off">
-        <input type="number" min="0" step="any" name="cat4possible" id="cat4possible" autocomplete="off">
-        <input type="number" min="0" step="any" class="hypinput" name="cat4earnedhyp" id="cat4earnedhyp" autocomplete="off">
-        <input type="number" min="0" step="any" class="hypinput" name="cat4possiblehyp" id="cat4possiblehyp" autocomplete="off">
-      </div>
-      <div class="inputgrp grp5">
-        <label for="grp5">
-          <h4>Category 5</h4>
-        </label>
-        <input type="number" min="0" max="100" name="cat5weight" id="cat5weight" autocomplete="off">
-        <input type="number" min="0" step="any" name="cat5earned" id="cat5earned" autocomplete="off">
-        <input type="number" min="0" step="any" name="cat5possible" id="cat5possible" autocomplete="off">
-        <input type="number" min="0" step="any" class="hypinput" name="cat5earnedhyp" id="cat5earnedhyp" autocomplete="off">
-        <input type="number" min="0" step="any" class="hypinput" name="cat5possiblehyp" id="cat5possiblehyp" autocomplete="off">
-      </div>
-      <button id="gradebtn" type="button">Get Grade</button>
-      <div id="weightalert">
-        <div id="grade">
+      <div class="inputgrp">
+        <h4></h4>
+        <input type="number" min="0" step="any" max="100" autocomplete="off" placeholder="Weight (0-100)">
+        <div class="pointgrp">
+          <input type="number" min="0" step="any" placeholder="Points Earned" autocomplete="off">
+          <input type="number" min="0" step="any" placeholder="Points Possible" autocomplete="off">
         </div>
+        <div class="pointgrp">
+          <input type="number" min="0" step="any" placeholder="Possible Earned"autocomplete="off">
+          <input type="number" min="0" step="any" placeholder="Possible Possible" autocomplete="off">
+        </div>
+      </div>
     </form>
   </section>
   <section>
     <h1>GPA Calculator</h1>
     <p>Choose grades for each of your periods from the drop-down boxes. If you have a <span>Seminar</span>, the grade doesn't count toward your GPA, so leave the selection blank.</p>
     <form class="gpaform">
-      <p>
-        <select name="period1" id="period1" type="select">
+      <div class="gpalabels">
+        <h2 class="gpahead"></h2>
+        <h3 class="gpahead"></h2>
+        <h4>1st</h4>
+        <h4>2nd</h4>
+        <h4>3rd</h4>
+        <h4>4th</h4>
+        <h4>5th</h4>
+        <h4>6th</h4>
+        <h4>7th</h4>
+      </div>
+      <div class="gpa gpa-q1">
+        <h2 class="gpahead">MP1</h2>
+        <h3 class="gpahead" id="gpa_0"></h3>
+        <select name="period1" class="period1" type="select">
           <option>--</option>
           <option value="4">A</option>
           <option value="3.7">A-</option>
@@ -234,10 +208,7 @@
           <option value="0.7">D-</option>
           <option value="0">E</option>
         </select>
-        <label for="period1">Period 1</label>
-      </p>
-      <p>
-        <select name="period2" id="period2" type="select">
+        <select name="period2" class="period2" type="select">
           <option>--</option>
           <option value="4">A</option>
           <option value="3.7">A-</option>
@@ -252,10 +223,7 @@
           <option value="0.7">D-</option>
           <option value="0">E</option>
         </select>
-        <label for="period2">Period 2</label>
-      </p>
-      <p>
-        <select name="period3" id="period3" type="select">
+        <select name="period3" class="period3" type="select">
           <option>--</option>
           <option value="4">A</option>
           <option value="3.7">A-</option>
@@ -270,10 +238,7 @@
           <option value="0.7">D-</option>
           <option value="0">E</option>
         </select>
-        <label for="period3">Period 3</label>
-      </p>
-      <p>
-        <select name="period4" id="period4" type="select">
+        <select name="period4" class="period4" type="select">
           <option>--</option>
           <option value="4">A</option>
           <option value="3.7">A-</option>
@@ -288,10 +253,7 @@
           <option value="0.7">D-</option>
           <option value="0">E</option>
         </select>
-        <label for="period4">Period 4</label>
-      </p>
-      <p>
-        <select name="period5" id="period5" type="select">
+        <select name="period5" class="period5" type="select">
           <option>--</option>
           <option value="4">A</option>
           <option value="3.7">A-</option>
@@ -306,10 +268,7 @@
           <option value="0.7">D-</option>
           <option value="0">E</option>
         </select>
-        <label for="period5">Period 5</label>
-      </p>
-      <p>
-        <select name="period6" id="period6" type="select">
+        <select name="period6" class="period6" type="select">
           <option>--</option>
           <option value="4">A</option>
           <option value="3.7">A-</option>
@@ -324,10 +283,7 @@
           <option value="0.7">D-</option>
           <option value="0">E</option>
         </select>
-        <label for="period6">Period 6</label>
-      </p>
-      <p>
-        <select name="period7" id="period7" type="select">
+        <select name="period7" class="period7" type="select">
           <option>--</option>
           <option value="4">A</option>
           <option value="3.7">A-</option>
@@ -342,170 +298,767 @@
           <option value="0.7">D-</option>
           <option value="0">E</option>
         </select>
-        <label for="period7">Period 7</label>
-      </p>
-      <button id="gpabtn" type="button">Get GPA</button>
-      <div id="gpa"></div>
+      </div>
+      <div class="gpa gpa-q2">
+        <h2 class="gpahead">MP2</h2>
+        <h3 class="gpahead" id="gpa_1"></h3>
+        <select name="period1" class="period1" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period2" class="period2" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period3" class="period3" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period4" class="period4" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period5" class="period5" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period6" class="period6" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period7" class="period7" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+      </div>
+      <div class="gpa gpa-e1">
+        <h2 class="gpahead">E1</h2>
+        <h3 class="gpahead" id="gpa_2"></h3>
+        <select name="period1" class="period1" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period2" class="period2" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period3" class="period3" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period4" class="period4" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period5" class="period5" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period6" class="period6" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period7" class="period7" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+      </div>
+      <div class="semgpa">
+        <h2 class="gpahead">S1</h2>
+        <h3 id="s1" class="gpahead"></h2>
+        <h4 id="s1_1"></h4>
+        <h4 id="s1_2"></h4>
+        <h4 id="s1_3"></h4>
+        <h4 id="s1_4"></h4>
+        <h4 id="s1_5"></h4>
+        <h4 id="s1_6"></h4>
+        <h4 id="s1_7"></h4>
+      </div>
+      <div class="gpa gpa-q3">
+        <h2 class="gpahead">MP3</h2>
+        <h3 class="gpahead" id="gpa_3"></h3>
+        <select name="period1" class="period1" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period2" class="period2" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period3" class="period3" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period4" class="period4" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period5" class="period5" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period6" class="period6" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period7" class="period7" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+      </div>
+      <div class="gpa gpa-q4">
+        <h2 class="gpahead">MP4</h2>
+        <h3 class="gpahead" id="gpa_4"></h3>
+        <select name="period1" class="period1" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period2" class="period2" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period3" class="period3" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period4" class="period4" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period5" class="period5" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period6" class="period6" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period7" class="period7" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+      </div>
+      <div class="gpa gpa-e2">
+        <h2 class="gpahead">E4</h2>
+        <h3 class="gpahead" id="gpa_5"></h3>
+        <select name="period1" class="period1" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period2" class="period2" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period3" class="period3" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period4" class="period4" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period5" class="period5" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period6" class="period6" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <select name="period7" class="period7" type="select">
+          <option>--</option>
+          <option value="4">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1">D</option>
+          <option value="0.7">D-</option>
+          <option value="0">E</option>
+        </select>
+      </div>
+      <div class="semgpa">
+        <h2 class="gpahead">S2</h2>
+        <h3 id="s2" class="gpahead"></h2>
+        <h4 id="s2_1"></h4>
+        <h4 id="s2_2"></h4>
+        <h4 id="s2_3"></h4>
+        <h4 id="s2_4"></h4>
+        <h4 id="s2_5"></h4>
+        <h4 id="s2_6"></h4>
+        <h4 id="s2_7"></h4>
+      </div>
+      <div class="semgpa yrgpa">
+        <h2 class="gpahead">YR</h2>
+        <h3 id="yr" class="gpahead"></h2>
+        <h4 id="yr_1"></h4>
+        <h4 id="yr_2"></h4>
+        <h4 id="yr_3"></h4>
+        <h4 id="yr_4"></h4>
+        <h4 id="yr_5"></h4>
+        <h4 id="yr_6"></h4>
+        <h4 id="yr_7"></h4>
+      </div>
     </form>
   </section>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://use.fontawesome.com/27a0b013e2.js"></script>
   <script>
     $(function() {
-      $('#gradebtn').click(function() {
+      $('#catbtnadd').click(function() {
+        $('.gradeform').append('<div class="inputgrp"><h4></h4><input type="number" min="0" step="any" max="100" autocomplete="off" placeholder="Weight (0-100)"><div class="pointgrp"><input type="number" min="0" step="any" placeholder="Points Earned" autocomplete="off"><input type="number" min="0" step="any" placeholder="Points Possible" autocomplete="off"></div><div class="pointgrp"><input type="number" min="0" step="any" placeholder="Possible Earned"autocomplete="off"><input type="number" min="0" step="any" placeholder="Possible Possible" autocomplete="off"></div></div>');
+      });
+      $('#catbtnrem').click(function() {
+        $('.gradeform .inputgrp').last().remove();
+      });
+      $(document).keyup(function() {
+        catArray = new Array();
+        $('.inputgrp').each(function(i) {
+          var weight = $(this).find('input').eq(0);
+          var earned = $(this).find('input').eq(1);
+          var possible = $(this).find('input').eq(2);
+          var earnedhyp = $(this).find('input').eq(3);
+          var possiblehyp = $(this).find('input').eq(4);
 
-        var cat1weight = parseFloat(document.getElementById('cat1weight').value);
-        if (isNaN(cat1weight)) {
-          var cat1weight = 0
-        }
-        var cat1earned = parseFloat(document.getElementById('cat1earned').value);
-        var cat1possible = parseFloat(document.getElementById('cat1possible').value);
-        var cat1earnedhyp = parseFloat(document.getElementById('cat1earnedhyp').value);
-        if (isNaN(cat1earnedhyp)) {
-          var cat1earnedhyp = 0
-        }
-        var cat1possiblehyp = parseFloat(document.getElementById('cat1possiblehyp').value);
-        if (isNaN(cat1possiblehyp)) {
-          var cat1possiblehyp = 0
-        }
-        var cat1 = parseFloat((cat1weight / 100) * ((cat1earned + cat1earnedhyp) / (cat1possible + cat1possiblehyp)));
-        if (isNaN(cat1)) {
-          var cat1 = 0
-        }
+          if (isNaN(parseFloat(weight.val()))) { var weight = 0 } else { var weight = parseFloat(weight.val()) }
+          if (isNaN(parseFloat(earned.val()))) { var earned = 0 } else { var earned = parseFloat(earned.val()) }
+          if (isNaN(parseFloat(possible.val()))) { var possible = 0 } else { var possible = parseFloat(possible.val()) }
+          if (isNaN(parseFloat(earnedhyp.val()))) { var earnedhyp = 0 } else { var earnedhyp = parseFloat(earnedhyp.val()) }
+          if (isNaN(parseFloat(possiblehyp.val()))) { var possiblehyp = 0 } else { var possiblehyp = parseFloat(possiblehyp.val()) }
 
-        var cat2weight = parseFloat(document.getElementById('cat2weight').value);
-        if (isNaN(cat2weight)) {
-          var cat2weight = 0
-        }
-        var cat2earned = parseFloat(document.getElementById('cat2earned').value);
-        var cat2possible = parseFloat(document.getElementById('cat2possible').value);
-        var cat2earnedhyp = parseFloat(document.getElementById('cat2earnedhyp').value);
-        if (isNaN(cat2earnedhyp)) {
-          var cat2earnedhyp = 0
-        }
-        var cat2possiblehyp = parseFloat(document.getElementById('cat2possiblehyp').value);
-        if (isNaN(cat2possiblehyp)) {
-          var cat2possiblehyp = 0
-        }
-        var cat2 = parseFloat((cat2weight / 100) * ((cat2earned + cat2earnedhyp) / (cat2possible + cat2possiblehyp)));
-        if (isNaN(cat2)) {
-          var cat2 = 0
-        }
-
-        var cat3weight = parseFloat(document.getElementById('cat3weight').value);
-        if (isNaN(cat3weight)) {
-          var cat3weight = 0
-        }
-        var cat3earned = parseFloat(document.getElementById('cat3earned').value);
-        var cat3possible = parseFloat(document.getElementById('cat3possible').value);
-        var cat3earnedhyp = parseFloat(document.getElementById('cat3earnedhyp').value);
-        if (isNaN(cat3earnedhyp)) {
-          var cat3earnedhyp = 0
-        }
-        var cat3possiblehyp = parseFloat(document.getElementById('cat3possiblehyp').value);
-        if (isNaN(cat3possiblehyp)) {
-          var cat3possiblehyp = 0
-        }
-        var cat3 = parseFloat((cat3weight / 100) * ((cat3earned + cat3earnedhyp) / (cat3possible + cat3possiblehyp)));
-        if (isNaN(cat3)) {
-          var cat3 = 0
-        }
-
-        var cat4weight = parseFloat(document.getElementById('cat4weight').value);
-        if (isNaN(cat4weight)) {
-          var cat4weight = 0
-        }
-        var cat4earned = parseFloat(document.getElementById('cat4earned').value);
-        var cat4possible = parseFloat(document.getElementById('cat4possible').value);
-        var cat4earnedhyp = parseFloat(document.getElementById('cat4earnedhyp').value);
-        if (isNaN(cat4earnedhyp)) {
-          var cat4earnedhyp = 0
-        }
-        var cat4possiblehyp = parseFloat(document.getElementById('cat4possiblehyp').value);
-        if (isNaN(cat4possiblehyp)) {
-          var cat4possiblehyp = 0
-        }
-        var cat4 = parseFloat((cat4weight / 100) * ((cat4earned + cat4earnedhyp) / (cat4possible + cat4possiblehyp)));
-        if (isNaN(cat4)) {
-          var cat4 = 0
-        }
-
-        var cat5weight = parseFloat(document.getElementById('cat5weight').value);
-        if (isNaN(cat5weight)) {
-          var cat5weight = 0
-        }
-        var cat5earned = parseFloat(document.getElementById('cat5earned').value);
-        var cat5possible = parseFloat(document.getElementById('cat5possible').value);
-        var cat5earnedhyp = parseFloat(document.getElementById('cat5earnedhyp').value);
-        if (isNaN(cat5earnedhyp)) {
-          var cat5earnedhyp = 0
-        }
-        var cat5possiblehyp = parseFloat(document.getElementById('cat5possiblehyp').value);
-        if (isNaN(cat5possiblehyp)) {
-          var cat5possiblehyp = 0
-        }
-        var cat5 = parseFloat((cat5weight / 100) * ((cat5earned + cat5earnedhyp) / (cat5possible + cat5possiblehyp)));
-        if (isNaN(cat5)) {
-          var cat5 = 0
-        }
-
-        var grade = Math.round((cat1 + cat2 + cat3 + cat4 + cat5) * 100, 3);
-        if ((cat1weight + cat2weight + cat3weight + cat4weight + cat5weight) == 100) {
-          $('#grade').html(grade + '%')
+          var cat = (weight / 100) * ((earned + earnedhyp) / (possible + possiblehyp));
+          if(isNaN(cat)) { cat = 0 }
+          catArray.push(cat);
+        });
+        var grade = catArray.reduce(add, 0);
+        function add(a, b) { return a + b }
+        var grade = parseFloat(100 * grade).toFixed(2);
+        if (0 < grade && grade <= 100 && isFinite(grade)) {
+          $('#grade').html('Grade: ' + grade + '%')
+        } else {
+          $('#grade').html('Grade:')
         }
       });
-      $('#gpabtn').click(function() {
-        var period1 = document.getElementById('period1');
-        if (isNaN(period1.options[period1.selectedIndex].value)) {
-          var selected1 = null;
-        } else {
-          var selected1 = parseFloat(period1.options[period1.selectedIndex].value);
-        };
-        var period2 = document.getElementById('period2');
-        if (isNaN(period2.options[period2.selectedIndex].value)) {
-          var selected2 = null;
-        } else {
-          var selected2 = parseFloat(period2.options[period2.selectedIndex].value);
-        };
-        var period3 = document.getElementById('period3');
-        if (isNaN(period3.options[period3.selectedIndex].value)) {
-          var selected3 = null;
-        } else {
-          var selected3 = parseFloat(period3.options[period3.selectedIndex].value);
-        };
-        var period4 = document.getElementById('period4');
-        if (isNaN(period4.options[period4.selectedIndex].value)) {
-          var selected4 = null;
-        } else {
-          var selected4 = parseFloat(period4.options[period4.selectedIndex].value);
-        };
-        var period5 = document.getElementById('period5');
-        if (isNaN(period5.options[period5.selectedIndex].value)) {
-          var selected5 = null;
-        } else {
-          var selected5 = parseFloat(period5.options[period5.selectedIndex].value);
-        };
-        var period6 = document.getElementById('period6');
-        if (isNaN(period6.options[period6.selectedIndex].value)) {
-          var selected6 = null;
-        } else {
-          var selected6 = parseFloat(period6.options[period6.selectedIndex].value);
-        };
-        var period7 = document.getElementById('period7');
-        if (isNaN(period7.options[period7.selectedIndex].value)) {
-          var selected7 = null;
-        } else {
-          var selected7 = parseFloat(period7.options[period7.selectedIndex].value);
-        };
-        var array = [selected1, selected2, selected3, selected4, selected5, selected6, selected7];
-        var array = array.filter(function(value) {
-          return value !== null
-        });
-        var count = array.filter(function(value) {
-          return value !== null
-        }).length;
+      $('.gpaform select').change(function() {
 
-        var gpa = ((selected1 + selected2 + selected3 + selected4 + selected5 + selected6 + selected7) / count).toFixed(2);
-        $('#gpa').html(gpa + '!');
+        grades = {};
+
+        $('.gpaform .gpa').each(function(i) {
+          parseNumber = function(value) {
+            if (isNaN(parseFloat(value))) { var value = "remove" } else { var value = parseFloat(value) }
+            return value;
+          };
+          parseFixed = function(value) {
+            if (isNaN(parseFloat(value))) {
+              return ""
+            } else {
+              var value = parseFloat(value).toFixed(2);
+              return value;
+            }
+          };
+          avgArray = function(value) {
+            var remove = "remove";
+            var value = jQuery.grep(value, function(value) {
+              return value != remove;
+            });
+            function add(a, b) { return a + b };
+            var value = value.reduce(add, 0) / value.length;
+            return value;
+          };
+
+          period1 = parseNumber($(this).find('.period1').val());
+          period2 = parseNumber($(this).find('.period2').val());
+          period3 = parseNumber($(this).find('.period3').val());
+          period4 = parseNumber($(this).find('.period4').val());
+          period5 = parseNumber($(this).find('.period5').val());
+          period6 = parseNumber($(this).find('.period6').val());
+          period7 = parseNumber($(this).find('.period7').val());
+
+          grades["grade_"+i] = [period1, period2, period3, period4, period5, period6, period7];
+        });
+
+        function add(a, b) { return a + b }
+
+        var mp1 = avgArray(grades.grade_0);
+        var mp2 = avgArray(grades.grade_1);
+        var e1 = avgArray(grades.grade_2);
+        var mp3 = avgArray(grades.grade_3);
+        var mp4 = avgArray(grades.grade_4);
+        var e2 = avgArray(grades.grade_5);
+
+        $('#gpa_0').html(parseFixed(mp1));
+        $('#gpa_1').html(parseFixed(mp2));
+        $('#gpa_2').html(parseFixed(e1));
+        $('#gpa_3').html(parseFixed(mp3));
+        $('#gpa_4').html(parseFixed(mp4));
+        $('#gpa_5').html(parseFixed(e2));
+
+        sem1Grade = function(period) {
+          var mp1 = grades.grade_0[period];
+          var mp2 = grades.grade_1[period];
+          var e1 = grades.grade_2[period];
+          if ( ( mp1 == 0 && mp2 == 0 ) || ( mp1 == 0 && e1 == 0 ) || ( mp2 == 0 && e1 == 0) ) { 
+            grade = 0;
+            return grade 
+          } else {
+            var grade = parseNumber(( 3/7 * mp1 ) + ( 3/7 * mp2 ) + ( 1/7 * e1 ));
+            return grade
+          }
+        };
+        sem2Grade = function(period) {
+          var mp3 = grades.grade_3[period];
+          var mp4 = grades.grade_4[period];
+          var e2 = grades.grade_5[period];
+          if ( ( mp3 == 0 && mp4 == 0 ) || ( mp3 == 0 && e2 == 0 ) || ( mp4 == 0 && e2 == 0) ) { 
+            grade = 0;
+            return grade 
+          } else {
+            var grade = parseNumber(( 3/7 * mp3 ) + ( 3/7 * mp4 ) + ( 1/7 * e2 ));
+            return grade
+          }
+        };
+        yearGrade = function(period) {
+          var mp1 = grades.grade_0[period];
+          var mp2 = grades.grade_1[period];
+          var e1 = grades.grade_2[period];
+          var mp3 = grades.grade_3[period];
+          var mp4 = grades.grade_4[period];
+          var e2 = grades.grade_5[period];
+          if ( ( mp1 == 0 && mp2 == 0 ) || ( mp1 == 0 && e1 == 0 ) || ( mp2 == 0 && e1 == 0) ) { 
+            sem1 = 0
+          } else {
+            sem1 = parseNumber(( 3/7 * mp1 ) + ( 3/7 * mp2 ) + ( 1/7 * e1 ))
+          }
+          if ( ( mp3 == 0 && mp4 == 0 ) || ( mp3 == 0 && e2 == 0 ) || ( mp4 == 0 && e2 == 0) ) { 
+            sem2 = 0
+          } else {
+            sem2 = parseNumber(( 3/7 * mp3 ) + ( 3/7 * mp4 ) + ( 1/7 * e2 ))
+          }
+          if (isNaN(sem1)) { sem1 = "remove" }
+          if (isNaN(sem2)) { sem2 = "remove" }
+          var yearArray = [sem1, sem2];
+          
+          var year = avgArray(yearArray);
+          if (isNaN(year)) { year = "remove" }
+
+          return year
+        };
+
+        $('#s1_1').html(parseFixed(sem1Grade(0)));
+        $('#s1_2').html(parseFixed(sem1Grade(1)));
+        $('#s1_3').html(parseFixed(sem1Grade(2)));
+        $('#s1_4').html(parseFixed(sem1Grade(3)));
+        $('#s1_5').html(parseFixed(sem1Grade(4)));
+        $('#s1_6').html(parseFixed(sem1Grade(5)));
+        $('#s1_7').html(parseFixed(sem1Grade(6)));
+
+        sem1Array = [sem1Grade(0), sem1Grade(1), sem1Grade(2), sem1Grade(3), sem1Grade(4), sem1Grade(5), sem1Grade(6)];
+        s1 = avgArray(sem1Array);
+        $('#s1').html(parseFixed(s1));
+          
+
+        $('#s2_1').html(parseFixed(sem2Grade(0)));
+        $('#s2_2').html(parseFixed(sem2Grade(1)));
+        $('#s2_3').html(parseFixed(sem2Grade(2)));
+        $('#s2_4').html(parseFixed(sem2Grade(3)));
+        $('#s2_5').html(parseFixed(sem2Grade(4)));
+        $('#s2_6').html(parseFixed(sem2Grade(5)));
+        $('#s2_7').html(parseFixed(sem2Grade(6)));
+
+        sem2Array = [sem2Grade(0), sem2Grade(1), sem2Grade(2), sem2Grade(3), sem2Grade(4), sem2Grade(5), sem2Grade(6)];
+        s2 = avgArray(sem2Array);
+        $('#s2').html(parseFixed(s2));
+
+        $('#yr_1').html(parseFixed(yearGrade(0)));
+        $('#yr_2').html(parseFixed(yearGrade(1)));
+        $('#yr_3').html(parseFixed(yearGrade(2)));
+        $('#yr_4').html(parseFixed(yearGrade(3)));
+        $('#yr_5').html(parseFixed(yearGrade(4)));
+        $('#yr_6').html(parseFixed(yearGrade(5)));
+        $('#yr_7').html(parseFixed(yearGrade(6)));
+
+        yearArray = [yearGrade(0), yearGrade(1), yearGrade(2), yearGrade(3), yearGrade(4), yearGrade(5), yearGrade(6)];
+        year = avgArray(yearArray);
+        console.log(year, yearArray);
+        $('#yr').html(parseFixed(year));
       });
     });
   </script>
