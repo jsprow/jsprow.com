@@ -150,12 +150,6 @@
       outline: none;
       box-shadow: -2px 1px 0 1px #eee;
     }
-    .gpa select::after {
-      content: "\f09b";
-      font-family: FontAwesome;
-      left: 0;
-      z-index: 10;
-    }
     .gpa select:hover {
       background-color: #eee;
       box-shadow: -2px 1px 0 1px hsl(255, 50%, 60%);
@@ -1077,7 +1071,6 @@
 
         yearArray = [yearGrade(0), yearGrade(1), yearGrade(2), yearGrade(3), yearGrade(4), yearGrade(5), yearGrade(6)];
         year = avgArray(yearArray);
-        console.log(year, yearArray);
         $('#yr').html(parseFixed(year));
       });
     });
