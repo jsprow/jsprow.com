@@ -106,8 +106,7 @@ if ($result->num_rows > 0) {
   <script src="https://s3.amazonaws.com/menumaker/menumaker.min.js"></script>
   <script type="text/javascript">
     $(function() {
-        $('#nameButton').on('click', function(e) {
-          e.preventDefault();
+        $('#nameButton').on('click', function() {
 
           $("#submitName").css('opacity', '0.5'); //dim submit button
 
