@@ -1,80 +1,54 @@
-@media all and (min-width: 960px) {
-    body{
-        font-size: 20px;
-    }
-}
- 
-@media all and (max-width: 959px) and (min-width: 600px) {
-    body{
-        font-size: 16px;
-    }
-}
- 
-@media all and (max-width: 599px) and (min-width: 320px) {
-    body{
-        font-size: 12px;
-    }
- 
-}
-h1 {
-    font-size: 2.441em;
-}
-h2 {
-    font-size: 1.953em;
-}
-h3 {
-    font-size: 1.563em;
-}
-h4 {
-    font-size: 1.25em;
-}
-p, li, td, a, input, button {
-    font-size: 1em;
-}
-body {
-	position: relative;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-around;
-	align-items: flex-start;
-	font-family: 'Roboto Slab', serif;
-}
-.content {
+body, .form_style {
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
-	max-width: 35vw;
+	font-family: 'Amiko', sans-serif;
+}
+.content_wrapper {
+	width: 50%;
+}
+.form_style {
+	width: 50%;
+	margin-bottom: 1em;
+}
+#contentText {
 	padding: 1em;
+	border: 1px solid #CCCCCC;
+	border-radius: 1em;
+	outline: none;
 }
-.content img {
-	width: 100%;
+#FormSubmit {
+	display: block;
+	background: #6C93AD;
+	border: 1px solid #4B6170;
+	color: #FFFFFF;
+	margin-top: 1em;
+	padding: 1em 1.5em;
+	border-radius: 1em;
+	outline: none;
 }
-button {
-	height: 3em;
-	width: 100%;
-	padding: 0.5em;
-	background-color: #777;
-	border: 1px solid black;
-	color: #DDD;
+#responds{
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
-button {
-	align-self: flex-end;
-	background-color: #555;
-}
-textarea {
-	width: 100%;
-	height: 5em;
-	resize: vertical;
-	border: 1px solid black;
-}
-#bio {
-	width: 100%;
+#responds li {
+	display: flex;
+	flex-flow: row nowrap;
+	list-style: none;
 	padding: 1em;
+	background: rgb(221, 240, 255);
+	margin-bottom: 1em;
+	border-radius: 1em;
+	font-size: 13px;
+	outline: none;
 }
-#phpfact {
-	width: 100%;
+#responds li.sel {
+	background: rgb(255, 221, 221);
 }
-
-
-
-
+.del_wrapper{
+	margin-left: auto;
+}
+#responds li p {
+	margin: 0 auto 0 0;
+}

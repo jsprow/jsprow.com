@@ -10,7 +10,7 @@
   <main>
     <h1>welcome to...</h1>
     <a href="flexbox/flex.html">...flexbox</a>
-    <a href="ajax/ajax.php">...ajax</a>
+    <a href="ajax/index.php">...ajax</a>
     <a href="naughty-words/naughty.php">...databases</a>
     <a href="emailform/emailform.php">...forms that email</a>
     <a href="wikipedia/index.php">...flashcards scraped from wikipedia</a>
