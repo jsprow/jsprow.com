@@ -76,7 +76,6 @@
       ?>
     </form>
   </div>
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
     <script type="text/javascript">
       $(function() {
