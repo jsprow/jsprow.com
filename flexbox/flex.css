@@ -1,6 +1,6 @@
 body {
   font-family: "Josefin Sans", Arial, Helvetica;
-  font-size: calc( 14px + (24 - 16) * (100vw - 400px)/(800 - 400));
+  font-size: calc( 14px + (20 - 14) * (100vw - 320px)/(1280 - 320));
   line-height: calc( 1.3em + (1.5 - 1.3) * ( (100vw - 21em) / (35 - 21)));
   display: flex;
   flex-direction: column;
@@ -24,13 +24,13 @@ main {
   display: flex;
   flex: 1 0;
   justify-content: space-between;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   align-content: stretch;
   background-color: #A49694;
   padding: 0.5em;
 }
 
-.flex-content {
+.flex-content__stretch {
   display: flex;
   flex: 1 1 25%;
   background-color: #EDE7D9;
