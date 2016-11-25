@@ -8,16 +8,25 @@ body {
  -webkit-perspective: 1000;                   /* Sets up your viewpoint for seeing the animation */
 }
 
-.flashcard {
-  height: 50vh;  
-  width: 70vw; 
-  margin: 10% auto;                                              /* Centers the flashcard on the page */
+.flashcard,
+.front,
+.back {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.flashcard {                                         /* Centers the flashcard on the page */
   border: 1px solid gray;                            /*  Border makes the animation easier to see. */
   box-shadow: 2px 2px 2px #000;
   -webkit-transform-style: preserve-3d;                                 /* Provides 3D perspective. */
   transition: all 0.3s;                                /* Slows down any transitions (e.g. rotation) */
   -webkit-transition: all 0.3s;
+  width: 30em;
+  height: 20em;
+  margin: 10% auto;
   z-index: 100;
+  user-select: none;
 }
 
 .flashcard:active, .back {
@@ -29,18 +38,18 @@ body {
 	background-color: #eee;
   position: absolute;                    
   -webkit-backface-visibility: hidden;           /*  Hides back side of text (it's upside down) */
-  height: 50vh;  
-  width: 70vw;
-  text-align: center; 
-  display: flex;                                                 
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  width: 30em;
+  height: 20em;
+}
+
+br {
+  display: none;
 }
 
 .front p, .back p {
 	display: inline-block;
 	font-size: 1.75em;
   width: 100%;
-  height: 30%;
+  margin: auto;
 }

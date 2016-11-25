@@ -10,8 +10,6 @@
 </head>
 <body>
 
-<!-- <table class="table"></table>
- -->
 <div class="cards">
 	<script id="hr-template" type="text/x-handlebars-template">
 		<div class="stage">
@@ -38,7 +36,7 @@ $(function() {
 	$('.cards').sheetrock({
 	  url: "https://docs.google.com/spreadsheets/d/1i01it-1Lim-rMZ0UTY1rsB3iqk6USqVSZBOprJrYIcQ/edit#gid=0",
 	  query: "select A,B,C",
-	  fetchSize: 20,
+	  fetchSize: 300,
 	  rowTemplate: HRTemplate
 	});
 	$('.flashcard').on('click', function() {

@@ -31,12 +31,18 @@ main {
 }
 
 .flex-content__stretch {
-  display: flex;
   flex: 1 1 25%;
+  display: flex;
+  flex-flow: column;
   background-color: #EDE7D9;
   padding: 1.5em;
   border-radius: 1em;
   margin: 0.5em;
+}
+
+h2 {
+  width: 100%;
+  text-align: center;
 }
 
 p {
