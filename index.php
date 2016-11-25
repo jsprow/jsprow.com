@@ -9,13 +9,16 @@
 <body id="body-duh">
   <div id="video"></div>
     <main>
-      <h1>welcome to...</h1>
+      <h1>home of...</h1>
       <a href="flexbox/flex.html">...flexbox</a>
       <a href="ajax/index.php">...ajax</a>
       <a href="emailform/emailform.php">...forms that email</a>
       <a href="wikipedia/index.php">...flashcards scraped from wikipedia</a>
       <div class="space-invader-box">
         <div class="space-invader"></div>
+      </div>
+      <div class="space-invader-box__top">
+        <div class="space-invader__top"></div>
       </div>
     </main>
 
@@ -39,9 +42,22 @@
         player.pauseVideo();
       };
       $('.space-invader-box').click(function() {
-        $('#video').fadeToggle();
+        $('a').addClass('dim');
+        $('#video').fadeIn();
+        $(this).hide();
+        $('.space-invader-box__top').fadeIn();
+        $('.space-invader__top').fadeIn();
         var player = $('#video').data('ytPlayer').player;
         player.playVideo();
+      });
+      $('.space-invader-box__top').click(function() {
+        $('a').removeClass('dim');
+        var player = $('#video').data('ytPlayer').player;
+        player.pauseVideo();
+        $('#video').fadeOut();
+        $(this).hide();
+        $('.space-invader-box').fadeIn();
+        $('.space-invader').fadeIn();
       });
     });
   </script>

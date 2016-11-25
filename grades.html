@@ -171,7 +171,7 @@
       <div class="outputgrp">
         <button type="button" id="catbtnadd">Add Category</button>
         <button type="button" id="catbtnrem">Remove Category</button>
-        <h1 id="grade">Grade:</h1>
+        <h1 id="grade">Your grade is...</h1>
       </div>
       <div class="inputgrp">
         <h4></h4>
@@ -924,9 +924,9 @@
         function add(a, b) { return a + b }
         var grade = parseFloat(100 * grade).toFixed(2);
         if (0 < grade && grade <= 100 && isFinite(grade)) {
-          $('#grade').html('Grade: ' + grade + '%')
+          $('#grade').html('Your grade is ' + grade + '%')
         } else {
-          $('#grade').html('Grade:')
+          $('#grade').html('Your grade is...')
         }
       });
       $('.gpaform select').change(function() {

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>AJAX Trying Again...</title>
+	<title>AJAX List</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Amiko" rel="stylesheet">
 </head>
 <body>
+<p>Type a word in the box. It will be added to a MySQL database... which is cool. Even cooler is the fact that the page isn't reloading when you hit the submit button.</p>
 <div class="form_style">
 	<input name="content_txt" id="contentText" placeholder="Name" />
 	<button id="FormSubmit">Add record</button>
