@@ -20,13 +20,14 @@
     </main>
 
   <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="youtubebg.js"></script>
   <script>
     $(function() {
+      var sassyTrump = ['fkgK2M8e6-4', 'eORnMWDI_F0', 'kZsKEHwBld0', 'Z7anGrhCZok', 'iQYLw9S1mqw', 'UrjGxL3cFqk', 'w6j70qBvJOA', '7b7p2SI81Ok'];
+      var randomSassy = sassyTrump[Math.floor(Math.random() * sassyTrump.length)];
       $('#video').YTPlayer({
         fitToBackground: true,
-        videoId: 'eORnMWDI_F0',
+        videoId: randomSassy,
         repeat: true,
         mute: false,
         events: {
