@@ -7,7 +7,12 @@ $(document).ready(function() {
             return false;
         }
         $("#formSubmit").hide(); //hide submit button
-        var myData = 'content_txt=' + $("#contentText").val(); //build a post data structure
+        var contentText = $("#contentText").val();
+        var inOut = $("#inOut").val();
+        var myData = { //build a post data structure
+            content_txt: contentText, 
+            in_out: inOut
+        };
         jQuery.ajax({
             type: "POST", // HTTP method POST or GET
             url: "response.php", //Where to make Ajax calls
@@ -20,7 +25,7 @@ $(document).ready(function() {
             },
             error: function(xhr, ajaxOptions, thrownError) {
                 $("#formSubmit").show(); //show submit button
-                alert(thrownError);
+                console.warn(thrownError, xhr.responseText);
             }
         });
     });

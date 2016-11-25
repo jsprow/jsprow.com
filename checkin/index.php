@@ -11,6 +11,10 @@
 </div>
 <div class="form_style">
 	<input name="content_txt" id="contentText" placeholder="Name" />
+	<select name="in_out" id="inOut">
+		<option value="in">In</option>
+		<option value="out">Out</option>
+	</select>
 	<button id="formSubmit"><span>Add record</span></button>
 </div>
 <div class="content_wrapper">
@@ -20,10 +24,10 @@
 include_once "config.php";
 
 //MySQLi query
-$results = $con->query("SELECT id,name FROM add_delete_record");
+$results = $con->query("SELECT id,time,name,in_out FROM add_delete_record");
 //get all records from add_delete_record table
 while ($row = $results->fetch_assoc()) {
-    echo '<li id="item_' . $row["id"] . '">' . '<p>' . $row["name"] . '</p>';
+    echo '<li id="item_' . $row["id"] . '">' . '<p>' . $row["name"] . '</p><p>' . $row["time"] . '</p><p>' . $row["in_out"] . '</p>';
     echo '<div class="del_wrapper"><a href="#" class="close del_button" id="del-' . $row["id"] . '">';
     echo '</a></div></li>';
 }

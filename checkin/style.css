@@ -46,6 +46,18 @@ span {
 	outline: none;
 	margin: 1em;
 }
+#inOut {
+	-webkit-appearance: none;
+	display: inline-block;
+	font-size: 1em;
+	height: 3em;
+	padding: 0.5em 1em;
+	margin: 1em;
+	border: none;
+	border: 1px solid #ccc;
+	border-radius: 1em;
+	outline: none;
+}
 #formSubmit {
 	display: inline-block;
 	background: hsl(204, 28%, 55%);
