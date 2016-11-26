@@ -11,11 +11,11 @@
 </div>
 <div class="form_style">
 	<input name="content_txt" id="contentText" placeholder="Name" />
-	<select name="in_out" id="inOut">
-		<option value="in">In</option>
-		<option value="out">Out</option>
-	</select>
-	<button id="formSubmit"><span>Add record</span></button>
+
+<!-- 	<div class="select_wrapper"><select name="in_out" id="inOut">	<option value="in">IN</option>	<option value="out">OUT</option></select><i class="fa fa-chevron-down"></i>/div> -->
+
+	<button id="inSubmit"><span>Check In</span></button>
+	<button id="outSubmit"><span>Check Out</span></button>
 </div>
 <div class="content_wrapper">
 	<ul id="responds">
@@ -27,17 +27,17 @@ include_once "config.php";
 $results = $con->query("SELECT id,time,name,in_out FROM add_delete_record");
 //get all records from add_delete_record table
 while ($row = $results->fetch_assoc()) {
-    echo '<li id="item_' . $row["id"] . '">' . '<p>' . $row["name"] . '</p><p>' . $row["time"] . '</p><p>' . $row["in_out"] . '</p>';
-    echo '<div class="del_wrapper"><a href="#" class="close del_button" id="del-' . $row["id"] . '">';
-    echo '</a></div></li>';
+	echo '<li id="item_' . $row["id"] . '">' . '<p>' . $row["name"] . '</p><p>' . $row["time"] . '</p><p>' . $row["in_out"] . '</p>';
+	echo '<div class="del_wrapper"><a href="#" class="close del_button" id="del-' . $row["id"] . '">';
+	echo '<i class="fa fa-times"></i></a></div></li>';
 }
-
 //close db connection
 $con->close();
 ?>
 	</ul>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://use.fontawesome.com/27a0b013e2.js"></script>
 <script src="ajax.js"></script>
 </body>
 </html>

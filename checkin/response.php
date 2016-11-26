@@ -8,18 +8,18 @@ if(isset($_POST["content_txt"]) && strlen($_POST["content_txt"])>0)
 	//sanitize post value, PHP filter FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH Strip tags, encode special characters.
 	$contentToSave = filter_var($_POST["content_txt"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH); 
 	$inOut = filter_var($_POST["in_out"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
-	$time = date("Y-m-d H:i:s");
+	$timeStamp = filter_var($_POST["time_stamp"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 	
 	// Insert sanitize string in record
-	$insert_row = $con->query("INSERT INTO add_delete_record(name,time,in_out) VALUES('".$contentToSave."','".$time."', '".$inOut."')");
+	$insert_row = $con->query("INSERT INTO add_delete_record(name,time,in_out) VALUES('".$contentToSave."','".$timeStamp."', '".$inOut."')");
 	
 	if($insert_row)
 	{
 		 //Record was successfully inserted, respond result back to index page
 		  $my_id = $con->insert_id; //Get ID of last inserted row from MySQL
-      echo '<li id="item_' . $my_id . '"><p>' . $contentToSave . '</p><p>' . $time . '</p><p>' . $inOut . '</p>';
+      echo '<li id="item_' . $my_id . '"><p>' . $contentToSave . '</p><p>' . $timeStamp . '</p><p>' . $inOut . '</p>';
   		echo '<div class="del_wrapper"><a href="#" class="close del_button" id="del-' . $my_id . '">';
-    	echo '</a></div></li>';
+			echo '<i class="fa fa-times"></i></a></div></li>';
 
 		  $con->close(); //close db connection
 

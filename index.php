@@ -42,7 +42,11 @@
         player.pauseVideo();
       };
       $('.space-invader-box').click(function() {
+        $('h1').addClass('dim');
         $('a').addClass('dim');
+        $('a').addClass('right');
+        $('h1').addClass('right');
+        $('.space-invader-box__top').addClass('right');
         $('#video').fadeIn();
         $(this).hide();
         $('.space-invader-box__top').fadeIn();
@@ -51,7 +55,11 @@
         player.playVideo();
       });
       $('.space-invader-box__top').click(function() {
+        $('h1').removeClass('dim');
         $('a').removeClass('dim');
+        $('a').removeClass('right');
+        $('h1').removeClass('right');
+        $('.space-invader-box__top').removeClass('right');
         var player = $('#video').data('ytPlayer').player;
         player.pauseVideo();
         $('#video').fadeOut();

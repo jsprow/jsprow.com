@@ -7,13 +7,16 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	font-family: 'Amiko', sans-serif;
+	padding: 0;
 }
 p,
 a,
 input,
 li,
 button,
-span {
+span,
+select,
+option {
 	font-size: 1em;
 	padding: 0;
 	margin: 0;
@@ -25,7 +28,6 @@ span {
 .description {
 	color: #fff;
 	padding: 1em;
-	margin: 1em;
 	background-color: #6C93AD;
 	border: 1px solid #4B6170;
 	border-radius: 1em;
@@ -33,46 +35,42 @@ span {
 .form_style {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: center;
-	align-self: center;
-	width: 50%;
-	margin: 1em;
+	justify-content: space-between;
+	padding: 1em;
 }
 #contentText {
-	padding: 1em;
-	border: 1px solid #CCCCCC;
-	border-radius: 1em;
-	height: 1.5em;
-	outline: none;
-	margin: 1em;
-}
-#inOut {
-	-webkit-appearance: none;
-	display: inline-block;
-	font-size: 1em;
-	height: 3em;
-	padding: 0.5em 1em;
-	margin: 1em;
-	border: none;
+	padding: 0.75em;
 	border: 1px solid #ccc;
 	border-radius: 1em;
+	width: 100%;
+	height: 1.5em;
+	margin: 0 1em 1em 0;
 	outline: none;
 }
-#formSubmit {
+#contentText:focus {
+	background-color: hsl(204, 28%, 95%);
+}
+
+/* .select_wrapper {	position: relative;	display: inline-block;	height: 3em;	border: 1px solid #ccc;	border-radius: 1em;	margin: 1em;}.select_wrapper:hover {	background-color: hsl(204, 28%, 95%);}.select_wrapper i {	position: absolute;	top: 1em;	right: 0.5em;}.select_wrapper select {	-webkit-appearance: none;	background: transparent;	height: 3em;	padding: 0.5em 1.5em 0.5em 1em;	border-radius: 1em;	outline: none;	border: none;	z-index: 10;} */
+
+#inSubmit,
+#outSubmit {
+	flex: 1 1;
 	display: inline-block;
 	background: hsl(204, 28%, 55%);
 	border: 1px solid #4B6170;
 	color: #fff;
-	width: 9em;
-	margin: 1em;
 	padding: 1em 0;
+	margin: 0 1em 1em 0;
 	border-radius: 1em;
 	outline: none;
 }
-#formSubmit:hover {
+#inSubmit:hover,
+#outSubmit:hover {
 	background: hsl(204, 28%, 45%);
 }
-#formSubmit:active {
+#inSubmit:active 
+#outSubmit:active {
 	background: hsl(204, 28%, 35%);	
 }
 .content_wrapper {
@@ -81,9 +79,8 @@ span {
 #responds{
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: center;
+	justify-content: flex-start;
 	width: 100%;
-	margin: 1em;
 	padding: 0;
 	list-style: none;
 }
@@ -112,28 +109,8 @@ span {
 .close {
   position: relative;
   display: inline-block;
+	color: hsl(0, 50%, 50%);
   width: 100%;
   height: 100%;
   overflow: hidden;
-}
-.close::before,
-.close::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  left: 0;
-  background: hsl(0, 50%, 50%);
-  height: 0.3em;
-  border-radius: 0.2em;
-}
-.close:hover::before,
-.close:hover::after {
-	background: hsl(0, 50%, 30%);
-}
-.close::before {
-  transform: rotate(45deg);
-}
-.close::after {
-  transform: rotate(-45deg);
 }

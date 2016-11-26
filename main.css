@@ -62,13 +62,24 @@ body {
 }
 
 main {
+  position: relative;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
   align-items: center;
   height: 100vh;
+  padding-right: 2em;
 }
-
+.right {
+  align-self: flex-end;
+  transition: align-self 500ms;
+}
+h1,
+a,
+.space-invader-box__top {
+  transform: translateX(0);
+  transition: transform 500ms;
+}
 a {
   color: #eee;
   text-decoration: none;
