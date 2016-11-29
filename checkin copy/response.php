@@ -17,6 +17,10 @@ if(isset($_POST["content_txt"]) && strlen($_POST["content_txt"])>0)
 	{
 		 //Record was successfully inserted, respond result back to index page
 		  $my_id = $con->insert_id; //Get ID of last inserted row from MySQL
+      echo '<li id="item_' . $my_id . '"><p>' . $name . '</p><p>IN: ' . $time_in . ' DATE:' . $date . '</p>';
+  		echo '<div class="del_wrapper"><a href="#" class="close del_button" id="del-' . $my_id . '">';
+			echo '<i class="fa fa-times"></i></a></div></li>';
+
 		  $con->close(); //close db connection
 
 	}else{

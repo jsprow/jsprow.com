@@ -6,17 +6,21 @@ if(isset($_POST["content_txt"]) && strlen($_POST["content_txt"])>0)
 {	//check $_POST["content_txt"] is not empty
 
 	//sanitize post value, PHP filter FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH Strip tags, encode special characters.
-	$name = filter_var($_POST["content_txt"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+
+	$name = filter_var($_POST["content_txt"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH); 
+	$time_out = date("H:i:s");
 	$date = date("Y-m-d");
-	$time_in = date("H:i:s");
-	
-	// Insert sanitize string in record
-	$insert_row = $con->query("INSERT INTO add_delete_record(name,time_in,date) VALUES('".$name."','".$time_in."','".$date."')");
-	
-	if($insert_row)
+
+		// Insert sanitize string in record
+	$update_row = $con->query("UPDATE add_delete_record SET time_out = CASE WHEN time_out IS NULL THEN '".$time_out."' ELSE time_out END WHERE name = '".$name."' AND date = '".$date."'");
+	if($update_row)
 	{
 		 //Record was successfully inserted, respond result back to index page
 		  $my_id = $con->insert_id; //Get ID of last inserted row from MySQL
+      echo '<li id="item_' . $my_id . '"><p>' . $name . '</p>OUT: ' . $time_out . '</p>';
+  		echo '<div class="del_wrapper"><a href="#" class="close del_button" id="del-' . $my_id . '">';
+			echo '<i class="fa fa-times"></i></a></div></li>';
+
 		  $con->close(); //close db connection
 
 	}else{

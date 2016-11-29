@@ -3,8 +3,7 @@ $(document).ready(function() {
     $("#inSubmit").click(function(e) {
         e.preventDefault();
         if ($("#contentText").val() === '') {
-            $("#error_box").html('<p id="error">Whatsyername?</p>');
-            $("#error_box").slideDown();
+            $("#contentText").append('<div id="error"><p>Whatsyername?</p></div>');
             return false;
         }
         $("#inSubmit").fadeOut(); //hide submit button
@@ -23,7 +22,7 @@ $(document).ready(function() {
             dataType: "text", // Data type, HTML, json etc.
             data: myData, //Form variables
             success: function(response) {
-                $("#responds").load("index.php #responds > *");
+                $("#responds").append(response);
                 $("#contentText").val(''); //empty text field on successful
                 $("#inSubmit").fadeIn(); //show submit button
             },
@@ -36,8 +35,7 @@ $(document).ready(function() {
     $("#outSubmit").click(function(e) {
         e.preventDefault();
         if ($("#contentText").val() === '') {
-            $("#error_box").slideDown();
-            $("#error_box").html('<p id="error">Whatsyername?</p>');
+            $("#contentText").append('<div id="error"><p>Whatsyername?</p></div>');
             return false;
         }
         $("#outSubmit").fadeOut(); //hide submit button
@@ -56,7 +54,7 @@ $(document).ready(function() {
             dataType: "text", // Data type, HTML, json etc.
             data: myData, //Form variables
             success: function(response) {
-                $("#responds").load("index.php #responds > *");
+                $("#responds").append(response);
                 $("#contentText").val(''); //empty text field on successful
                 $("#outSubmit").fadeIn(); //show submit button
             },
@@ -88,12 +86,5 @@ $(document).ready(function() {
                 alert(thrownError);
             }
         });
-    });
-    $(document).keyup(function() {
-        if ($("#error_box").is(':visible')) {
-            $("#contentText").keyup(function() {
-                $("#error_box").slideUp();
-            })
-        }
     });
 });
