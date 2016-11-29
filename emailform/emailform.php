@@ -4,37 +4,17 @@
 	<title>Email Contact Form</title>
 </head>
 <body>
-	<?php
-	//if "email" variable is filled out, send email
-	  if (isset($_REQUEST['email']))  {
-	  
-	  //Email information
-	  $admin_email = "jsprow@gmail.com";
-	  $email = $_REQUEST['email'];
-	  $subject = $_REQUEST['subject'];
-	  $comment = $_REQUEST['comment'];
-	  
-	  //send email
-	  mail($admin_email, "$subject", $comment, "From:" . $email);
-	  
-	  //Email response
-	  echo "Thank you for contacting us!";
-	  }
-	  
-	  //if "email" variable is not filled out, display the form
-	  else  {
-	?>
-
-	<form method="post">
-		Email: <input name="email" type="text" /><br />
-		Subject: <input name="subject" type="text" /><br />
-		Message:<br />
-		<textarea name="comment" rows="15" cols="40"></textarea><br />
-		<input type="submit" value="Submit" />
-	</form>
-	  
-	<?php
-	  }
-	?>
+	<form class="email" action="email.php" method="post">
+              <label for="#name">Name</label>
+              <input id="name" type="text" name="name" required="" placeholder="First Last">
+              <label for="#email">Email</label>
+              <input id="email" type="email" name="email" required="" pattern="(?!(^[.-].*|[^@]*[.-]@|.*\.{2,}.*)|^.{254}.)([a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@)(?!-.*|.*-\.)([a-zA-Z0-9-]{1,63}\.)+[a-zA-Z]{2,15}" placeholder="you@example.com">
+              <label for="#phone">Phone Number</label>
+              <input id="phone" type="phone" name="phone" required="" pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$" placeholder="xxx-xxx-xxxx">
+              <label for="#message">Message</label>
+              <textarea id="message" type="textarea" name="message" required="" placeholder="Please let us know how we can help you."></textarea>
+              <div class="g-recaptcha" data-sitekey="6Lf8NwkUAAAAAL10S24CNJEkfOAb-aRKfvaik2W7"></div>
+              <button id="email-submit" type="submit" value="Submit"><i class="fa fa-envelope"></i><span> Submit</span></button>
+    	</form>
 </body>
 </html>
