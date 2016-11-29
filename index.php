@@ -15,6 +15,7 @@
       <a href="emailform/emailform.php">...forms that email</a>
       <a href="wikipedia/index.php">...flashcards scraped from wikipedia</a>
       <a href="checkin/index.php">...a check-in/out form</a>
+      <a href="grades.html">...a grade calculator</a>
       <div class="space-invader-box">
         <div class="space-invader"></div>
       </div>
