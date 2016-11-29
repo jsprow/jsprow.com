@@ -11,11 +11,11 @@
     <main>
       <h1>home of...</h1>
       <a href="flexbox/flex.html">...flexbox</a>
-      <a href="ajax/index.php">...ajax</a>
       <a href="emailform/emailform.php">...forms that email</a>
       <a href="wikipedia/index.php">...flashcards scraped from wikipedia</a>
       <a href="checkin/index.php">...a check-in/out form</a>
       <a href="grades.html">...a grade calculator</a>
+      <a id="catering" href="http://emacatering.com">...a catering website</a>
       <div class="space-invader-box">
         <div class="space-invader"></div>
       </div>
@@ -28,6 +28,9 @@
   <script src="youtubebg.js"></script>
   <script>
     $(function() {
+      $('#catering').mouseover(function() {
+        $(this).append('<p id="cateringHover">check out the print button</p>');
+      });
       var videos = ['OQSNhk5ICTI', 'J---aiyznGQ', 'a1Y73sPHKxw', 'sTSA_sWGM44', 'FJ3oHpup-pk', 'wCF3ywukQYA', 'dMH0bHeiRNg', 'r6tlw-oPDBM', 'lAl28d6tbko', 'EwTZ2xpQwpA'];
       var randomVideo = videos[Math.floor(Math.random() * videos.length)];
       $('#video').YTPlayer({
