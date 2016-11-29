@@ -8,42 +8,71 @@
 	<title>Bulma Practice</title>
 
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.3/css/bulma.css">
-
-	<style>section{padding:40px 20px;}</style>
 </head>
 
 <body>
-	<section>
-		<div class="content columns">
-			<form class="form column is-8 is-offset-2">
-				<h1>This is a Form</h1>
-					<label class="label" for="email">Email</label>
-					<p class="control">
-						<input type="phone" class="input" id="email" placeholder="email@example.com">
-					</p>
-					<label class="label" for="phone">Phone Number</label>
-					<p class="control">
-						<input type="tel" class="input" id="phone" placeholder="(555) 555-5555">
-					</p>
-					<button class="button is-primary" type="submit">Submit</button>
-			</form>
+	<section class="section">
+		<div class="box">
+			<p class="title is-1">This is a Form</p>
+			<p class="subtitle is-3">But it Does Nothing</p>
+			<div class="content columns">
+				<form class="form column is-8">
+						<label class="label" for="email">Email</label>
+						<p class="control">
+							<input type="phone" class="input" id="email" placeholder="email@example.com">
+						</p>
+						<label class="label" for="phone">Phone Number</label>
+						<p class="control">
+							<input type="tel" class="input" id="phone" placeholder="(555) 555-5555">
+						</p>
+						<button class="button is-primary" type="submit">Submit</button>
+				</form>
+			</div>
 		</div>
 	</section>
-	<section>
-		<div class="content columns">
-			<div class="tile is-ancestor">
-				<div class="tile is-vertical is-8">
-					<div class="tile">
-						<div class="tile is-parent is-vertical">
-							<article class="tile is-child notification is-primary">
-								<p class="title">Lorem Ipsum</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-							</article>
+	<section class="section">
+		<div class="box">
+			<p class="title is-1">This is a Grid</p>
+			<p class="subtitle is-3">It's Responsive</p>
+			<div class="content columns">
+				<div class="tile is-ancestor">
+					<div class="tile is-vertical is-8">
+						<div class="tile">
+							<div class="tile is-parent is-vertical">
+								<article class="tile is-child notification is-primary">
+									<p class="title">Lorem Ipsum</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								</article>
+							</div>
+						</div>
+							<div class="tile is-parent is-horizontal">
+								<article class="tile is-child notification is-warning">
+									<p class="title">Lorem Ipsum</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								</article>
+							</div>
+						</div>
+							<div class="tile is-parent is-vertical">
+								<article class="tile is-child notification is-danger">
+									<p class="title">Lorem Ipsum</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								</article>
+							</div>
 						</div>
 					</div>
 				</div>

@@ -10,11 +10,12 @@
   <div id="video"></div>
     <main>
       <h1>home of...</h1>
-      <a href="flexbox/flex.html">...flexbox</a>
-      <!--<a href="emailform/emailform.php">...forms that email</a>-->
+      <a href="flexbox/flex.html">...a responsive template using flexbox</a>
+      <a href="emailform/emailform.php">...an email contact form</a>
       <a href="wikipedia/index.php">...flashcards scraped from wikipedia</a>
-      <a href="checkin/index.php">...a check-in/out form</a>
+      <a href="checkin/index.php">...a check-in/out form using MySQL</a>
       <a href="grades.html">...a grade calculator</a>
+      <a href="bulma/index.html">...a pretty layout using Bulma</a>
       <a id="catering" href="http://emacatering.com">...a catering website</a>
       <p id="cateringHover">check out the print button</p>
       <div class="space-invader-box">
