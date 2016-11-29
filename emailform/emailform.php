@@ -31,7 +31,12 @@
 			font-size: 1em;
 			border: none;
 			outline: none;
-			margin: 0 auto;
+		}
+		label {
+			flex: 0 1 50%;
+		}
+		input {
+			margin-left: auto;
 		}
 	</style>
 </head>
