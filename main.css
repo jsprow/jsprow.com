@@ -90,7 +90,7 @@ a:hover {
   color: #ECD3FE;
   transform: translateY(0.05em);
 }
-#cateringHover {
+p#cateringHover {
   display: none;
   color: red;
   position: absolute;
