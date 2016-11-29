@@ -5,11 +5,23 @@
 	<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
 	<style>
 		body {
+			font-size: calc( 14px + (20 - 14) * (100vw - 320px)/(1280 - 320));
+  			line-height: calc( 1.3em + (1.5 - 1.3) * ( (100vw - 21em) / (35 - 21)));
+		}
+		body,
+		input,
+		textarea,
+		button {
 			font-family: 'Slabo 27px', serif;
 		}
 		form {
 			display: flex;
 			flex-direction: column;
+		}
+		input,
+		textarea,
+		button {
+			flex: 0 1;
 		}
 	</style>
 </head>
