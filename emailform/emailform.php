@@ -22,7 +22,10 @@
 		input,
 		textarea,
 		button {
-			flex: 0 0;
+			font-size: 1em;
+			border: none;
+			outline: none;
+			margin: 0 auto;
 		}
 	</style>
 </head>
