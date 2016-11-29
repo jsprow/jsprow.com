@@ -92,10 +92,8 @@ a:hover {
 }
 p#cateringHover {
   display: none;
+  font-size: 0.75em;
   color: red;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 .dim {
   opacity: 0.5;
