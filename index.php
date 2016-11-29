@@ -29,7 +29,7 @@
   <script src="youtubebg.js"></script>
   <script>
     $(function() {
-      $('#catering').mouseover(function() {
+      $('#catering').hover(function() {
         $('#cateringHover').slideToggle(50);
       });
       var videos = ['OQSNhk5ICTI', 'J---aiyznGQ', 'a1Y73sPHKxw', 'sTSA_sWGM44', 'FJ3oHpup-pk', 'wCF3ywukQYA', 'dMH0bHeiRNg', 'r6tlw-oPDBM', 'lAl28d6tbko', 'EwTZ2xpQwpA'];
