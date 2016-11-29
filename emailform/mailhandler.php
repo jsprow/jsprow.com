@@ -1,32 +1,51 @@
 <?php
-//if "email" variable is filled out, send email
-  if (isset($_REQUEST['email']))  {
-  
-  //Email information
-  $admin_email = "jsprow@gmail.com";
-  $email = $_REQUEST['email'];
-  $subject = $_REQUEST['subject'];
-  $comment = $_REQUEST['comment'];
-  
-  //send email
-  mail($admin_email, "$subject", $comment, "From:" . $email);
-  
-  //Email response
-  echo "Thank you for contacting us!";
-  }
-  
-  //if "email" variable is not filled out, display the form
-  else  {
+/* Make sure to set /etc/apache2/envvars APACHE_RUN_USER and GROUP to 'mail' or somesuch */
+/* Set e-mail recipients */
+$to = "email@something.com";
+/* Check all form inputs using check_input function */
+$name = $_POST['name'];
+$email = $_POST['email'];
+$phone = $_POST['phone'];
+$message = $_POST['message'];
+$subject = "Catering Email from $name";
+/* Let's prepare the message for the e-mail */
+$message = "
+Customer Name: $name
+E-mail: $email
+Phone: $phone
+Message:
+$message
+";
+/* Send the message using mail() function */
+mail($to, $subject, $message);
+/* Redirect visitor to the thank you page */
+header('Location: thanks.html');
+exit();
+/* Functions we used */
+function check_input($data, $problem='')
+{
+$data = trim($data);
+$data = stripslashes($data);
+$data = htmlspecialchars($data);
+if ($problem && strlen($data) == 0)
+{
+show_error($problem);
+}
+return $data;
+}
+function show_error($myError)
+{
 ?>
+<html>
+<body>
 
- <form method="post">
-  Email: <input name="email" type="text" /><br />
-  Subject: <input name="subject" type="text" /><br />
-  Message:<br />
-  <textarea name="comment" rows="15" cols="40"></textarea><br />
-  <input type="submit" value="Submit" />
-  </form>
-  
+<p>Please correct the following error:</p>
+<strong><?php echo $myError; ?></strong>
+<p>Hit the back button and try again</p>
+
+</body>
+</html>
 <?php
-  }
+exit();
+}
 ?>
