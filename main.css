@@ -91,6 +91,7 @@ a:hover {
   transform: translateY(0.05em);
 }
 #cateringHover {
+  display: none;
   color: red;
   position: absolute;
   top: 0;
