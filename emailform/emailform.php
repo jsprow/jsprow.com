@@ -17,11 +17,12 @@
 		form {
 			display: flex;
 			flex-direction: column;
+			justify-content: space-between;
 		}
 		input,
 		textarea,
 		button {
-			flex: 0 1;
+			flex: 0 0;
 		}
 	</style>
 </head>
