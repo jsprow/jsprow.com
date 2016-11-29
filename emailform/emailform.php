@@ -34,6 +34,7 @@
 		}
 		label {
 			flex: 0 1 50%;
+			padding-right: auto;
 		}
 		input {
 			margin-left: auto;
