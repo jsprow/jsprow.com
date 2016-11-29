@@ -22,6 +22,7 @@
 		input,
 		textarea,
 		button {
+			display: inline-block;
 			font-size: 1em;
 			border: none;
 			outline: none;
