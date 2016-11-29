@@ -9,6 +9,7 @@
   			line-height: calc( 1.3em + (1.5 - 1.3) * ( (100vw - 21em) / (35 - 21)));
 		}
 		body,
+		label,
 		input,
 		textarea,
 		button {
@@ -16,14 +17,15 @@
 		}
 		form {
 			display: flex;
-			flex-direction: column;
+			flex-flow: column nowrap;
 			justify-content: space-between;
 			align-items: flex-start;
+			height: 100vh;
 		}
+		label,
 		input,
 		textarea,
 		button {
-			display: inline-block;
 			font-size: 1em;
 			border: none;
 			outline: none;
