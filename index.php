@@ -32,7 +32,7 @@
       var randomVideo = videos[Math.floor(Math.random() * videos.length)];
       $('#video').YTPlayer({
         fitToBackground: true,
-        videoId: doubleRainbow,
+        videoId: randomVideo,
         repeat: true,
         mute: false,
         events: {
