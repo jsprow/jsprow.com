@@ -5,6 +5,9 @@ body {
   margin: 0;
   background-color: #ddd;
 }
+p {
+	font-size: 1em;
+}
 
 .stage {
  -webkit-perspective: 1000;                   /* Sets up your viewpoint for seeing the animation */
