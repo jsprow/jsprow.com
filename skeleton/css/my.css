@@ -1,0 +1,34 @@
+nav {
+  position: fixed;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  padding: 0 2.5rem;
+  background-color: #E1E1E1;
+  z-index: 10;
+  box-shadow: 0 2px 8px #222;
+}
+
+nav a {
+	color: #222;
+	text-decoration: none;
+	padding: 0.15rem 1rem;
+	border-radius: 4px;
+}
+
+nav a:hover {
+	color: #222;
+	background-color: hsla(0, 100%, 100%, 0.3);
+}
+
+nav a:active {
+	color: #222;
+	background-color: hsla(0, 100%, 100%, 0.15);
+}
+
+main {
+  padding-top: 10rem;
+}
