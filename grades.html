@@ -869,7 +869,7 @@
       </div>
       <div class="semgpa">
         <h2 class="gpahead">S2</h2>
-        <h3 id="s2" class="gpahead"></h2>
+        <h3 id="s2" class="gpahead"></h3>
         <h4 id="s2_1"></h4>
         <h4 id="s2_2"></h4>
         <h4 id="s2_3"></h4>
@@ -880,7 +880,7 @@
       </div>
       <div class="semgpa yrgpa">
         <h2 class="gpahead">YR</h2>
-        <h3 id="yr" class="gpahead"></h2>
+        <h3 id="yr" class="gpahead"></h3>
         <h4 id="yr_1"></h4>
         <h4 id="yr_2"></h4>
         <h4 id="yr_3"></h4>
@@ -991,7 +991,7 @@
             grade = 0;
             return grade 
           } else {
-            var grade = parseNumber(( 3/7 * mp1 ) + ( 3/7 * mp2 ) + ( 1/7 * e1 ));
+            var grade = parseNumber(( 0.4 * mp1 ) + ( 0.4 * mp2 ) + ( 0.2 * e1 ));
             return grade
           }
         };
@@ -1003,7 +1003,7 @@
             grade = 0;
             return grade 
           } else {
-            var grade = parseNumber(( 3/7 * mp3 ) + ( 3/7 * mp4 ) + ( 1/7 * e2 ));
+            var grade = parseNumber(( 0.4 * mp3 ) + ( 0.4 * mp4 ) + ( 0.2 * e2 ));
             return grade
           }
         };
@@ -1017,12 +1017,12 @@
           if ( ( mp1 == 0 && mp2 == 0 ) || ( mp1 == 0 && e1 == 0 ) || ( mp2 == 0 && e1 == 0) ) { 
             sem1 = 0
           } else {
-            sem1 = parseNumber(( 3/7 * mp1 ) + ( 3/7 * mp2 ) + ( 1/7 * e1 ))
+            sem1 = parseNumber(( 0.4 * mp1 ) + ( 0.4 * mp2 ) + ( 0.2 * e1 ))
           }
           if ( ( mp3 == 0 && mp4 == 0 ) || ( mp3 == 0 && e2 == 0 ) || ( mp4 == 0 && e2 == 0) ) { 
             sem2 = 0
           } else {
-            sem2 = parseNumber(( 3/7 * mp3 ) + ( 3/7 * mp4 ) + ( 1/7 * e2 ))
+            sem2 = parseNumber(( 0.4 * mp3 ) + ( 0.4 * mp4 ) + ( 0.2 * e2 ))
           }
           if (isNaN(sem1)) { sem1 = "remove" }
           if (isNaN(sem2)) { sem2 = "remove" }
